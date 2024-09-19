@@ -1,81 +1,93 @@
-import type { Site, Page, Links, Socials } from "@types"
+import type { Site, Page, Links, Socials } from "@types";
 
 // Global
 export const SITE: Site = {
-  TITLE: "Astro Sphere",
-  DESCRIPTION: "Welcome to Astro Sphere, a portfolio and blog for designers and developers.",
+  TITLE: "flinodev",
+  DESCRIPTION:
+    "Bienvenido a la página de inicio de Francisco Lino. Desarrollador Web",
   AUTHOR: "Mark Horn",
-}
+};
 
 // Work Page
 export const WORK: Page = {
   TITLE: "Work",
-  DESCRIPTION: "Places I have worked.",
-}
+  DESCRIPTION: "Experiencia profesional.",
+};
 
 // Blog Page
 export const BLOG: Page = {
   TITLE: "Blog",
-  DESCRIPTION: "Writing on topics I am passionate about.",
-}
+  DESCRIPTION: "Escribiendo sobre temas de mi interés.",
+};
 
-// Projects Page 
+// Projects Page
 export const PROJECTS: Page = {
   TITLE: "Projects",
-  DESCRIPTION: "Recent projects I have worked on.",
-}
+  DESCRIPTION: "Proyectos en los que he trabajado.",
+};
 
 // Search Page
 export const SEARCH: Page = {
   TITLE: "Search",
-  DESCRIPTION: "Search all posts and projects by keyword.",
-}
+  DESCRIPTION: "Búsqueda de proyectos y posts por palabras clave.",
+};
 
 // Links
 export const LINKS: Links = [
-  { 
-    TEXT: "Home", 
-    HREF: "/", 
+  {
+    TEXT: "Inicio",
+    HREF: "/",
   },
-  { 
-    TEXT: "Work", 
-    HREF: "/work", 
+  {
+    TEXT: "Trabajos",
+    HREF: "/work",
   },
-  { 
-    TEXT: "Blog", 
-    HREF: "/blog", 
+  {
+    TEXT: "Blog",
+    HREF: "/blog",
   },
-  { 
-    TEXT: "Projects", 
-    HREF: "/projects", 
+  {
+    TEXT: "Proyectos",
+    HREF: "/projects",
   },
-]
+];
 
 // Socials
 export const SOCIALS: Socials = [
-  { 
+  {
     NAME: "Email",
-    ICON: "email", 
-    TEXT: "markhorn.dev@gmail.com",
-    HREF: "mailto:markhorn.dev@gmail.com",
+    ICON: "email",
+    TEXT: "flinodev@gmail.com",
+    HREF: "mailto:flinodev@gmail.com",
   },
-  { 
-    NAME: "Github",
-    ICON: "github",
-    TEXT: "markhorn-dev",
-    HREF: "https://github.com/markhorn-dev/astro-sphere"
-  },
-  { 
+  {
     NAME: "LinkedIn",
     ICON: "linkedin",
-    TEXT: "markhorn-dev",
-    HREF: "https://www.linkedin.com/in/markhorn-dev/",
+    TEXT: "francisco-suriel-lino-cadena-551294154",
+    HREF: "https://www.linkedin.com/in/francisco-suriel-lino-cadena-551294154/",
   },
-  { 
+  {
+    NAME: "Github",
+    ICON: "github",
+    TEXT: "flinodev",
+    HREF: "https://github.com/flinodev",
+  },
+  {
     NAME: "Twitter",
     ICON: "twitter-x",
-    TEXT: "markhorn_dev",
-    HREF: "https://twitter.com/markhorn_dev",
+    TEXT: "flinodev",
+    HREF: "https://x.com/flinodev",
   },
-]
-
+  {
+    NAME: "Youtube",
+    ICON: "youtube",
+    TEXT: "@flinodev",
+    HREF: "https://www.youtube.com/@flinodev",
+  },
+  // {
+  //   NAME: "Tiktok",
+  //   ICON: "tiktok",
+  //   TEXT: "@flinodev",
+  //   HREF: "https://www.tiktok.com/@flinodev",
+  // },
+];

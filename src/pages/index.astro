@@ -17,12 +17,7 @@ const projects = (await getCollection("projects"))
   .sort((a, b) => b.data.date.getTime() - a.data.date.getTime())
   .slice(0,3)
 
-const stack = [
-  { 
-    text: "Astro", 
-    icon: "astro", 
-    href: "https://astro.build" 
-  },
+const stack = [  
   { 
     text: "Javascript", 
     icon: "javascript", 
@@ -34,10 +29,76 @@ const stack = [
     href: "https://www.typescriptlang.org" 
   },
   { 
+    text: "Dart", 
+    icon: "dart", 
+    href: "https://dart.dev/" 
+  },
+  { 
+    text: "Java", 
+    icon: "java", 
+    href: "https://www.oracle.com/java/" 
+  },
+  { 
+    text: "Python", 
+    icon: "python", 
+    href: "https://www.python.org/" 
+  },
+  { 
+    text: "NodeJS", 
+    icon: "node", 
+    href: "https://nodejs.org/en" 
+  },
+  { 
+    text: "Express", 
+    icon: "express", 
+    href: "https://expressjs.com/" 
+  },
+  { 
+    text: "NextJS", 
+    icon: "next", 
+    href: "https://nextjs.org/" 
+  },
+  { 
+    text: "GCP", 
+    icon: "gcp", 
+    href: "https://cloud.google.com" 
+  },
+  { 
+    text: "Firebase", 
+    icon: "firebase", 
+    href: "https://firebase.google.com" 
+  },
+  { 
+    text: "Docker", 
+    icon: "docker", 
+    href: "https://www.docker.com" 
+  },
+  { 
+    text: "Angular", 
+    icon: "angular", 
+    href: "https://angular.dev" 
+  },
+  { 
+    text: "Astro", 
+    icon: "astro", 
+    href: "https://astro.build" 
+  },  
+  { 
+    text: "React", 
+    icon: "react", 
+    href: "https://es.react.dev" 
+  },
+  { 
     text: "Tailwind", 
     icon: "tailwind", 
     href: "https://tailwindcss.com" 
   },
+  { 
+    text: "Flutter", 
+    icon: "flutter", 
+    href: "https://flutter.dev" 
+  },
+  
 ]
 ---
 
@@ -80,20 +141,20 @@ const stack = [
       <div class='relative w-full h-full flex items-center justify-center'>
         <div class='p-5 text-center'>
           <p class='animated text-lg md:text-xl lg:text-2xl font-semibold opacity-75'>
-            Hello, I am ...
+            Hola, soy Francisco Lino
           </p>
           <p class='animated text-2xl md:text-3xl lg:text-4xl font-bold uppercase text-black dark:text-white'>
-            Astro Sphere
+            Web Developer
           </p>
           <p class='animated text-sm md:text-base lg:text-lg opacity-75'>
-            Currently designing products for humans.
+            Apasionado por la tecnología, la IA, y la ciberseguridad
           </p>
           <div id="ctaButtons" class='animated flex flex-wrap gap-4 justify-center mt-5'>
             <a href='/blog' class='py-2 px-4 rounded truncate text-xs md:text-sm lg:text-base bg-black dark:bg-white text-white dark:text-black hover:opacity-75 blend'>
-              Read my blog
+              Lee mi blog
             </a>
             <a href='/work' class='py-2 px-4 truncate rounded text-xs md:text-sm lg:text-base border border-black/25 dark:border-white/25 hover:bg-black/5 hover:dark:bg-white/15 blend'>
-              View my work
+              Ve mi trabajo
             </a>
           </div>
         </div>
@@ -107,12 +168,12 @@ const stack = [
       <!-- About Section -->
       <section class="animate">
         <article>
-          <p>I am a <b><i>software engineer</i></b>, <b><i>ui/ux designer</i></b>, <b><i>product planner</i></b>, <b><i>mentor</i></b>, <b><i>student</i></b>, <b><i>minimalist</i></b>, <b><i>eternal optimist</i></b>, <b><i>crypto enthusiast</i></b> and <b><i>sarcasm connoisseur</i></b>.</p>
-          <p>I love to both build and break things. I am motivated by challenging projects with self-guided research and dynamic problem solving. My true passion is crafting creative front end designs with unique takes on color, typography and motion.</p>
-          <p>During my career</p>
-          <p>I have built products ranging from marketing and ecommerce websites to complex enterprise apps with focus on delivering fast, elegant code along with delightful user interfaces.</p>
-          <p>Now</p>
-          <p>I currently work as a software engineer at StreamlineFS, where I do product planning, design and development.</p>
+          <p>Soy un <b><i>ingeniero en sistemas</i></b>, <b><i>desarrollador web</i></b>, <b><i>aficionado a la ciberseguridad</i></b>, <b><i>escritor novato</i></b>, <b><i>músico de ocasión</i></b>, <b><i>profesor de vocación</i></b>, <b><i>estudiante de tiempo completo</i></b>, <b><i>entusiasta del desarrollo humano</i></b>, y <b><i>amante del café</i></b>.</p>
+          <p>Me encantan los proyectos que involucran retos y problemáticas que te sacan de tu zona de confort y te forzan a aprender nuevas formas de resolver un problema, a dominar nuevas herramientas, a encararlos desde otra perspectiva. Creo firmemente que, para crecer, algunas veces te tienes que romper.</p>
+          <p>Durante mi carrera</p>
+          <p>He tenido la oportunidad de trabajar como desarrollador independiente, construyendo sistemas web como apoyo en el área de la educación, aplicaciones móviles y páginas web para promocionar negocios. También he trabajado para algunas empresas del sector privado, donde he construido aplicaciones web, microservicios, API's, herramientas de monitoreo, etc</p>
+          <p>Hoy</p>
+          <p>Actualmente me desempeño como desarrollador de pila completa en un consultora de desarrollo de software, donde mi función principal es el diseño, desarrollo e implementación de sistemas a la medida. Empleando tecnologías como <b>NodeJS</b>, <b>Express</b>, <b>Angular</b>, <b>NextJS</b>, <b>Flutter</b>, <b>Google Cloud Platform</b>, <b>Docker</b>, <b>Firebase</b>, entre otras. </p>
         </article>
       </section>
 
@@ -121,11 +182,11 @@ const stack = [
         <div class="space-y-4">
           <div class="flex justify-between">
             <p class="font-semibold text-black dark:text-white">
-              Recent posts
+              Publicaciones recientes
             </p>
             <a href="/blog" class="w-fit col-span-3 group flex gap-1 items-center underline decoration-[.5px] decoration-black/25 dark:decoration-white/50 hover:decoration-black dark:hover:decoration-white text-black dark:text-white underline-offset-2 blend">
               <span class="text-black/75 dark:text-white/75 group-hover:text-black group-hover:dark:text-white blend">
-                All posts
+                Todas las publicaciones
               </span>
             </a>
           </div>
@@ -143,7 +204,7 @@ const stack = [
       <section class="animate">
         <div class="space-y-4">
           <p class="font-semibold text-black dark:text-white">
-            Website build with
+            Stack tecnológico
           </p>
           <div class="flex flex-wrap items-center gap-2 mt-5">
             {stack.map(item => (
@@ -158,7 +219,7 @@ const stack = [
             Performing reactivity and statefulness, special guest
             <a href="https://www.solidjs.com/" target="_blank" class="w-fit group underline decoration-[.5px] decoration-black/25 dark:decoration-white/50 hover:decoration-black dark:hover:decoration-white text-black dark:text-white underline-offset-2 blend">
               <span class="text-black/75 dark:text-white/75 group-hover:text-black group-hover:dark:text-white blend">
-                SolidJS
+                SolidJSSS
               </span>
             </a>
           </div>
@@ -170,11 +231,11 @@ const stack = [
         <div class="space-y-4">
           <div class="flex justify-between">
             <p class="font-semibold text-black dark:text-white">
-              Recent projects
+              Proyectos recientes
             </p>
             <a href="/projects" class="w-fit col-span-3 group flex gap-1 items-center underline decoration-[.5px] decoration-black/25 dark:decoration-white/50 hover:decoration-black dark:hover:decoration-white text-black dark:text-white underline-offset-2 blend">
               <span class="text-black/75 dark:text-white/75 group-hover:text-black group-hover:dark:text-white blend">
-                All projects
+                Todos los proyectos
               </span>
             </a>
           </div>
@@ -192,10 +253,10 @@ const stack = [
       <section class="animate">
         <div>
           <p class="font-semibold text-black dark:text-white">
-            Let's Connect
+            Contáctame
           </p>
           <p>
-            Reach out to me via email or on social media.
+            Comunicate conmigo vía correo electrónico o redes sociales
           </p>
           <div class="grid grid-cols-4 gap-y-2 mt-4 auto-cols-min">
             {SOCIALS.map(social => (
