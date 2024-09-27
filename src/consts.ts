@@ -2,7 +2,7 @@ import type { Site, Page, Links, Socials } from "@types";
 
 // Global
 export const SITE: Site = {
-  TITLE: "flinodev",
+  TITLE: "{flino|dev}",
   DESCRIPTION:
     "Bienvenido a la página de inicio de Francisco Lino. Desarrollador Web",
   AUTHOR: "Mark Horn",
@@ -10,7 +10,7 @@ export const SITE: Site = {
 
 // Work Page
 export const WORK: Page = {
-  TITLE: "Work",
+  TITLE: "Trabajos",
   DESCRIPTION: "Experiencia profesional.",
 };
 
@@ -22,13 +22,13 @@ export const BLOG: Page = {
 
 // Projects Page
 export const PROJECTS: Page = {
-  TITLE: "Projects",
+  TITLE: "Proyectos",
   DESCRIPTION: "Proyectos en los que he trabajado.",
 };
 
 // Search Page
 export const SEARCH: Page = {
-  TITLE: "Search",
+  TITLE: "Búsqueda",
   DESCRIPTION: "Búsqueda de proyectos y posts por palabras clave.",
 };
 
