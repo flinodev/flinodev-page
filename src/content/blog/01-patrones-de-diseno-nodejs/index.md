@@ -9,10 +9,10 @@ tags:
   - Singleton
   - Factory
   - Observer
-image: "/images/blog/design_patterns.png"
+image: "/blog/design_patterns.jpeg"
 ---
 
-![Imagen de patrones de diseño](/images/blog/design_patterns.png)
+![Imagen de patrones de diseño](/images/blog/design_patterns.jpeg)
 
 Cuando desarrollamos aplicaciones en Node.js, un entorno popular para aplicaciones de servidor, es fundamental escribir código limpio, modular y escalable. Para lograr esto, los patrones de diseño son una herramienta poderosa. Estos son soluciones probadas para problemas comunes en el diseño de software que ayudan a estructurar el código de manera eficiente, promoviendo la reutilización y facilitando el mantenimiento a largo plazo.
 
