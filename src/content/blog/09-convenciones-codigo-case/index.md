@@ -7,7 +7,7 @@ tags:
   - Camel Case
   - Pascal Case
   - Snake Case
-image: "/blog/nomenclatura.png"
+image: "/images/blog/nomenclatura.png"
 ---
 
 ![Imagen de nomenclatura](/images/blog/nomenclatura.png)

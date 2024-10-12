@@ -7,7 +7,7 @@ tags:
   - Angular
   - React
   - Vue
-image: "/blog/angular_react_vue.jpeg"
+image: "/images/blog/angular_react_vue.jpeg"
 ---
 
 ![Home de Clips](/images/blog/angular_react_vue.jpeg)
