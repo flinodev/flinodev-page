@@ -9,7 +9,7 @@ tags:
   - Singleton
   - Factory
   - Observer
-image: "/blog/design_patterns.jpeg"
+image: "/images/blog/design_patterns.jpeg"
 ---
 
 ![Imagen de patrones de diseño](/images/blog/design_patterns.jpeg)
