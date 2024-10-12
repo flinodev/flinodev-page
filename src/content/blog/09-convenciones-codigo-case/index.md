@@ -1,6 +1,6 @@
 ---
-title: "Convenciones de Nombramiento en Programación: Camel Case, Pascal Case, Snake Case y más"
-summary: "Una buena convención de nombramiento hace que el código sea más legible y mantenible."
+title: "Convenciones de Nomenclatura en Programación: Camel Case, Pascal Case y más"
+summary: "Una buena convención de nomeclatura hace que el código sea más legible y mantenible."
 date: "Oct 08 2024"
 draft: false
 tags:
@@ -9,7 +9,7 @@ tags:
   - Snake Case
 ---
 
-El nombramiento de variables, funciones, y métodos es una parte importante del desarrollo de software. Una buena convención de nombramiento hace que el código sea más legible y mantenible. A lo largo del tiempo, se han establecido diversas convenciones que ayudan a mejorar la claridad y consistencia en el código.
+La nomenclatura de variables, funciones, y métodos es una parte importante del desarrollo de software. Una buena convención de nomeclatura hace que el código sea más legible y mantenible. A lo largo del tiempo, se han establecido diversas convenciones que ayudan a mejorar la claridad y consistencia en el código.
 
 A continuación, repasaremos algunas de las convenciones más populares como Camel Case, Pascal Case, Snake Case, entre otras, junto con ejemplos de código.
 
@@ -146,6 +146,6 @@ Uso típico: Definir constantes inmutables en lenguajes como Java o C++.
 
 ### Conclusión
 
-El uso adecuado de las convenciones de nombramiento es crucial para escribir código limpio y fácil de mantener. Cada convención tiene su propósito y es importante elegir la que mejor se adapte a tu proyecto o seguir las convenciones que el equipo o la comunidad de desarrollo utiliza.
+El uso adecuado de las convenciones de nomenclatura es crucial para escribir código limpio y fácil de mantener. Cada convención tiene su propósito y es importante elegir la que mejor se adapte a tu proyecto o seguir las convenciones que el equipo o la comunidad de desarrollo utiliza.
 
 Siguiendo estas convenciones, se puede lograr un código más legible y organizado, lo que facilita su mantenimiento y colaboración. ¡Elige la convención adecuada para cada situación y mantén tu código consistente!
