@@ -1,13 +1,16 @@
 ---
 title: "Vue, Angular y React."
-summary: "Comparación de tres de los frameworks más populares para el desarrollo frontend"
+summary: "Comparación entre tres de los frameworks más populares para el desarrollo frontend. Ventajas y desventajas de cada uno."
 date: "Sept 19 2024"
 draft: false
 tags:
   - Angular
   - React
   - Vue
+image: "/blog/angular_react_vue.jpeg"
 ---
+
+![Home de Clips](/images/blog/angular_react_vue.jpeg)
 
 En el mundo del desarrollo frontend, tres de los frameworks más populares son Vue, Angular, y React. Aunque todos tienen el mismo propósito principal, que es construir interfaces de usuario (UI) dinámicas y aplicaciones de una sola página (SPA), cada uno tiene un enfoque diferente, y por lo tanto, diferentes ventajas y desventajas.
 
@@ -81,7 +84,7 @@ export class AppComponent {
 
 Angular requiere una configuración inicial más compleja, pero es muy útil para aplicaciones a gran escala debido a su estructura bien definida y sus herramientas integradas.
 
-### 3.React
+### 3. React
 
 React es una biblioteca de JavaScript desarrollada por Facebook. A diferencia de Angular y Vue, React se enfoca exclusivamente en la capa de vista y utiliza un enfoque basado en componentes funcionales. React es muy popular debido a su gran ecosistema y comunidad.
 

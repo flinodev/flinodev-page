@@ -17,7 +17,8 @@ export const WORK: Page = {
 // Blog Page
 export const BLOG: Page = {
   TITLE: "Blog",
-  DESCRIPTION: "Escribiendo sobre temas de mi interés.",
+  DESCRIPTION:
+    "Publicaciones sobre temas de desarrollo web, seguridad informática, inteligencia artificial y más",
 };
 
 // Projects Page

@@ -1,13 +1,13 @@
 ---
-title: "Convenciones de Nomenclatura en Programación: Camel Case, Pascal Case y más"
-summary: "Una buena convención de nomeclatura hace que el código sea más legible y mantenible."
+title: "Convenciones de Nomenclatura en Programación."
+summary: "Una buena convención de nomeclatura hace que el código sea más legible y mantenible. Camel Case, Pascal Case, Snake Case, entre otros son ejemplos de convenciones."
 date: "Oct 08 2024"
 draft: false
 tags:
   - Camel Case
   - Pascal Case
   - Snake Case
-image: "/images/blog/nomenclatura.png"
+image: "/blog/nomenclatura.png"
 ---
 
 ![Imagen de nomenclatura](/images/blog/nomenclatura.png)
