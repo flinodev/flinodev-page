@@ -4,9 +4,7 @@ summary: "Una buena convención de nomeclatura hace que el código sea más legi
 date: "Oct 08 2024"
 draft: false
 tags:
-  - Camel Case
-  - Pascal Case
-  - Snake Case
+  - Clean Code
 image: "/images/blog/nomenclatura.png"
 ---
 

@@ -6,9 +6,6 @@ draft: false
 tags:
   - Node
   - Design Patterns
-  - Singleton
-  - Factory
-  - Observer
 image: "/images/blog/design_patterns.jpeg"
 ---
 
