@@ -10,4 +10,4 @@ Desarrollador de pila completa en donde mi principal función consiste en colabo
 - Migración de funciones serveless que procesan un gran volumen de datos a tecnologías más escalables.
 - Optimización de almacenamiento mediante la aplicación de políticas de almacenamiento y el rediseño de procesos.
 - Generación de alarmas en tiempo real para el monitoreo de procesos internos.
-- Implementación de una API, aplicando arquitectura limpia.
+- Desarrollo e implementación de API's y migración de servicios aplicando los principios de la arquitectura limpia.
