@@ -4,7 +4,7 @@ import type { Site, Page, Links, Socials } from "@types";
 export const SITE: Site = {
   TITLE: "{flino|dev}",
   DESCRIPTION:
-    "Bienvenido a la página de inicio de Francisco Lino. Desarrollador Web",
+    "Bienvenido a la página web de Francisco Lino, Full Stack Developer. Compartimos el conocimiento y el entusiasmos por la tecnología y la programación",
   AUTHOR: "Mark Horn",
 };
 
