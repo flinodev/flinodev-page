@@ -7,6 +7,7 @@ tags:
   - Angular
   - React
   - Vue
+  - Web
 image: "/images/blog/angular_react_vue.jpeg"
 ---
 

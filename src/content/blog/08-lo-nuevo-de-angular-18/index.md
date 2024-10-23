@@ -5,6 +5,7 @@ date: "Sept 19 2024"
 draft: false
 tags:
   - Angular
+  - Web
 ---
 
 Angular está más vivo que nunca, y el equipo de desarrollo de este framework sigue avanzando a pasos agigantados con su evolución, trayendo una serie de mejoras y nuevas características que optimizan la experiencia del desarrollador, mejoran el rendimiento y amplían las capacidades del framework. En esta artículo, exploraremos las principales novedades que trae Angular 18 y cómo puedes aprovecharlas en tus desarrollos.
