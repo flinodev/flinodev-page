@@ -10,4 +10,4 @@ Desarrollador web especializado en frameworks Javascript en donde colaboraré co
 - Generación dinámica de componentes web, mediante configuración en base datos.
 - Migración del portal de una versión legacy a la más reciente en su momento.
 - Mejoras en el proceso de la administración de permisos de la aplicación web.
-- Implementación de la Arquitectura Limpia.
+- Desarrollo e Implementación de módulos mediante la aplicación de los principios de la Arquitectura Limpia.
