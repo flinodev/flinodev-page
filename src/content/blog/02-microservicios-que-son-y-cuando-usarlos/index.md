@@ -6,7 +6,7 @@ draft: false
 tags:
   - Microservices
   - Backend
-image: "/images/blog/nomenclatura.png"
+image: "/images/blog/microservices.jpg"
 ---
 
 ![Imagen de nomenclatura](/images/blog/microservices.jpg)
