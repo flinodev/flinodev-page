@@ -7,7 +7,7 @@ import solidJs from "@astrojs/solid-js";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://flino.dev",
+  site: "https://www.flino.dev",
   integrations: [
     mdx(),
     sitemap(),
