@@ -4,7 +4,7 @@ import type { Site, Page, Links, Socials } from "@types";
 export const SITE: Site = {
   TITLE: "{flino|dev}",
   DESCRIPTION:
-    "Bienvenido a la página web de Francisco Lino, Full Stack Developer. Compartimos el conocimiento y el entusiasmos por la tecnología y la programación",
+    "Sitio oficial de Francisco Lino, desarrollador de software, freelancer y profesor. Comparto el conocimiento y entusiasmo por la tecnología y la programación",
   AUTHOR: "Mark Horn",
 };
 
@@ -64,8 +64,8 @@ export const SOCIALS: Socials = [
   {
     NAME: "LinkedIn",
     ICON: "linkedin",
-    TEXT: "francisco-suriel-lino-cadena-551294154",
-    HREF: "https://www.linkedin.com/in/francisco-suriel-lino-cadena-551294154/",
+    TEXT: "flinodev",
+    HREF: "https://www.linkedin.com/in/flinodev/",
   },
   {
     NAME: "Github",
@@ -85,10 +85,10 @@ export const SOCIALS: Socials = [
     TEXT: "@flinodev",
     HREF: "https://www.youtube.com/@flinodev",
   },
-  // {
-  //   NAME: "Tiktok",
-  //   ICON: "tiktok",
-  //   TEXT: "@flinodev",
-  //   HREF: "https://www.tiktok.com/@flinodev",
-  // },
+  {
+    NAME: "Tiktok",
+    ICON: "tiktok",
+    TEXT: "@flinodev",
+    HREF: "https://www.tiktok.com/@flinodev",
+  },
 ];
