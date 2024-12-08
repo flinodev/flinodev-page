@@ -5,10 +5,10 @@ date: "Oct 08 2024"
 draft: false
 tags:
   - Clean Code
-image: "/images/blog/nomenclatura.png"
+image: "/images/blog/nomenclatura.webp"
 ---
 
-![Imagen de nomenclatura](/images/blog/nomenclatura.png)
+![Imagen de nomenclatura](/images/blog/nomenclatura.webp)
 
 La nomenclatura de variables, funciones, y métodos es una parte importante del desarrollo de software. Una buena convención de nomeclatura hace que el código sea más legible y mantenible. A lo largo del tiempo, se han establecido diversas convenciones que ayudan a mejorar la claridad y consistencia en el código.
 
