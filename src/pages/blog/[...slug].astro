@@ -18,7 +18,7 @@ export async function getStaticPaths() {
 // Get the requested post
 type Props = CollectionEntry<"blog">;
 const post = Astro.props;
-const { title, summary, image = "/flinodev.jpg" } = post.data;
+const { title, summary, image = "/flinodev.webp" } = post.data;
 ---
 
 <PageLayout title={title} description={summary} image={image}>
