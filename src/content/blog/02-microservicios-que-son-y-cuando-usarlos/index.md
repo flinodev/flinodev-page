@@ -11,7 +11,7 @@ image: "/images/blog/microservices.webp"
 
 ![Imagen de nomenclatura](/images/blog/microservices.webp)
 
-La arquitectura de microservicios ha cambiado la forma en que desarrollamos aplicaciones complejas, ofreciendo modularidad, escalabilidad y una separación de preocupaciones que permite que cada servicio sea administrado y escalado de forma independiente. En esta entrada, exploraremos qué son los microservicios, cuándo tiene sentido usarlos y cuáles son sus ventajas y desventajas en comparación con el enfoque monolítico.
+La arquitectura de microservicios ha cambiado la forma en que desarrollamos aplicaciones complejas, ofreciendo modularidad, escalabilidad y una separación de responsabilidades que permite que cada servicio sea administrado y escalado de forma independiente. En esta entrada, exploraremos qué son los microservicios, cuándo tiene sentido usarlos y cuáles son sus ventajas y desventajas en comparación con el enfoque monolítico.
 
 ## ¿Qué son los Microservicios?
 
