@@ -148,3 +148,43 @@ article img {
 #meteors .shower.ul {
   @apply rotate-315;
 }
+
+.libutton {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 7px;
+  text-align: center;
+  outline: none;
+  text-decoration: none !important;
+  color: #0A66C2 !important;
+  width: 200px;
+  height: 32px;
+  border-radius: 16px;
+  background-color: #FFFFFF;
+  font-family: "SF Pro Text", Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+.libutton:hover {
+  color: #FFFFFF !important;
+  background-color: #0A66C2;
+}
+
+#badge {
+  width: 340px;
+  height: 100px;
+  object-fit: fill;
+  border-radius: 10px;
+  margin-top: 1.6rem;
+  background-color: transparent;
+  border: 5px solid white;
+}
+
+@media (max-width: 600px) {
+  #badge {
+    width: 355px;
+    height: 112px;
+    border: 12px solid white;
+  }
+}
