@@ -6,18 +6,13 @@ draft: false
 tags:
   - SOC Level 1
   - Cyber Defence Frameworks
+  - THM
 image: "/images/blog/cyber-kill-chain.webp"
 ---
 
 <a href="https://tryhackme.com/room/cyberkillchainzmt" target="_blank" style="text-decoration: none; cursor:pointer">SOC Level 1 > Cyber Defence Frameworks > Cyber Kill Chain</a>
 
 ![Imagen de nomenclatura](/images/blog/cyber-kill-chain.webp)
-
-El término kill chain (cadena de muerte) es un concepto militar que describe las etapas de un ataque: identificación del objetivo, decisión y orden de ataque, y finalmente la destrucción del objetivo.
-
-En 2011, la empresa Lockheed Martin adaptó este concepto al ámbito de la ciberseguridad, creando el marco Cyber Kill Chain®. Este modelo describe las fases que siguen los atacantes en el ciberespacio. Para tener éxito, el atacante debe completar todas las etapas de la cadena.
-
-Comprender este modelo ayuda a prevenir ataques como ransomware, brechas de seguridad y amenazas persistentes avanzadas (APT). Permite evaluar la seguridad de una red o sistema, identificar fallos en los controles y cerrar brechas según la infraestructura de cada empresa.
 
 ## Introduction
 
