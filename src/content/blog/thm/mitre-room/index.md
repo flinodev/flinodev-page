@@ -10,6 +10,10 @@ tags:
 image: "/images/blog/diamond-model-room.webp"
 ---
 
+<a href="https://tryhackme.com/room/mitre" target="_blank" style="text-decoration: none; cursor:pointer">SOC Level 1 > Cyber Defence Frameworks > MITRE
+
+![Imagen de nomenclatura](/images/blog/mitre.webp)
+
 ### Task 1
 ## Introduction
 
