@@ -15,6 +15,7 @@ image: "/images/blog/diamond-model-room.webp"
 
 ![Diamond Model](/images/blog/diamond-model-room.webp)
 
+### Task 1
 ## Introduction
 
 1. **Read the above.**
@@ -25,6 +26,7 @@ No answer needed
 
 ***
 
+### Task 2
 ## Adversary
 
 1. **What is the term for a person/group that has the intention to perform malicious actions against cyber resources?**  
@@ -43,6 +45,7 @@ Adversary Customer
 
 ***
 
+### Task 3
 ## Victim
 
 1. **What is the term that applies to the Diamond Model for organizations or people that are being targeted?**  
@@ -54,6 +57,7 @@ Victim Personae
 
 ***
 
+### Task 4
 ## Capability
 
 1. **Provide the term for the set of tools or capabilities that belong to an adversary.**  
@@ -65,6 +69,8 @@ Adversary Arsenal
 
 ***
 
+
+### Task 5
 ## Infrastructure
 
 1. **To which type of infrastructure do malicious domains and compromised email accounts belong?**  
@@ -83,6 +89,7 @@ Type 1 Infrastructure
 
 ***
 
+### Task 6
 ## Event Meta Features
 
 1. **What meta-feature does the axiom "Every malicious activity contains two or more phases which must be successfully executed in succession to achieve the desired result" belong to?**  
@@ -109,6 +116,7 @@ Resources
 
 ***
 
+### Task 7
 ## Social-Political Component
 
 1. **Read the above.**  
@@ -119,6 +127,7 @@ No answer needed
 
 ***
 
+### Task 8
 ## Technology Component
 
 1. **Read the above.**  
@@ -129,6 +138,7 @@ No answer needed
 
 ***
 
+### Task 9
 ## Practice Analysis
 
 1. **Complete all eight areas of the diamond. What is the flag that is displayed to you?**  
@@ -140,6 +150,7 @@ THM{DIAMOND_MODEL_ATTACK_CHAIN}
 
 ***
 
+### Task 10
 ## Conclusion
 
 1. **Read the above.**  
