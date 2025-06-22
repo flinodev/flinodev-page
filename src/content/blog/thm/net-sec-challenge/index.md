@@ -7,7 +7,7 @@ tags:
   - Jr Penetration Tester
   - Network Security
   - THM
-image: "/images/blog/diamond-model-room.webp"
+image: "/images/blog/net-sec-challenge.webp"
 ---
 
 <a href="https://tryhackme.com/room/netsecchallenge" target="_blank" style="text-decoration: none; cursor:pointer">Jr Penetration Tester > Network Security > Net Sec Challenge
