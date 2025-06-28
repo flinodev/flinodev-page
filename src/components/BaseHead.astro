@@ -1,6 +1,6 @@
 ---
-import { ViewTransitions } from "astro:transitions";
-
+import SpeedInsights from '@vercel/speed-insights/astro';
+import Analytics from '@vercel/analytics/astro';
 interface Props {
   title: string;
   description: string;
@@ -65,6 +65,9 @@ const { title, description, image = "/flinodev.webp" } = Astro.props;
   title={title}
   href={`${Astro.site}rss.xml`}
 />
+
+<Analytics />
+<SpeedInsights />
 
 <!-- Global Scripts -->
 <script defer is:inline src="/js/theme.js"></script>
