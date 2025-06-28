@@ -7,6 +7,7 @@ tags:
   - Jr Penetration Tester
   - Network Security
   - THM
+  - TryHackMe
 image: "/images/blog/protocols-servers-2.webp"
 ---
 

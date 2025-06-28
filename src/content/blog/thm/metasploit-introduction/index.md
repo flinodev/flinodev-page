@@ -7,6 +7,7 @@ tags:
   - Jr Penetration Tester
   - Metasploit
   - THM
+  - TryHackMe
 image: "/images/blog/metasploit_intro.webp"
 ---
 
@@ -95,7 +96,7 @@ _¿Cómo establecerías el valor global de RHOSTS en 10.10.19.23?_
 setg RHOSTS 10.10.19.23
 </blockquote>
 
-3. **What command would you use to clear a set payload?**
+3. **What command would you use to clear a set payload?**  
 _¿Qué comando usarías para limpiar un payload configurado?_  
 
 <blockquote>
