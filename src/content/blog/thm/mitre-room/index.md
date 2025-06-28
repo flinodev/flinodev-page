@@ -7,6 +7,7 @@ tags:
   - SOC Level 1
   - Cyber Defence Frameworks
   - THM
+  - TryHackMe
 image: "/images/blog/diamond-model-room.webp"
 ---
 

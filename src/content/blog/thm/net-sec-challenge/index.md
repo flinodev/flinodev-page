@@ -7,13 +7,14 @@ tags:
   - Jr Penetration Tester
   - Network Security
   - THM
+  - TryHackMe
 image: "/images/blog/net-sec-challenge.webp"
 ---
 
 <a href="https://tryhackme.com/room/netsecchallenge" target="_blank" style="text-decoration: none; cursor:pointer">Jr Penetration Tester > Network Security > Net Sec Challenge
 </a>
 
-![Diamond Model](/images/blog/net-sec-challenge.webp)
+![Net Sec Challenge](/images/blog/net-sec-challenge.webp)
 
 Use this challenge to test your mastery of the skills you have acquired in the Network Security module. All the questions in this challenge can be solved using only __nmap__, __telnet__, and __hydra__.
 
