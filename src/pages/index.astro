@@ -6,6 +6,7 @@ import StackCard from "@components/StackCard.astro"
 import { SITE, SOCIALS } from "@consts"
 import TwinklingStars from "@components/TwinklingStars.astro"
 import MeteorShower from "@components/MeteorShower.astro"
+import EducationCard from "@components/EducationCard.astro"
 
 const posts = (await getCollection("blog"))
   .filter(post => !post.data.draft)
@@ -115,6 +116,30 @@ const stack = [
   },
   
 ]
+
+const education = [
+  {
+    icon: "thm",
+    href: "https://tryhackme.com/p/flinodev"
+  },
+  {
+    icon: "platzi",
+    href: "https://platzi.com/p/franciscosuriellinocadena/"
+  },
+  {
+    icon: "udemy",
+    href: "https://www.udemy.com/user/francisco-suriel-lino-2/"
+  },
+  {
+    icon: "datacamp",
+    href: "https://www.datacamp.com/portfolio/flinodev"
+  },
+  {
+    icon: "devtalles",
+    href: "https://cursos.devtalles.com/certificates/qtc394twqu"
+  },
+];
+
 ---
 
 <PageLayout title="Francisco Lino :: Software Developer" description={SITE.DESCRIPTION}>
@@ -266,12 +291,16 @@ const stack = [
             Con el paso del tiempo, la tecnología avanza a pasos agigantados, y mantenerse actualizado es imprescindible. 
             Te comparto mis perfiles en algunas de las plataformas de aprendizaje en donde día a día me capacito para encontrarme mejor preparado.
           </p>
-          <p class="font-semibold text-black dark:text-white">
-            TryHackme
-          </p>
-          <div class="space-y-4 flex items-center justify-center">
-            <iframe loading="lazy" title="thm-badge" id="badge" src="https://tryhackme.com/api/v2/badges/public-profile?userPublicId=618745"></iframe>
+
+          <div class="flex justify-center flex-wrap items-center gap-4 mt-5">
+            {education.map(item => (
+              <EducationCard 
+                icon={item.icon}
+                href={item.href}
+              />
+            ))}
           </div>
+          
         </div>
       </section>
 

@@ -1,0 +1,14 @@
+---
+type Props = {
+  icon: string
+  href: string
+}
+
+const { icon, href } = Astro.props
+---
+
+<a href={href} target="_blank" class="w-fit pt-3 px-2 py-2 group rounded border flex gap-2 items-center border-neutral-200 dark:border-neutral-700 hover:bg-neutral-100 hover:dark:bg-neutral-800 blend no-underline">
+  <svg height={30}>
+    <use href={`/education.svg#${icon}`}></use>
+  </svg>
+</a>
