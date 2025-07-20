@@ -14,4 +14,9 @@ export default defineConfig({
     solidJs(),
     tailwind({ applyBaseStyles: false }),
   ],
+  markdown: {
+    shikiConfig: {
+      theme: "dracula"
+    },
+  },
 });
