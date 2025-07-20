@@ -5,7 +5,7 @@ dateStart: "02/19/2019"
 dateEnd: "04/15/2021"
 ---
 
-Desarrollador web especializado en tecnologías Javascript. En <a href="https://realmetrics.io/" target="_blank">RealMetrics</a> colaboraré con el equipo de frontend en el desarrollo y mantenimiento de la aplicación web de la compañía, haciendo uso de tecnologías como Angular, Angular Material, Saas, Firebase, entre otras. Algunas de mis aportaciones más destacadas son:
+Desarrollador web especializado en tecnologías Javascript. En <a href="https://realmetrics.io/" target="_blank">RealMetrics</a> colaboraré con el equipo de frontend en el desarrollo y mantenimiento de la aplicación web de la compañía, haciendo uso de tecnologías como **Angular**, **Angular Material**, **Saas**, **Firebase**, entre otras. Algunas de mis aportaciones más destacadas son:
 
 - Generación dinámica de componentes web, mediante configuración en base datos.
 - Migración del portal de una versión legacy a la más reciente en su momento.
