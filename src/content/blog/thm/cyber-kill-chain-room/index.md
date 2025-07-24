@@ -11,7 +11,7 @@ tags:
 image: "/images/blog/cyber-kill-chain.webp"
 ---
 
-<a href="https://tryhackme.com/room/cyberkillchainzmt" target="_blank" style="text-decoration: none; cursor:pointer">SOC Level 1 > Cyber Defence Frameworks > Cyber Kill Chain</a>
+<a href="https://tryhackme.com/room/cyberkillchainzmt" target="_blank" rel="noopener noreferrer" style="text-decoration: none; cursor:pointer">SOC Level 1 > Cyber Defence Frameworks > Cyber Kill Chain</a>
 
 ![Imagen de nomenclatura](/images/blog/cyber-kill-chain.webp)
 

@@ -11,7 +11,7 @@ tags:
 image: "/images/blog/eviction.webp"
 ---
 
-<a href="https://tryhackme.com/room/eviction" target="_blank" style="text-decoration: none; cursor:pointer">SOC Level 1 > Cyber Defence Frameworks > Eviction</a>
+<a href="https://tryhackme.com/room/eviction" target="_blank" rel="noopener noreferrer" style="text-decoration: none; cursor:pointer">SOC Level 1 > Cyber Defence Frameworks > Eviction</a>
 
 ![Eviction](/images/blog/eviction.webp)
 
@@ -20,7 +20,7 @@ image: "/images/blog/eviction.webp"
 
 Sunny is a SOC analyst at E-corp, which manufactures rare earth metals for government and non-government clients. She receives a classified intelligence report that informs her that an APT group (APT28) might be trying to attack organizations similar to E-corp. To act on this intelligence, she must use the MITRE ATT&CK Navigator to identify the TTPs used by the APT group, to ensure it has not already intruded into the network, and to stop it if it has.
 
-Please visit <a href="https://static-labs.tryhackme.cloud/sites/eviction/" target="_blank">this link</a> to check out the MITRE ATT&CK Navigator layer for the APT group and answer the questions below.
+Please visit <a href="https://static-labs.tryhackme.cloud/sites/eviction/" target="_blank" rel="noopener noreferrer">this link</a> to check out the MITRE ATT&CK Navigator layer for the APT group and answer the questions below.
 
 1. **What is a technique used by the APT to both perform recon and gain initial access?**  
 _¿Cuál es una técnica utilizada por el APT para realizar reconocimiento y obtener acceso inicial?_  
