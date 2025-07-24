@@ -5,7 +5,7 @@ dateStart: "05/01/2021"
 dateEnd: "01/07/2025"
 ---
 
-Mi principal función en <a href="https://realmetrics.io/" target="_blank">Idea Code</a> fue colaborar con los equipos de frontend y backend en el diseño, desarrollo, implementación y mantenimiento de las aplicaciones, mediante el uso de cómputo en la nube (**Google Cloud Platform**), tecnologías **Javascript** como **NodeJS**, **Express**, **NestJS**, **Angular**, y otras tecnologías como **Firebase**, **Retool**, **Material**, etc. Algunas de mis aportaciones más destacadas fueron:
+Mi principal función en <a href="https://realmetrics.io/" target="_blank" rel="noopener noreferrer">Idea Code</a> fue colaborar con los equipos de frontend y backend en el diseño, desarrollo, implementación y mantenimiento de las aplicaciones, mediante el uso de cómputo en la nube (**Google Cloud Platform**), tecnologías **Javascript** como **NodeJS**, **Express**, **NestJS**, **Angular**, y otras tecnologías como **Firebase**, **Retool**, **Material**, etc. Algunas de mis aportaciones más destacadas fueron:
 
 - Migración de funciones serveless (**CloudFunctions**) que procesan un gran volumen de datos a tecnologías más escalables (**Cloud Task**, **Google Kubernetes Engine**).
 - Optimización de almacenamiento mediante la aplicación de políticas de almacenamiento (**Google Cloud Storage**) y el rediseño de procesos.

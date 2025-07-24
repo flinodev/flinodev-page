@@ -11,7 +11,7 @@ tags:
 image: "/images/blog/cyber-kill-chain.webp"
 ---
 
-<a href="https://tryhackme.com/room/unifiedkillchain" target="_blank" style="text-decoration: none; cursor:pointer">SOC Level 1 > Cyber Defence Frameworks > Unified Kill Chain</a>
+<a href="https://tryhackme.com/room/unifiedkillchain" target="_blank" rel="noopener noreferrer" style="text-decoration: none; cursor:pointer">SOC Level 1 > Cyber Defence Frameworks > Unified Kill Chain</a>
 
 ![Unified Kill Chain](/images/blog/unified_kill_chain.webp)
 

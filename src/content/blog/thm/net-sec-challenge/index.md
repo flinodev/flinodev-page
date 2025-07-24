@@ -11,7 +11,7 @@ tags:
 image: "/images/blog/net-sec-challenge.webp"
 ---
 
-<a href="https://tryhackme.com/room/netsecchallenge" target="_blank" style="text-decoration: none; cursor:pointer">Jr Penetration Tester > Network Security > Net Sec Challenge
+<a href="https://tryhackme.com/room/netsecchallenge" target="_blank" rel="noopener noreferrer" style="text-decoration: none; cursor:pointer">Jr Penetration Tester > Network Security > Net Sec Challenge
 </a>
 
 ![Net Sec Challenge](/images/blog/net-sec-challenge.webp)
