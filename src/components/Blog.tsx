@@ -36,11 +36,11 @@ export default function Blog({ data, tags }: Props) {
   return (
     <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
       <div class="col-span-3 sm:col-span-1">
-        <div class="sticky top-24">
+        <div class="sticky top-24 max-h-[calc(100vh-7rem)] overflow-y-auto">
           <div class="text-sm font-semibold uppercase mb-2 text-black dark:text-white">
             Filtros
           </div>
-          <ul class="flex flex-wrap sm:flex-col gap-1.5">
+          <ul class="flex flex-wrap sm:flex-col gap-1.5 pr-2">
             <For each={tags}>
               {(tag) => (
                 <li>
