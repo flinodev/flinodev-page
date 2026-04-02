@@ -1,6 +1,9 @@
 ---
 import SpeedInsights from "@vercel/speed-insights/astro";
 import Analytics from "@vercel/analytics/astro";
+import { ViewTransitions } from "astro:transitions";
+import { SITE } from "@consts";
+
 interface Props {
   title: string;
   description: string;
@@ -10,6 +13,23 @@ interface Props {
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
 const { title, description, image = "/flinodev.webp" } = Astro.props;
+
+// Keywords for SEO
+const keywords = [
+  "Francisco Lino",
+  "flinodev",
+  "desarrollador full stack",
+  "software developer",
+  "web development",
+  "NodeJS",
+  "React",
+  "Angular",
+  "TypeScript",
+  "ciberseguridad",
+  "cybersecurity",
+  "SQL",
+  "TryHackMe",
+].join(", ");
 ---
 
 <!-- Global Metadata -->
@@ -28,6 +48,8 @@ const { title, description, image = "/flinodev.webp" } = Astro.props;
 <title>{title}</title>
 <meta name="title" content={title} />
 <meta name="description" content={description} />
+<meta name="author" content={SITE.AUTHOR} />
+<meta name="keywords" content={keywords} />
 
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website" />
@@ -49,6 +71,35 @@ const { title, description, image = "/flinodev.webp" } = Astro.props;
 <!-- RSS Feed -->
 <link rel="alternate" type="application/rss+xml" title={title} href={`${Astro.site}rss.xml`} />
 
+<!-- Structured Data (JSON-LD) -->
+<script
+  type="application/ld+json"
+  set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: SITE.AUTHOR,
+    url: Astro.site,
+    sameAs: [
+      "https://github.com/flinodev",
+      "https://www.linkedin.com/in/flinodev/",
+      "https://x.com/flinodev",
+      "https://www.youtube.com/@flinodev",
+    ],
+    jobTitle: "Full Stack Developer",
+    description: SITE.DESCRIPTION,
+    knowsAbout: [
+      "Web Development",
+      "Software Engineering",
+      "Cybersecurity",
+      "JavaScript",
+      "TypeScript",
+      "NodeJS",
+      "React",
+      "Angular",
+    ],
+  })}
+/>
+
 <Analytics />
 <SpeedInsights />
 
@@ -57,7 +108,7 @@ const { title, description, image = "/flinodev.webp" } = Astro.props;
 <script defer is:inline src="/js/scroll.js"></script>
 <script defer is:inline src="/js/animate.js"></script>
 
-<!-- <ViewTransitions  /> -->
+<ViewTransitions />
 
 <script>
   import type { TransitionBeforeSwapEvent } from "astro:transitions/client";
