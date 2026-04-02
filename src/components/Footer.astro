@@ -65,9 +65,7 @@ const currentYear = new Date().getFullYear();
               <span
                 class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-300"
               ></span>
-              <span
-                class="relative inline-flex rounded-full h-3 w-3 bg-green-500"
-              ></span>
+              <span class="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
             </span>
             All systems normal
           </div>
@@ -80,9 +78,7 @@ const currentYear = new Date().getFullYear();
     >
       <Container size="md">
         <div class="h-full grid grid-cols-1 sm:grid-cols-2 gap-3">
-          <div
-            class="order-2 sm:order-1 flex flex-col items-center justify-center sm:items-start"
-          >
+          <div class="order-2 sm:order-1 flex flex-col items-center justify-center sm:items-start">
             <div class="legal">
               <a
                 href="/legal/terms"
@@ -106,7 +102,8 @@ const currentYear = new Date().getFullYear();
                 SOCIALS.map((SOCIAL) => (
                   <a
                     href={SOCIAL.HREF}
-                    target="_blank" rel="noopener noreferrer"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     aria-label={`${SITE.TITLE} on ${SOCIAL.NAME}`}
                     class="group size-10 rounded-full p-2 items-center justify-center hover:bg-black/5 dark:hover:bg-white/20  blend"
                   >

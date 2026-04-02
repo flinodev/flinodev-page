@@ -1,199 +1,214 @@
 ---
-import { getCollection } from "astro:content"
-import PageLayout from "@layouts/PageLayout.astro"
-import ArrowCard from "@components/ArrowCard"
-import StackCard from "@components/StackCard.astro"
-import { SITE, SOCIALS } from "@consts"
-import TwinklingStars from "@components/TwinklingStars.astro"
-import MeteorShower from "@components/MeteorShower.astro"
-import EducationCard from "@components/EducationCard.astro"
+import { getCollection } from "astro:content";
+import PageLayout from "@layouts/PageLayout.astro";
+import ArrowCard from "@components/ArrowCard";
+import StackCard from "@components/StackCard.astro";
+import { SITE, SOCIALS } from "@consts";
+import TwinklingStars from "@components/TwinklingStars.astro";
+import MeteorShower from "@components/MeteorShower.astro";
+import EducationCard from "@components/EducationCard.astro";
 
 const posts = (await getCollection("blog"))
-  .filter(post => !post.data.draft)
+  .filter((post) => !post.data.draft)
   .sort((a, b) => b.data.date.getTime() - a.data.date.getTime())
-  .slice(0,3)
+  .slice(0, 3);
 
 const projects = (await getCollection("projects"))
-  .filter(project => !project.data.draft)
+  .filter((project) => !project.data.draft)
   .sort((a, b) => b.data.date.getTime() - a.data.date.getTime())
-  .slice(0,3)
+  .slice(0, 3);
 
-const stack = [  
-  { 
-    text: "Javascript", 
-    icon: "javascript", 
-    href: "https://www.javascript.com" 
+const stack = [
+  {
+    text: "Javascript",
+    icon: "javascript",
+    href: "https://www.javascript.com",
   },
-  { 
-    text: "Typescript", 
-    icon: "typescript", 
-    href: "https://www.typescriptlang.org" 
+  {
+    text: "Typescript",
+    icon: "typescript",
+    href: "https://www.typescriptlang.org",
   },
-  { 
-    text: "Dart", 
-    icon: "dart", 
-    href: "https://dart.dev/" 
+  {
+    text: "Dart",
+    icon: "dart",
+    href: "https://dart.dev/",
   },
-  { 
-    text: "Java", 
-    icon: "java", 
-    href: "https://www.oracle.com/java/" 
+  {
+    text: "Java",
+    icon: "java",
+    href: "https://www.oracle.com/java/",
   },
-  { 
-    text: "Python", 
-    icon: "python", 
-    href: "https://www.python.org/" 
+  {
+    text: "Python",
+    icon: "python",
+    href: "https://www.python.org/",
   },
-  { 
-    text: "NodeJS", 
-    icon: "node", 
-    href: "https://nodejs.org/en" 
+  {
+    text: "NodeJS",
+    icon: "node",
+    href: "https://nodejs.org/en",
   },
-  { 
-    text: "NestJS", 
-    icon: "nestjs", 
-    href: "https://nestjs.com/" 
+  {
+    text: "NestJS",
+    icon: "nestjs",
+    href: "https://nestjs.com/",
   },
-  { 
-    text: "Express", 
-    icon: "express", 
-    href: "https://expressjs.com/" 
+  {
+    text: "Express",
+    icon: "express",
+    href: "https://expressjs.com/",
   },
-  { 
-    text: "NextJS", 
-    icon: "next", 
-    href: "https://nextjs.org/" 
+  {
+    text: "NextJS",
+    icon: "next",
+    href: "https://nextjs.org/",
   },
-  { 
-    text: "GCP", 
-    icon: "gcp", 
-    href: "https://cloud.google.com" 
+  {
+    text: "GCP",
+    icon: "gcp",
+    href: "https://cloud.google.com",
   },
-  { 
-    text: "Firebase", 
-    icon: "firebase", 
-    href: "https://firebase.google.com" 
+  {
+    text: "Firebase",
+    icon: "firebase",
+    href: "https://firebase.google.com",
   },
-  { 
-    text: "Docker", 
-    icon: "docker", 
-    href: "https://www.docker.com" 
+  {
+    text: "Docker",
+    icon: "docker",
+    href: "https://www.docker.com",
   },
-  { 
-    text: "Kubernetes", 
+  {
+    text: "Kubernetes",
     icon: "kubernetes",
-    href: "https://kubernetes.io/" 
+    href: "https://kubernetes.io/",
   },
-  { 
-    text: "Angular", 
-    icon: "angular", 
-    href: "https://angular.dev" 
+  {
+    text: "Angular",
+    icon: "angular",
+    href: "https://angular.dev",
   },
-  { 
-    text: "Astro", 
-    icon: "astro", 
-    href: "https://astro.build" 
-  },  
-  { 
-    text: "React", 
-    icon: "react", 
-    href: "https://es.react.dev" 
+  {
+    text: "Astro",
+    icon: "astro",
+    href: "https://astro.build",
   },
-  { 
-    text: "Flutter", 
-    icon: "flutter", 
-    href: "https://flutter.dev" 
+  {
+    text: "React",
+    icon: "react",
+    href: "https://es.react.dev",
   },
-  { 
-    text: "Postgres", 
-    icon: "postgres", 
-    href: "https://www.postgresql.org/" 
+  {
+    text: "Flutter",
+    icon: "flutter",
+    href: "https://flutter.dev",
   },
-  { 
-    text: "Tailwind", 
-    icon: "tailwind", 
-    href: "https://tailwindcss.com" 
+  {
+    text: "Postgres",
+    icon: "postgres",
+    href: "https://www.postgresql.org/",
   },
-  
-]
+  {
+    text: "Tailwind",
+    icon: "tailwind",
+    href: "https://tailwindcss.com",
+  },
+];
 
 const education = [
   {
     icon: "thm",
-    href: "https://tryhackme.com/p/flinodev"
+    href: "https://tryhackme.com/p/flinodev",
   },
   {
     icon: "platzi",
-    href: "https://platzi.com/p/franciscosuriellinocadena/"
+    href: "https://platzi.com/p/franciscosuriellinocadena/",
   },
   {
     icon: "udemy",
-    href: "https://www.udemy.com/user/francisco-suriel-lino-2/"
+    href: "https://www.udemy.com/user/francisco-suriel-lino-2/",
   },
   {
     icon: "datacamp",
-    href: "https://www.datacamp.com/portfolio/flinodev"
+    href: "https://www.datacamp.com/portfolio/flinodev",
   },
   {
     icon: "devtalles",
-    href: "https://cursos.devtalles.com/certificates/qtc394twqu"
+    href: "https://cursos.devtalles.com/certificates/qtc394twqu",
   },
 ];
-
 ---
 
 <PageLayout title="Francisco Lino :: Software Developer" description={SITE.DESCRIPTION}>
-
   <!-- Light Mode: Particles -->
-  <div class='absolute inset-0 block dark:hidden'>
-    <div id='particles1' class='fixed inset-0'></div>
-    <div id='particles2' class='fixed inset-0'></div>
-    <div id='particles3' class='fixed inset-0'></div>
+  <div class="absolute inset-0 block dark:hidden">
+    <div id="particles1" class="fixed inset-0"></div>
+    <div id="particles2" class="fixed inset-0"></div>
+    <div id="particles3" class="fixed inset-0"></div>
   </div>
 
   <!-- Dark Theme: Stars -->
-  <div class='absolute inset-0 bg-black hidden dark:block'>
-    <div id='stars1' class='fixed inset-0'></div>
-    <div id='stars2' class='fixed inset-0'></div>
-    <div id='stars3' class='fixed inset-0'></div>
+  <div class="absolute inset-0 bg-black hidden dark:block">
+    <div id="stars1" class="fixed inset-0"></div>
+    <div id="stars2" class="fixed inset-0"></div>
+    <div id="stars3" class="fixed inset-0"></div>
   </div>
 
   <!-- Dark Theme: Twinkling Stars / Metors -->
   <div id="galaxy" class="fixed inset-0">
     <div class="hidden dark:block">
-      <TwinklingStars/>
-      <MeteorShower/>
+      <TwinklingStars />
+      <MeteorShower />
     </div>
   </div>
 
   <script is:inline src="/js/bg.js"></script>
-  
+
   <!-- HERO -->
   <section class="relative h-screen w-full">
-    <div id="planetcont" class='animate absolute inset-0 top-1/4 overflow-hidden'>
-      <div id="crescent" class='absolute top-0 left-1/2 -translate-x-1/2 w-[250vw] min-h-[100vh] aspect-square rounded-full p-[1px] bg-gradient-to-b from-black/25 dark:from-white/75 from-0% to-transparent to-5%'>
-        <div id="planet" class='w-full h-full bg-white dark:bg-black rounded-full p-[1px] overflow-hidden flex justify-center'>
-          <div id="blur" class='w-full h-20 rounded-full bg-neutral-900/25 dark:bg-white/25 blur-3xl'/>
+    <div id="planetcont" class="animate absolute inset-0 top-1/4 overflow-hidden">
+      <div
+        id="crescent"
+        class="absolute top-0 left-1/2 -translate-x-1/2 w-[250vw] min-h-[100vh] aspect-square rounded-full p-[1px] bg-gradient-to-b from-black/25 dark:from-white/75 from-0% to-transparent to-5%"
+      >
+        <div
+          id="planet"
+          class="w-full h-full bg-white dark:bg-black rounded-full p-[1px] overflow-hidden flex justify-center"
+        >
+          <div
+            id="blur"
+            class="w-full h-20 rounded-full bg-neutral-900/25 dark:bg-white/25 blur-3xl"
+          >
+          </div>
         </div>
       </div>
     </div>
     <div class="animate absolute h-full w-full flex items-center justify-center">
-      <div class='relative w-full h-full flex items-center justify-center'>
-        <div class='p-5 text-center'>
-          <p class='animated text-lg md:text-xl lg:text-2xl font-semibold opacity-75'>
+      <div class="relative w-full h-full flex items-center justify-center">
+        <div class="p-5 text-center">
+          <p class="animated text-lg md:text-xl lg:text-2xl font-semibold opacity-75">
             Hola, soy Francisco Lino
           </p>
-          <p class='animated text-2xl md:text-3xl lg:text-4xl font-bold uppercase text-black dark:text-white'>
+          <p
+            class="animated text-2xl md:text-3xl lg:text-4xl font-bold uppercase text-black dark:text-white"
+          >
             Software Developer
           </p>
-          <p class='animated text-sm md:text-base lg:text-lg opacity-75'>
+          <p class="animated text-sm md:text-base lg:text-lg opacity-75">
             Apasionado por el desarrollo de software, la IA, y la ciberseguridad
           </p>
-          <div id="ctaButtons" class='animated flex flex-wrap gap-4 justify-center mt-5'>
-            <a href='/blog' class='py-2 px-4 rounded truncate text-xs md:text-sm lg:text-base bg-black dark:bg-white text-white dark:text-black hover:opacity-75 blend'>
+          <div id="ctaButtons" class="animated flex flex-wrap gap-4 justify-center mt-5">
+            <a
+              href="/blog"
+              class="py-2 px-4 rounded truncate text-xs md:text-sm lg:text-base bg-black dark:bg-white text-white dark:text-black hover:opacity-75 blend"
+            >
               Lee mi blog
             </a>
-            <a href='/work' class='py-2 px-4 truncate rounded text-xs md:text-sm lg:text-base border border-black/25 dark:border-white/25 hover:bg-black/5 hover:dark:bg-white/15 blend'>
+            <a
+              href="/work"
+              class="py-2 px-4 truncate rounded text-xs md:text-sm lg:text-base border border-black/25 dark:border-white/25 hover:bg-black/5 hover:dark:bg-white/15 blend"
+            >
               Experiencia profesional
             </a>
           </div>
@@ -204,18 +219,55 @@ const education = [
 
   <div class="relative bg-white dark:bg-black">
     <div class="mx-auto max-w-screen-sm p-5 space-y-24 pb-16">
-
       <!-- About Section -->
       <section class="animate">
         <article>
-          <p>Soy un <i>desarrollador de software</i>, <i>aficionado a la ciberseguridad</i>, <i>escritor novato</i>, <i>músico de ocasión</i>, <i>profesor de vocación</i>, <i>estudiante de tiempo completo</i> y <i>amante del café</i>. Me entusiasma todo el bienestar que se puede producir a través de la tecnología y la educación</p>
-          <p>Me encantan los proyectos que involucran retos y desafíos que me sacan de mi zona de confort, que me conducen a aprender nuevas formas de resolver un problema, y a dominar nuevas herramientas. Creo que para crecer tienes que darle la bienvenida a lo nuevo y desconocido, dejar por un momento lo familiar y abrazar la incomodidad que ello implica.</p>
-          <bold><b>Durante mi carrera</b></bold>
-          <p>He tenido la oportunidad de trabajar como desarrollador independiente, construyendo sistemas web como apoyo en el área de la educación, aplicaciones móviles y páginas web para promocionar negocios. También he trabajado para algunas empresas del sector privado, donde he construido aplicaciones web, microservicios, API's, herramientas de monitoreo, etc.</p>
-          <p>Me he desempeñado como <b>Backend Developer</b>, <b>Frontend Developer</b> y <b>Full Stack Developer</b> en consultoras de desarrollo de software, participando el diseño, desarrollo e implementación de sistemas a la medida. Empleando tecnologías como <b>NodeJS</b>, <b>Express</b>, <b>Angular</b>, <b>NextJS</b>, <b>Flutter</b>, <b>Google Cloud Platform</b>, <b>Docker</b>, <b>Firebase</b>, entre otras. </p>
-          <bold><b>Hoy</b></bols>
-          <p>Actualmente trabajo como desarrollador <b>Full Stack Developer</b> manteniendo API's con tecnologías como <b> NodeJS</b> y <b>Golang</b>, en el frontend participo en el desarrollo de aplicaciones en <b>ReactJS</b> y <b>Flutter</b>. Para el manejo de datos empleo tecnologías como <b>Postgres</b>, <b>SQLite</b> y <b>Redis</b>. Adicionalmente empleo <b>Swagger</b>, <b>Postman</b> y <b>Newman</b>.</p> 
-          <p>Me gusta aprender nuevas tecnologías y herramientas, y aplicar mis conocimientos para resolver problemas reales. Me gusta trabajar en equipo y colaborar con otros desarrolladores para crear soluciones innovadoras.</p>
+          <p>
+            Soy un <i>desarrollador de software</i>, <i>aficionado a la ciberseguridad</i>, <i
+              >escritor novato</i
+            >, <i>músico de ocasión</i>, <i>profesor de vocación</i>, <i
+              >estudiante de tiempo completo</i
+            > y <i>amante del café</i>. Me entusiasma todo el bienestar que se puede producir a
+            través de la tecnología y la educación
+          </p>
+          <p>
+            Me encantan los proyectos que involucran retos y desafíos que me sacan de mi zona de
+            confort, que me conducen a aprender nuevas formas de resolver un problema, y a dominar
+            nuevas herramientas. Creo que para crecer tienes que darle la bienvenida a lo nuevo y
+            desconocido, dejar por un momento lo familiar y abrazar la incomodidad que ello implica.
+          </p>
+          <p><b>Durante mi carrera</b></p>
+          <p>
+            He tenido la oportunidad de trabajar como desarrollador independiente, construyendo
+            sistemas web como apoyo en el área de la educación, aplicaciones móviles y páginas web
+            para promocionar negocios. También he trabajado para algunas empresas del sector
+            privado, donde he construido aplicaciones web, microservicios, API's, herramientas de
+            monitoreo, etc.
+          </p>
+          <p>
+            Me he desempeñado como <b>Backend Developer</b>, <b>Frontend Developer</b> y <b
+              >Full Stack Developer</b
+            > en consultoras de desarrollo de software, participando el diseño, desarrollo e implementación
+            de sistemas a la medida. Empleando tecnologías como <b>NodeJS</b>, <b>Express</b>, <b
+              >Angular</b
+            >, <b>NextJS</b>, <b>Flutter</b>, <b>Google Cloud Platform</b>, <b>Docker</b>, <b
+              >Firebase</b
+            >, entre otras.
+          </p>
+          <p><b>Hoy</b></p>
+          <p>
+            Actualmente trabajo como desarrollador <b>Full Stack Developer</b> manteniendo API's con tecnologías
+            como <b> NodeJS</b> y <b>Golang</b>, en el frontend participo en el desarrollo de
+            aplicaciones en <b>ReactJS</b> y <b>Flutter</b>. Para el manejo de datos empleo
+            tecnologías como <b>Postgres</b>, <b>SQLite</b> y <b>Redis</b>. Adicionalmente empleo <b
+              >Swagger</b
+            >, <b>Postman</b> y <b>Newman</b>.
+          </p>
+          <p>
+            Me gusta aprender nuevas tecnologías y herramientas, y aplicar mis conocimientos para
+            resolver problemas reales. Me gusta trabajar en equipo y colaborar con otros
+            desarrolladores para crear soluciones innovadoras.
+          </p>
         </article>
       </section>
 
@@ -223,21 +275,26 @@ const education = [
       <section class="animate">
         <div class="space-y-4">
           <div class="flex justify-between">
-            <p class="font-semibold text-black dark:text-white">
-              Posts recientes
-            </p>
-            <a href="/blog" class="w-fit col-span-3 group flex gap-1 items-center underline decoration-[.5px] decoration-black/25 dark:decoration-white/50 hover:decoration-black dark:hover:decoration-white text-black dark:text-white underline-offset-2 blend">
-              <span class="text-black/75 dark:text-white/75 group-hover:text-black group-hover:dark:text-white blend">
+            <p class="font-semibold text-black dark:text-white">Posts recientes</p>
+            <a
+              href="/blog"
+              class="w-fit col-span-3 group flex gap-1 items-center underline decoration-[.5px] decoration-black/25 dark:decoration-white/50 hover:decoration-black dark:hover:decoration-white text-black dark:text-white underline-offset-2 blend"
+            >
+              <span
+                class="text-black/75 dark:text-white/75 group-hover:text-black group-hover:dark:text-white blend"
+              >
                 Todos los posts
               </span>
             </a>
           </div>
           <ul class="space-y-4">
-            {posts.map((post) => (
-              <li>
-                <ArrowCard entry={post} />
-              </li>
-            ))}
+            {
+              posts.map((post) => (
+                <li>
+                  <ArrowCard entry={post} />
+                </li>
+              ))
+            }
           </ul>
         </div>
       </section>
@@ -245,18 +302,13 @@ const education = [
       <!-- Tech Stack Section -->
       <section class="animate">
         <div class="space-y-4">
-          <p class="font-semibold text-black dark:text-white">
-            Stack tecnológico
+          <p class="font-semibold text-black dark:text-white">Stack tecnológico</p>
+          <p>
+            En el transcurso de mi carrera he tenido la oportunidad de trabajar con las siguientes
+            herramientas:
           </p>
-          <p>En el transcurso de mi carrera he tenido la oportunidad de trabajar con las siguientes herramientas:</p>
           <div class="flex flex-wrap items-center gap-2 mt-5">
-            {stack.map(item => (
-              <StackCard 
-                text={item.text}
-                icon={item.icon}
-                href={item.href}
-              />
-            ))}
+            {stack.map((item) => <StackCard text={item.text} icon={item.icon} href={item.href} />)}
           </div>
         </div>
       </section>
@@ -265,71 +317,73 @@ const education = [
       <section class="animate">
         <div class="space-y-4">
           <div class="flex justify-between">
-            <p class="font-semibold text-black dark:text-white">
-              Proyectos recientes
-            </p>
-            <a href="/projects" class="w-fit col-span-3 group flex gap-1 items-center underline decoration-[.5px] decoration-black/25 dark:decoration-white/50 hover:decoration-black dark:hover:decoration-white text-black dark:text-white underline-offset-2 blend">
-              <span class="text-black/75 dark:text-white/75 group-hover:text-black group-hover:dark:text-white blend">
+            <p class="font-semibold text-black dark:text-white">Proyectos recientes</p>
+            <a
+              href="/projects"
+              class="w-fit col-span-3 group flex gap-1 items-center underline decoration-[.5px] decoration-black/25 dark:decoration-white/50 hover:decoration-black dark:hover:decoration-white text-black dark:text-white underline-offset-2 blend"
+            >
+              <span
+                class="text-black/75 dark:text-white/75 group-hover:text-black group-hover:dark:text-white blend"
+              >
                 Todos los proyectos
               </span>
             </a>
           </div>
           <ul class="space-y-4">
-            {projects.map((project) => (
-              <li>
-                <ArrowCard entry={project} />
-              </li>
-            ))}
+            {
+              projects.map((project) => (
+                <li>
+                  <ArrowCard entry={project} />
+                </li>
+              ))
+            }
           </ul>
         </div>
       </section>
 
       <section class="animate">
         <div class="space-y-4">
-          <p class="font-semibold text-black dark:text-white">
-            Educación continua
-          </p>
+          <p class="font-semibold text-black dark:text-white">Educación continua</p>
           <p>
-            Con el paso del tiempo, la tecnología avanza a pasos agigantados, y mantenerse actualizado es imprescindible. 
-            Te comparto mis perfiles en algunas de las plataformas de aprendizaje en donde día a día me capacito para encontrarme mejor preparado.
+            Con el paso del tiempo, la tecnología avanza a pasos agigantados, y mantenerse
+            actualizado es imprescindible. Te comparto mis perfiles en algunas de las plataformas de
+            aprendizaje en donde día a día me capacito para encontrarme mejor preparado.
           </p>
 
           <div class="flex justify-center flex-wrap items-center gap-4 mt-5">
-            {education.map(item => (
-              <EducationCard 
-                icon={item.icon}
-                href={item.href}
-              />
-            ))}
+            {education.map((item) => <EducationCard icon={item.icon} href={item.href} />)}
           </div>
-          
         </div>
       </section>
 
       <!-- Contact Section -->
       <section class="animate">
         <div>
-          <p class="font-semibold text-black dark:text-white">
-            Contáctame
-          </p>
-          <p>
-            Comunícate conmigo, con gusto te atenderé.
-          </p>
+          <p class="font-semibold text-black dark:text-white">Contáctame</p>
+          <p>Comunícate conmigo, con gusto te atenderé.</p>
           <div class="grid grid-cols-4 gap-y-2 mt-4 auto-cols-min">
-            {SOCIALS.map(social => (
-              <div class="col-span-1 flex items-center gap-1">
-                <span class="whitespace-nowrap truncate">
-                  {social.NAME}
-                </span>
-              </div>
-              <div class="col-span-3 truncate">
-                <a href={social.HREF} target="_blank" rel="noopener noreferrer" class="w-fit col-span-3 group flex gap-1 items-center underline decoration-[.5px] decoration-black/25 dark:decoration-white/50 hover:decoration-black dark:hover:decoration-white text-black dark:text-white underline-offset-2 blend">
-                  <span class="text-black/75 dark:text-white/75 group-hover:text-black group-hover:dark:text-white blend">
-                    {social.TEXT}
-                  </span>
-                </a>
-              </div>
-            ))}
+            {
+              SOCIALS.map((social) => (
+                <>
+                  <div class="col-span-1 flex items-center gap-1">
+                    <span class="whitespace-nowrap truncate">{social.NAME}</span>
+                  </div>
+                  <div class="col-span-3 truncate">
+                    <a
+                      href={social.HREF}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="w-fit col-span-3 group flex gap-1 items-center underline decoration-[.5px] decoration-black/25 dark:decoration-white/50 hover:decoration-black dark:hover:decoration-white text-black dark:text-white underline-offset-2 blend"
+                    >
+                      <span class="text-black/75 dark:text-white/75 group-hover:text-black group-hover:dark:text-white blend">
+                        {social.TEXT}
+                      </span>
+                    </a>
+                  </div>
+                </>
+              ))
+            }
+          </div>
         </div>
       </section>
     </div>

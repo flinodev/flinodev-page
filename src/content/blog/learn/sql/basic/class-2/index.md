@@ -17,16 +17,16 @@ tags:
 
 ### ¿Qué es SQL?
 
-SQL significa **Structured Query Language**.  
+SQL significa **Structured Query Language**.
 
 Es el lenguaje que usamos para consultar y manipular bases de datos.
 
 Con SQL podemos:
-  - consultar información
-  - filtrar datos
-  - ordenar datos
-  - agrupar información
 
+- consultar información
+- filtrar datos
+- ordenar datos
+- agrupar información
 
 ### Primera consulta: SELECT
 
@@ -35,17 +35,19 @@ La instrucción más importante es SELECT.
 Sirve para **ver información de una tabla.**
 
 Estructura básica:
+
 ```sql
 SELECT columnas
 FROM tabla;
 ```
+
 ### Ejemplos
 
-| id | nombre | edad | ciudad |
-|----|--------|------|--------|
-| 1  | Ana    | 20   | CDMX   |
-| 2  | Luis   | 22   | Puebla |
-| 3  | Marta  | 21   | CDMX   |
+| id  | nombre | edad | ciudad |
+| --- | ------ | ---- | ------ |
+| 1   | Ana    | 20   | CDMX   |
+| 2   | Luis   | 22   | Puebla |
+| 3   | Marta  | 21   | CDMX   |
 
 Mostrar todos los nombres:
 
@@ -55,12 +57,14 @@ FROM users;
 ```
 
 Mostrar nombre y edad:
+
 ```sql
 SELECT nombre, edad
 FROM users;
 ```
 
 Mostrar todas las columnas:
+
 ```sql
 SELECT *
 FROM users;
@@ -70,13 +74,13 @@ FROM users;
 
 ### Ejercicios
 
-Dada la tabla 
+Dada la tabla
 
-| id | nombre | edad | ciudad |
-|----|--------|------|--------|
-| 1  | Ana    | 20   | CDMX   |
-| 2  | Luis   | 22   | Puebla |
-| 3  | Marta  | 21   | CDMX   |
+| id  | nombre | edad | ciudad |
+| --- | ------ | ---- | ------ |
+| 1   | Ana    | 20   | CDMX   |
+| 2   | Luis   | 22   | Puebla |
+| 3   | Marta  | 21   | CDMX   |
 
 1. Mostrar solo los nombres.
 

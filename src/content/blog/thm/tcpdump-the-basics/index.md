@@ -17,9 +17,10 @@ image: "/images/blog/tcpdump.webp"
 ![tcpdump the basics](/images/blog/tcpdump.webp)
 
 ### Task 1
+
 ## Introduction
 
-1. **What is the name of the library that is associated with tcpdump?**  
+1. **What is the name of the library that is associated with tcpdump?**
 
 <blockquote>
 libpcap
@@ -28,6 +29,7 @@ libpcap
 ---
 
 ### Task 2
+
 ## Basic Packet Capture
 
 1. **What option can you add to your command to display addresses only in numeric format?**
@@ -39,11 +41,13 @@ libpcap
 ---
 
 ### Task 3
+
 ## Filtering Expressions
 
 1. **How many packets in traffic.pcap use the ICMP protocol?**
 
-Run this command: 
+Run this command:
+
 ```bash
 tcpdump icmp -r traffic.pcap | wc -l
 ```
@@ -54,7 +58,8 @@ tcpdump icmp -r traffic.pcap | wc -l
 
 2. **What is the IP address of the host that asked for the MAC address of 192.168.124.137?**
 
-Run this command: 
+Run this command:
+
 ```bash
 tcpdump -r traffic.pcap dst 192.168.124.137 and arp
 ```
@@ -65,7 +70,8 @@ tcpdump -r traffic.pcap dst 192.168.124.137 and arp
 
 3. **What hostname (subdomain) appears in the first DNS query?**
 
-Run this command: 
+Run this command:
+
 ```bash
 tcpdump -r traffic.pcap port 53 -c 1
 ```
@@ -77,11 +83,13 @@ mirrors.rockylinux.org
 ---
 
 ### Task 4
+
 ## Advanced Filtering
 
 1. **How many packets have only the TCP Reset (RST) flag set?**
 
-Run this command: 
+Run this command:
+
 ```bash
 tcpdump -r traffic.pcap "tcp[tcpflags] == tcp-rst" | wc -l
 ```
@@ -92,7 +100,8 @@ tcpdump -r traffic.pcap "tcp[tcpflags] == tcp-rst" | wc -l
 
 2. **What is the IP address of the host that sent packets larger than 15000 bytes?**
 
-Run this command: 
+Run this command:
+
 ```bash
 tcpdump -r traffic.pcap greater 15000 -c 1 -n
 ```
@@ -104,11 +113,13 @@ tcpdump -r traffic.pcap greater 15000 -c 1 -n
 ---
 
 ### Task 5
+
 ## Displaying Packets
 
 1. **What is the MAC address of the host that sent an ARP request?**
 
-Run this command: 
+Run this command:
+
 ```bash
 tcpdump arp -r traffic.pcap -e
 ```
@@ -120,6 +131,7 @@ tcpdump arp -r traffic.pcap -e
 ---
 
 ### Task 6
+
 ## Conclusion
 
 1. **Ensure you have noted the various Tcpdump options we covered in this room.**

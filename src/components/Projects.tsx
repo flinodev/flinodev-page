@@ -10,17 +10,13 @@ type Props = {
 
 export default function Projects({ data, tags }: Props) {
   const [filter, setFilter] = createSignal(new Set<string>());
-  const [projects, setProjects] = createSignal<CollectionEntry<"projects">[]>(
-    []
-  );
+  const [projects, setProjects] = createSignal<CollectionEntry<"projects">[]>([]);
 
   createEffect(() => {
     setProjects(
       data.filter((entry) =>
         Array.from(filter()).every((value) =>
-          entry.data.tags.some(
-            (tag: string) => tag.toLowerCase() === String(value).toLowerCase()
-          )
+          entry.data.tags.some((tag: string) => tag.toLowerCase() === String(value).toLowerCase())
         )
       )
     );
@@ -28,10 +24,7 @@ export default function Projects({ data, tags }: Props) {
 
   function toggleTag(tag: string) {
     setFilter(
-      (prev) =>
-        new Set(
-          prev.has(tag) ? [...prev].filter((t) => t !== tag) : [...prev, tag]
-        )
+      (prev) => new Set(prev.has(tag) ? [...prev].filter((t) => t !== tag) : [...prev, tag])
     );
   }
 
@@ -39,9 +32,7 @@ export default function Projects({ data, tags }: Props) {
     <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
       <div class="col-span-3 sm:col-span-1">
         <div class="sticky top-24">
-          <div class="text-sm font-semibold uppercase mb-2 text-black dark:text-white">
-            Filtros
-          </div>
+          <div class="text-sm font-semibold uppercase mb-2 text-black dark:text-white">Filtros</div>
           <ul class="flex flex-wrap sm:flex-col gap-1.5">
             <For each={tags}>
               {(tag) => (
