@@ -10,7 +10,7 @@
     font-style: normal;
     font-display: swap;
   }
-  
+
   @font-face {
     font-family: "Atkinson";
     src: url("/fonts/atkinson-bold.woff") format("woff");
@@ -25,7 +25,6 @@ html {
   color-scheme: light;
   background-color: white;
   font-family: "Atkinson", sans-serif;
-  
 }
 
 html.dark {
@@ -89,7 +88,9 @@ article {
 .animate {
   opacity: 0;
   transform: translateY(50px);
-  transition: opacity 1s ease, transform 1s ease;
+  transition:
+    opacity 1s ease,
+    transform 1s ease;
 }
 
 .animate.show {
@@ -108,7 +109,7 @@ article img {
  * TWINKLE STARS
  */
 
- #twinkle-star.template {
+#twinkle-star.template {
   @apply absolute -left-full; /* hide offscreen */
 }
 
@@ -116,13 +117,12 @@ article img {
   @apply animate-twinkle; /* defined in tailwind.config */
 }
 
-
 /**
  * Meteors
  */
 
 #meteors .shower {
-  @apply absolute inset-0 top-0;;
+  @apply absolute inset-0 top-0;
   @apply left-1/2 -translate-x-1/2;
   @apply w-screen aspect-square;
 }
@@ -157,18 +157,18 @@ article img {
   text-align: center;
   outline: none;
   text-decoration: none !important;
-  color: #0A66C2 !important;
+  color: #0a66c2 !important;
   width: 200px;
   height: 32px;
   border-radius: 16px;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   font-family: "SF Pro Text", Helvetica, sans-serif;
   font-weight: bold;
 }
 
 .libutton:hover {
-  color: #FFFFFF !important;
-  background-color: #0A66C2;
+  color: #ffffff !important;
+  background-color: #0a66c2;
 }
 
 #badge {

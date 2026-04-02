@@ -54,7 +54,7 @@ WHERE ciudad != 'CDMX';
 Dada la tabla:
 
 | nombre | edad | ciudad |
-|--------|------|--------|
+| ------ | ---- | ------ |
 | Ana    | 20   | CDMX   |
 | Luis   | 22   | Puebla |
 | Marta  | 21   | CDMX   |

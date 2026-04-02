@@ -12,10 +12,11 @@ image: "/images/blog/cyber-kill-chain.webp"
 ---
 
 ### Task 1
+
 ## Challenge
 
 1. **What is the first flag you receive after successfully detecting sample1.exe?**  
-_¿Cuál es la primera bandera que recibes después de detectar exitosamente sample1.exe?_  
+   _¿Cuál es la primera bandera que recibes después de detectar exitosamente sample1.exe?_
 
 **Paso 1**: Después de analizar el **sample1.exe** con ayuda de **Malware SandBox** copiamos el hash SHA256
 
@@ -29,12 +30,12 @@ _¿Cuál es la primera bandera que recibes después de detectar exitosamente sam
 THM{f3cbf08151a11a6a331db9c6cf5f4fe4}
 </blockquote>
 
-***
+---
 
 2. **What is the second flag you receive after successfully detecting sample2.exe?**  
-_¿Cuál es la segunda bandera que recibes después de detectar exitosamente sample2.exe?_  
+   _¿Cuál es la segunda bandera que recibes después de detectar exitosamente sample2.exe?_
 
-**Paso 1**: Con ayuda de **Malware SandBox** analizamos el **sample2.exe** 
+**Paso 1**: Con ayuda de **Malware SandBox** analizamos el **sample2.exe**
 
 ![Imagen de nomenclatura](/images/blog/summit_3.webp)
 
@@ -50,10 +51,10 @@ _¿Cuál es la segunda bandera que recibes después de detectar exitosamente sam
 THM{2ff48a3421a938b388418be273f4806d}
 </blockquote>
 
-***
+---
 
 3.  **What is the third flag you receive after successfully detecting sample3.exe?**  
-_¿Cuál es la tercera bandera que recibes después de detectar exitosamente sample3.exe?_  
+    _¿Cuál es la tercera bandera que recibes después de detectar exitosamente sample3.exe?_
 
 **Paso 1**: Después de analizar el reporte generado por **Malware SandBox** para el malware **sample3.exe** notamos como este hace peticiones a IP's de un dominio en particular.
 
@@ -67,10 +68,10 @@ _¿Cuál es la tercera bandera que recibes después de detectar exitosamente sam
 THM{4eca9e2f61a19ecd5df34c788e7dce16}
 </blockquote>
 
-***
+---
 
 4. **What is the fourth flag you receive after successfully detecting sample4.exe?**  
-_¿Cuál es la cuarta bandera que recibes después de detectar exitosamente sample4.exe?_  
+   _¿Cuál es la cuarta bandera que recibes después de detectar exitosamente sample4.exe?_
 
 **Paso 1**: Después de analizar el reporte generado por **Malware SandBox** para el malware **sample4.exe** notamos que hace modificaciones al registro deshabilitando la monitoreo en tiempo real
 
@@ -83,10 +84,10 @@ _¿Cuál es la cuarta bandera que recibes después de detectar exitosamente samp
 THM{c956f455fc076aea829799c0876ee399}
 </blockquote>
 
-***
+---
 
 5. **What is the fifth flag you receive after successfully detecting sample5.exe?**  
-_¿Cuál es la primera bandera que recibes después de detectar exitosamente sample5.exe?_  
+   _¿Cuál es la primera bandera que recibes después de detectar exitosamente sample5.exe?_
 
 **Paso 1**: Después de analizar el log adjunto en el correo, podemos notar un patrón en las peticiones hechas por el equipo infectado.
 
@@ -99,10 +100,10 @@ _¿Cuál es la primera bandera que recibes después de detectar exitosamente sam
 THM{46b21c4410e47dc5729ceadef0fc722e}
 </blockquote>
 
-***
+---
 
 6. **What is the final flag you receive from Sphinx?**  
-_¿Cuál es la bandera final que recibes de Sphinx?_  
+   _¿Cuál es la bandera final que recibes de Sphinx?_
 
 **Paso 1**: Después de analizar el log adjunto en el correo, podemos notar que el malware ejecuta cierto comandos cuya salida redirige al archivo _exfiltr8.log_.
 
@@ -111,7 +112,6 @@ _¿Cuál es la bandera final que recibes de Sphinx?_
 **Paso 2**: Agregamos una regla que detecte las ejecuciones del cmd que contengan la palabra _exfiltr8.log_.
 
 ![Imagen de nomenclatura](/images/blog/summit_22.webp)
-
 
 <blockquote>
 THM{c8951b2ad24bbcbac60c16cf2c83d92c}

@@ -19,9 +19,10 @@ image: "/images/blog/session-management.webp"
 Learn about session management and the different attacks that can be performed against insecure implementations.
 
 ### Task 1
+
 ## Introduction
 
-1. **I am ready to learn about session management!**  
+1. **I am ready to learn about session management!**
 
 <blockquote>
 No answer needed
@@ -30,6 +31,7 @@ No answer needed
 ---
 
 ### Task 2
+
 ## What is Session Management?
 
 1. **Which state in the session management lifecycle deals with user's pressing the logout button?**  
@@ -59,6 +61,7 @@ Session Expiry
 ---
 
 ### Task 3
+
 ## Authentication vs Authorisation
 
 1. **What is the name of the process in the IAAA model that would be responsible for tracking your actions and logging them?**  
@@ -82,9 +85,10 @@ Authorisation
 ---
 
 ### Task 4
+
 ## Cookies vs Tokens
 
-1. **What cookie attribute can be used to ensure that the cookie is only transmitted via secure HTTPS channels?**    
+1. **What cookie attribute can be used to ensure that the cookie is only transmitted via secure HTTPS channels?**  
 _¿Qué atributo de cookie puede usarse para garantizar que la cookie solo se transmita a través de canales HTTPS seguros?_
 <blockquote>
 secure
@@ -105,6 +109,7 @@ Authorization: Bearer
 ---
 
 ### Task 5
+
 ## Securing the Session Lifecycle
 
 1. **What phase of the session management lifecycle would be vulnerable if you could predict what the value of a session would be?**  
@@ -134,6 +139,7 @@ Session Creation
 ---
 
 ### Task 6
+
 ## Exploiting Insecure Session Management
 
 1. **What is the username of the student with the name X?**  
@@ -176,11 +182,11 @@ y,n,n
 ---
 
 ### Task 7
+
 ## Conclusion
 
-1. **I understand the session management lifecycle and how to secure it!**  
+1. **I understand the session management lifecycle and how to secure it!**
 
 <blockquote>
 No answer needed
 </blockquote>
-

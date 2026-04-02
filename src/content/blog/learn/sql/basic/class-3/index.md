@@ -22,6 +22,7 @@ tags:
 ---
 
 ## Clase 3 — Filtrar datos con WHERE
+
 ### Qué es WHERE
 
 La cláusula WHERE permite filtrar datos.  
@@ -32,12 +33,13 @@ Es decir, seleccionar solo los registros que cumplen una condición.
 Dada la tabla:
 
 | nombre | edad | ciudad |
-|--------|------|--------|
+| ------ | ---- | ------ |
 | Ana    | 20   | CDMX   |
 | Luis   | 22   | Puebla |
 | Marta  | 21   | CDMX   |
 
 **Consulta:**
+
 ```sql
 SELECT nombre
 FROM users
@@ -47,21 +49,19 @@ WHERE ciudad = 'CDMX';
 **Resultado:**
 
 | nombre |
-|--------|
+| ------ |
 | Ana    |
 | Marta  |
 
-
 ### Operadores comunes
 
-| operador  |  significado  |
-|-----------|---------------|
-| =         | igual         |
-| >         | mayor que     |
-| <         | menor que     |
-| >=        | mayor o igual |
-| <=        | menor o igual |
-
+| operador | significado   |
+| -------- | ------------- |
+| =        | igual         |
+| >        | mayor que     |
+| <        | menor que     |
+| >=       | mayor o igual |
+| <=       | menor o igual |
 
 **Ejercicios**
 

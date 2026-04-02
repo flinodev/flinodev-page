@@ -17,9 +17,10 @@ image: "/images/blog/sql-fundamentals.webp"
 ![tcpdump the basics](/images/blog/sql-fundamentals.webp)
 
 ### Task 1
+
 ## Introduction
 
-1. **Teach me the basics of SQL!**  
+1. **Teach me the basics of SQL!**
 
 <blockquote>
 No answer needed
@@ -28,6 +29,7 @@ No answer needed
 ---
 
 ### Task 2
+
 ## Databases 101
 
 1. **What type of database should you consider using if the data you're going to be storing will vary greatly in its format?**
@@ -42,7 +44,7 @@ Non-relational database
 relational database
 </blockquote>
 
-3. **In our example, once a record of a book is inserted into our "Books" table, it would be represented as a ___ in that table?**
+3. **In our example, once a record of a book is inserted into our "Books" table, it would be represented as a \_\_\_ in that table?**
 
 <blockquote>
 row
@@ -63,6 +65,7 @@ primary key
 ---
 
 ### Task 3
+
 ## SQL
 
 1. **What serves as an interface between a database and an end user?**
@@ -80,6 +83,7 @@ SQL
 ---
 
 ### Task 4
+
 ## Database and Table Statements
 
 1. **Using the statement you've learned to list all databases, it should reveal a database with a flag for a name; what is it?**
@@ -110,6 +114,7 @@ THM{692aa7eaec2a2a827f4d1a8bed1f90e5e49d2410}
 ---
 
 ### Task 5
+
 ## CRUD Operations
 
 1. **Using the `tools_db` database, what is the name of the tool in the `hacking_tools` table that can be used to perform man-in-the-middle attacks on wireless networks?**
@@ -140,6 +145,7 @@ USB attacks
 ---
 
 ### Task 6
+
 ## Clauses
 
 1. **Using the `tools_db` database, what is the total number of distinct `categories` in the `hacking_tools` table?**
@@ -181,6 +187,7 @@ Wi-Fi Pineapple
 ---
 
 ### Task 7
+
 ## Operators
 
 1. **Using the `tools_db` database, which tool falls under the Multi-tool `category` and is useful for pentesters and geeks?**
@@ -222,6 +229,7 @@ Lan Turtle
 ---
 
 ### Task 8
+
 ## Functions
 
 1. **Using the tools_db database, what is the tool with the longest name based on character length?**
@@ -263,6 +271,7 @@ Flipper Zero & iCopy-XS
 ---
 
 ### Task 9
+
 ## Conclusion
 
 1. **I'm ready to move forward and learn more about web application security.**

@@ -5,7 +5,7 @@ export const SITE: Site = {
   TITLE: "{flino|dev}",
   DESCRIPTION:
     "Sitio oficial de Francisco Suriel Lino, desarrollador de software, freelancer y profesor. Comparto el conocimiento y entusiasmo por la tecnología y la programación",
-  AUTHOR: "Mark Horn",
+  AUTHOR: "Francisco Suriel Lino",
 };
 
 // Work Page
