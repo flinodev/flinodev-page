@@ -1,13 +1,14 @@
 ---
 import type { CollectionEntry } from "astro:content";
 import { formatDate, readingTime } from "@lib/utils";
+import ViewCounter from "@/components/ViewCounter";
 
 type Props = {
   entry: CollectionEntry<"projects"> | CollectionEntry<"blog">;
 };
 
 const { entry } = Astro.props;
-const { collection, data, body } = entry;
+const { collection, data, body, slug } = entry;
 const { title, summary, date } = data;
 
 const demoUrl = collection === "projects" ? data.demoUrl : null;
@@ -61,6 +62,7 @@ const repoUrl = collection === "projects" ? data.repoUrl : null;
       </svg>
       {readingTime(body)}
     </div>
+    <ViewCounter slug={slug} client:load />
   </div>
   <h1 class="text-3xl font-semibold text-black dark:text-white mt-2">
     {title}

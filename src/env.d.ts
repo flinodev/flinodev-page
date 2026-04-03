@@ -4,6 +4,8 @@
 interface ImportMetaEnv {
   readonly GISCUS_REPO_ID: string;
   readonly GISCUS_CATEGORY_ID: string;
+  readonly UPSTASH_REDIS_REST_URL: string;
+  readonly UPSTASH_REDIS_REST_TOKEN: string;
 }
 
 interface ImportMeta {
