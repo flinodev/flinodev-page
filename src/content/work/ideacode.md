@@ -5,9 +5,15 @@ dateStart: "05/01/2021"
 dateEnd: "01/07/2025"
 ---
 
-Mi principal función en <a href="https://realmetrics.io/" target="_blank" rel="noopener noreferrer">Idea Code</a> fue colaborar con los equipos de frontend y backend en el diseño, desarrollo, implementación y mantenimiento de las aplicaciones, mediante el uso de cómputo en la nube (**Google Cloud Platform**), tecnologías **Javascript** como **NodeJS**, **Express**, **NestJS**, **Angular**, y otras tecnologías como **Firebase**, **Retool**, **Material**, etc. Algunas de mis aportaciones más destacadas fueron:
+En <a href="https://realmetrics.io/" target="_blank" rel="noopener noreferrer">Idea Code</a> colaboré con los equipos de frontend y backend en el diseño, desarrollo e implementación de aplicaciones en la nube.
 
-- Migración de funciones serveless (**CloudFunctions**) que procesan un gran volumen de datos a tecnologías más escalables (**Cloud Task**, **Google Kubernetes Engine**).
-- Optimización de almacenamiento mediante la aplicación de políticas de almacenamiento (**Google Cloud Storage**) y el rediseño de procesos.
-- Generación de alarmas en tiempo real para el monitoreo de procesos internos (**Cloud Schedule**, **Google Pub/Sub**).
-- Desarrollo e implementación de API's y migración de servicios aplicando los principios de la arquitectura limpia.
+**Logros destacados:**
+
+- Migré funciones serverless que procesaban gran volumen de datos a arquitecturas más escalables basadas en contenedores, mejorando significativamente el rendimiento.
+- Optimicé costos de almacenamiento aplicando políticas de ciclo de vida y rediseñando procesos internos.
+- Implementé sistema de alertas en tiempo real para monitoreo proactivo de procesos críticos.
+- Desarrollé y migré múltiples APIs aplicando principios de arquitectura limpia, mejorando la mantenibilidad del código.
+
+**Stack tecnológico:**
+
+Google Cloud Platform • Node.js • Express • NestJS • Angular • Firebase • Retool • Material • Cloud Functions • Cloud Tasks • Kubernetes • Cloud Storage • Cloud Scheduler • Pub/Sub

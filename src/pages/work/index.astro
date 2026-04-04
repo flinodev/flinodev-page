@@ -4,6 +4,7 @@ import type { CollectionEntry } from "astro:content";
 import PageLayout from "@layouts/PageLayout.astro";
 import TopLayout from "@layouts/TopLayout.astro";
 import BottomLayout from "@layouts/BottomLayout.astro";
+import StackCard from "@components/StackCard.astro";
 import { WORK } from "@consts";
 
 const collection = await getCollection("work");
@@ -22,13 +23,33 @@ const work = await Promise.all(
 function formatWorkDate(input: Date | string) {
   if (typeof input === "string") return input;
 
-  const month = input.toLocaleDateString("en-US", {
+  const month = input.toLocaleDateString("es-ES", {
     month: "short",
   });
 
   const year = new Date(input).getFullYear();
   return `${month} ${year}`;
 }
+
+// Calcular estadísticas
+const startYear = 2017;
+const currentYear = new Date().getFullYear();
+const yearsOfExperience = currentYear - startYear;
+const totalCompanies = collection.length;
+
+// Tecnologías destacadas (extraídas manualmente de las experiencias)
+const topSkills = [
+  { text: "JavaScript", icon: "javascript", href: "https://www.javascript.com" },
+  { text: "TypeScript", icon: "typescript", href: "https://www.typescriptlang.org" },
+  { text: "Node.js", icon: "node", href: "https://nodejs.org/en" },
+  { text: "Angular", icon: "angular", href: "https://angular.dev" },
+  { text: "React", icon: "react", href: "https://es.react.dev" },
+  { text: "Golang", icon: "go", href: "https://go.dev" },
+  { text: "PostgreSQL", icon: "postgres", href: "https://www.postgresql.org/" },
+  { text: "GCP", icon: "gcp", href: "https://cloud.google.com" },
+  { text: "Docker", icon: "docker", href: "https://www.docker.com" },
+  { text: "Kubernetes", icon: "kubernetes", href: "https://kubernetes.io/" },
+];
 ---
 
 <PageLayout title={WORK.TITLE} description={WORK.DESCRIPTION}>
@@ -36,8 +57,25 @@ function formatWorkDate(input: Date | string) {
     <div class="animate page-heading">
       {WORK.TITLE}
     </div>
-    <!--Add LinkedIn button -->
-    <div class="animate flex flex-wrap gap-4 justify-left mt-5">
+
+    <!-- Estadísticas -->
+    <div class="animate grid grid-cols-2 md:grid-cols-3 gap-4 mt-8 mb-8">
+      <div class="text-center p-4 bg-black/5 dark:bg-white/5 rounded-lg border border-black/10 dark:border-white/20">
+        <p class="text-3xl font-bold text-black dark:text-white">{yearsOfExperience}+</p>
+        <p class="text-sm opacity-75">Años experiencia</p>
+      </div>
+      <div class="text-center p-4 bg-black/5 dark:bg-white/5 rounded-lg border border-black/10 dark:border-white/20">
+        <p class="text-3xl font-bold text-black dark:text-white">{totalCompanies}</p>
+        <p class="text-sm opacity-75">Empresas</p>
+      </div>
+      <div class="text-center p-4 bg-black/5 dark:bg-white/5 rounded-lg border border-black/10 dark:border-white/20 col-span-2 md:col-span-1">
+        <p class="text-3xl font-bold text-black dark:text-white">10+</p>
+        <p class="text-sm opacity-75">Tecnologías</p>
+      </div>
+    </div>
+
+    <!-- LinkedIn button -->
+    <div class="animate flex flex-wrap gap-4 justify-left">
       <a
         class="libutton text-xs md:text-sm lg:text-base"
         href="https://www.linkedin.com/comm/mynetwork/discovery-see-all?usecase=PEOPLE_FOLLOWS&followMember=flinodev"
@@ -46,22 +84,56 @@ function formatWorkDate(input: Date | string) {
       >
     </div>
   </TopLayout>
+
   <BottomLayout>
-    <ul>
+    <!-- Timeline de experiencias -->
+    <div class="relative">
       {
-        work.map((entry) => (
-          <li class="animate border-b border-black/10 dark:border-white/25 mt-4 py-8 first-of-type:mt-0 first-of-type:pt-0 last-of-type:border-none">
-            <div class="text-sm uppercase mb-4">
-              {formatWorkDate(entry.data.dateStart)} - {formatWorkDate(entry.data.dateEnd)}
+        work.map((entry, index) => (
+          <div class="animate relative pl-8 md:pl-12 pb-12 last:pb-0">
+            {/* Línea vertical del timeline */}
+            {index < work.length - 1 && (
+              <div class="absolute left-[11px] md:left-[19px] top-6 bottom-0 w-[2px] bg-black/10 dark:bg-white/25" />
+            )}
+
+            {/* Punto del timeline */}
+            <div class="absolute left-0 md:left-2 top-1.5 w-6 h-6 rounded-full bg-black dark:bg-white border-4 border-white dark:border-black" />
+
+            {/* Card de experiencia */}
+            <div class="group bg-white dark:bg-black border border-black/10 dark:border-white/25 rounded-lg p-6 hover:border-black/25 dark:hover:border-white/50 transition-all duration-300 hover:shadow-lg">
+              {/* Header: Empresa y fechas */}
+              <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-2 mb-3">
+                <div>
+                  <h3 class="text-xl font-bold text-black dark:text-white group-hover:underline">
+                    {entry.data.company}
+                  </h3>
+                  <p class="text-base font-semibold opacity-75 mt-1">
+                    {entry.data.role}
+                  </p>
+                </div>
+                <div class="text-sm opacity-75 md:text-right whitespace-nowrap">
+                  {formatWorkDate(entry.data.dateStart)} - {formatWorkDate(entry.data.dateEnd)}
+                </div>
+              </div>
+
+              {/* Contenido */}
+              <article class="prose dark:prose-invert prose-sm max-w-none prose-li:my-1">
+                <entry.Content />
+              </article>
             </div>
-            <div class="text-black dark:text-white font-semibold">{entry.data.company}</div>
-            <div class="text-sm font-semibold">{entry.data.role}</div>
-            <article class="prose dark:prose-invert">
-              <entry.Content />
-            </article>
-          </li>
+          </div>
         ))
       }
-    </ul>
+    </div>
+
+    <!-- Sección de Skills destacadas -->
+    <div class="animate mt-16 pt-8 border-t border-black/10 dark:border-white/25">
+      <h2 class="text-2xl font-bold text-black dark:text-white mb-6">
+        🛠️ Tecnologías más utilizadas
+      </h2>
+      <div class="flex flex-wrap items-center gap-2">
+        {topSkills.map((skill) => <StackCard text={skill.text} icon={skill.icon} href={skill.href} />)}
+      </div>
+    </div>
   </BottomLayout>
 </PageLayout>

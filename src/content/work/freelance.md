@@ -5,9 +5,15 @@ dateStart: "01/15/2018"
 dateEnd: "Now"
 ---
 
-Desarrollador de software para pequeñas y medianas empresa, asociaciones civiles y emprendedores. Desarrollé desde landing pages para promocionar los productos y servicios de mis clientes, pasando por aplicaciones móviles, hasta sistemas web completos para emprendedores del área educativa. Entre mis desarrollos más destacados están:
+Desarrollo soluciones de software para pequeñas y medianas empresas, asociaciones civiles y emprendedores. Creo desde landing pages y aplicaciones móviles hasta sistemas web completos.
 
-- Sistema web como apoyo a la enseñanza del idioma inglés.
-- Sistema web para la gestión de la información financiera de una pequeña empresa.
-- Aplicación móvil para la gestión de calendarios, anuncios y recursos digitales de una asociación civil.
-- Sistema web como apoyo a la enseñanza de alumnos con dificultades en el aprendizaje.
+**Proyectos destacados:**
+
+- Desarrollé plataforma web educativa para la enseñanza del idioma inglés con sistema de ejercicios interactivos y seguimiento de progreso.
+- Creé sistema de gestión financiera para PyME con dashboards en tiempo real y generación automática de reportes.
+- Implementé aplicación móvil para asociación civil con gestión de calendarios, anuncios y recursos digitales, mejorando la comunicación con sus miembros.
+- Diseñé plataforma educativa adaptativa para alumnos con dificultades de aprendizaje, con ejercicios personalizados y seguimiento individual.
+
+**Stack tecnológico:**
+
+React • Angular • Node.js • Flutter • Firebase • JavaScript • TypeScript
