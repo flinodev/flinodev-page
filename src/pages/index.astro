@@ -20,6 +20,11 @@ const projects = (await getCollection("projects"))
   .sort((a, b) => b.data.date.getTime() - a.data.date.getTime())
   .slice(0, 3);
 
+// Calcular años de experiencia desde primer empleo profesional en desarrollo (Real Metrics - Feb 2019)
+const startYear = 2019;
+const currentYear = new Date().getFullYear();
+const yearsOfExperience = currentYear - startYear;
+
 // Agrupar stack por categoría
 const stackByCategory = stack.reduce((acc, item) => {
   const category = item.category || "Otros";
@@ -127,11 +132,11 @@ const stackByCategory = stack.reduce((acc, item) => {
           <!-- Métricas visuales -->
           <div class="grid grid-cols-2 md:grid-cols-4 gap-4 p-6 bg-black/5 dark:bg-white/5 rounded-lg border border-black/10 dark:border-white/20">
             <div class="text-center">
-              <p class="text-3xl font-bold text-black dark:text-white">5+</p>
+              <p class="text-3xl font-bold text-black dark:text-white">{yearsOfExperience}+</p>
               <p class="text-sm opacity-75">Años experiencia</p>
             </div>
             <div class="text-center">
-              <p class="text-3xl font-bold text-black dark:text-white">50+</p>
+              <p class="text-3xl font-bold text-black dark:text-white">30+</p>
               <p class="text-sm opacity-75">Proyectos</p>
             </div>
             <div class="text-center">
