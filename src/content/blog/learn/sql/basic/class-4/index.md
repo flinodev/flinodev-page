@@ -8,11 +8,8 @@ Los estudiantes comienzan a entender cómo construir consultas más precisas par
 date: "March 5 2026"
 draft: false
 tags:
-  - sql
-  - operadores-logicos-sql
-  - and-or-sql
-  - consultas-avanzadas-sql
-  - filtrar-datos-sql
+  - SQL
+  - Base de datos
 ---
 
 ## Clase 4 — Múltiples condiciones

@@ -14,11 +14,8 @@ Este tema es fundamental para realizar consultas útiles dentro de una base de d
 date: "March 5 2026"
 draft: false
 tags:
-  - sql
-  - where-sql
-  - filtrar-datos
-  - consultas-sql
-  - sql-basico
+  - SQL
+  - Base de datos
 ---
 
 ## Clase 3 — Filtrar datos con WHERE

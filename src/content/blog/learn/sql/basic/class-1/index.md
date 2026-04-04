@@ -6,12 +6,8 @@ El objetivo de esta clase es que el estudiante entienda que una base de datos fu
 date: "March 5 2026"
 draft: false
 tags:
-  - sql
-  - base-de-datos
-  - introduccion-sql
-  - aprendiendo-sql
-  - datos-estructurados
-  - fundamentos-de-datos
+  - SQL
+  - Base de datos
 image: "/images/blog/main.webp"
 ---
 
