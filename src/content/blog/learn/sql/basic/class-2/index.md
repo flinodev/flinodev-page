@@ -6,11 +6,8 @@ El estudiante aprende a seleccionar columnas específicas o todas las columnas d
 date: "March 5 2026"
 draft: false
 tags:
-  - sql
-  - select-sql
-  - consultas-sql
-  - aprendiendo-sql
-  - lenguaje-sql
+  - SQL
+  - Base de datos
 ---
 
 ## Clase 2 — Introducción a SQL
