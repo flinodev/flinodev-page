@@ -1,6 +1,7 @@
 ---
 import { type CollectionEntry, getCollection } from "astro:content";
 import Giscus from "@/components/Giscus.astro";
+import ShareButtons from "@/components/ShareButtons.astro";
 
 type Props = {
   entry: CollectionEntry<"blog"> | CollectionEntry<"projects">;
@@ -28,6 +29,8 @@ const next = items[(index + 1) % items.length];
   <article>
     <Content />
   </article>
+
+  <ShareButtons title={data.title} />
 
   {showComments && (
     <div class="mt-12 pt-8 border-t border-black/10 dark:border-white/25">
