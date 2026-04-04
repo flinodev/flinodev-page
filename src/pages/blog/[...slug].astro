@@ -5,6 +5,8 @@ import TopLayout from "@layouts/TopLayout.astro";
 import BottomLayout from "@layouts/BottomLayout.astro";
 import ArticleTopLayout from "@layouts/ArticleTopLayout.astro";
 import ArticleBottomLayout from "@layouts/ArticleBottomLayout.astro";
+import { SITE } from "@consts";
+import { readingTime } from "@lib/utils";
 
 // Create the static blog pages
 export async function getStaticPaths() {
@@ -18,10 +20,80 @@ export async function getStaticPaths() {
 // Get the requested post
 type Props = CollectionEntry<"blog">;
 const post = Astro.props;
-const { title, summary, image = "/flinodev.webp" } = post.data;
+const { title, summary, date, tags, image = "/flinodev.webp" } = post.data;
+
+// Calculate reading time for structured data
+const wordCount = post.body.replace(/<[^>]+>/g, "").split(/\s+/).length;
+const readingTimeMinutes = Math.ceil(wordCount / 200);
+
+// Build canonical URL
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+
+// Structured data for BlogPosting
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  headline: title,
+  description: summary,
+  image: new URL(image, Astro.site).toString(),
+  datePublished: date.toISOString(),
+  dateModified: date.toISOString(),
+  author: {
+    "@type": "Person",
+    name: SITE.AUTHOR,
+    url: Astro.site?.toString(),
+  },
+  publisher: {
+    "@type": "Person",
+    name: SITE.AUTHOR,
+    logo: {
+      "@type": "ImageObject",
+      url: new URL("/flinodev.webp", Astro.site).toString(),
+    },
+  },
+  mainEntityOfPage: {
+    "@type": "WebPage",
+    "@id": canonicalURL.toString(),
+  },
+  keywords: tags.join(", "),
+  articleSection: "Technology",
+  inLanguage: "es-ES",
+  timeRequired: `PT${readingTimeMinutes}M`,
+};
+
+// Breadcrumb structured data
+const breadcrumbStructuredData = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Inicio",
+      item: Astro.site?.toString(),
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "Blog",
+      item: new URL("/blog", Astro.site).toString(),
+    },
+    {
+      "@type": "ListItem",
+      position: 3,
+      name: title,
+      item: canonicalURL.toString(),
+    },
+  ],
+};
 ---
 
 <PageLayout title={title} description={summary} image={image}>
+  <!-- Structured Data -->
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbStructuredData)} />
+  </Fragment>
   <TopLayout>
     <div class="animate">
       <ArticleTopLayout entry={post} />
