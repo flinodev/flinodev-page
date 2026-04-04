@@ -5,9 +5,15 @@ dateStart: "02/19/2019"
 dateEnd: "04/15/2021"
 ---
 
-Desarrollador web especializado en tecnologías Javascript. En <a href="https://realmetrics.io/" target="_blank" rel="noopener noreferrer">RealMetrics</a> colaboraré con el equipo de frontend en el desarrollo y mantenimiento de la aplicación web de la compañía, haciendo uso de tecnologías como **Angular**, **Angular Material**, **Saas**, **Firebase**, entre otras. Algunas de mis aportaciones más destacadas son:
+En <a href="https://realmetrics.io/" target="_blank" rel="noopener noreferrer">RealMetrics</a> colaboré con el equipo de frontend en el desarrollo y mantenimiento de la aplicación web de la compañía.
 
-- Generación dinámica de componentes web, mediante configuración en base datos.
-- Migración del portal de una versión legacy a la más reciente en su momento.
-- Mejoras en el proceso de la administración de permisos de la aplicación web.
-- Desarrollo e Implementación de módulos mediante la aplicación de los principios de la Arquitectura Limpia.
+**Logros destacados:**
+
+- Desarrollé sistema de generación dinámica de componentes web configurables desde base de datos, permitiendo personalización sin código.
+- Lideré la migración del portal de una versión legacy a la más reciente, mejorando el rendimiento y la experiencia de usuario.
+- Rediseñé el sistema de administración de permisos, simplificando la gestión de roles y accesos.
+- Implementé nuevos módulos aplicando principios de arquitectura limpia, facilitando el mantenimiento y escalabilidad del código.
+
+**Stack tecnológico:**
+
+JavaScript • TypeScript • Angular • Angular Material • Sass • Firebase

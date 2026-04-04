@@ -5,8 +5,10 @@ dateStart: "10/15/2017"
 dateEnd: "11/30/2018"
 ---
 
-Profesor de asignaturas como Informática, Matemáticas y Física a nivel medio superior. Entre mis funciones puedo mencionar:
+Impartí clases de Informática, Matemáticas y Física a nivel medio superior, combinando enseñanza tradicional con herramientas digitales para mejorar el aprendizaje de los estudiantes.
 
-- Generación de material didáctico mediante plataforma digital.
-- Generación de preguntas para exámenes parciales.
-- Mentorias y tutorías a alumnos.
+**Responsabilidades:**
+
+- Desarrollé material didáctico interactivo usando plataformas digitales, facilitando el aprendizaje autónomo.
+- Diseñé exámenes parciales alineados con los objetivos de aprendizaje de cada asignatura.
+- Brindé mentorías y tutorías personalizadas para apoyar a estudiantes con diferentes ritmos de aprendizaje.

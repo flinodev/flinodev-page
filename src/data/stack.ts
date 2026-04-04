@@ -1,5 +1,12 @@
 export const stack = [
   // Lenguajes
+
+  {
+    text: "Golang",
+    icon: "go",
+    href: "https://go.dev",
+    category: "Lenguajes",
+  },
   {
     text: "Javascript",
     icon: "javascript",

@@ -5,10 +5,16 @@ dateStart: "01/08/2025"
 dateEnd: "Now"
 ---
 
-Como desarrollador FullStack de <a href="https://montebit.io/" target="_blank" rel="noopener noreferrer">Montebit</a> mi principal función es mantener las API's de la <a href="https://rayyo.mx/" target="_blank" rel="noopener noreferrer">aplicación móvil</a> agregando nuevas características y dando mantenimiento al código ya existente. Además recientemente fui asignado a un proyecto de <a href="https://cryptobox.mx/" target="_blank" rel="noopener noreferrer">cajeros automáticos</a> en el cual me encargo del mantenimiento y desarrollo del front y backend del mismo. Todo esto junto a un equipo repleto de personas talentosas, cuyo esmero se ve reflejado en los maravilloso productos que ofrece la compañía.
+En <a href="https://montebit.io/" target="_blank" rel="noopener noreferrer">Montebit</a> desarrollo y mantengo las APIs de la aplicación móvil de la empresa y el sistema de cajeros automáticos. Trabajo con un equipo talentoso creando productos innovadores en el sector fintech.
 
-- Mantenimiento y desarrollo del backend de la aplicación mobile de la compañía con tecnologías y herramientas como: **Golang**, **Redis**, **Postgres**, **API Rest**, entre otras.
-- Mantenimiento y desarrollo del front y backend de cajeros automáticos con tecnologías como **ReactJS**, **NodeJS**, **SQLite**, **Java** y **C#**.
-- Generación de pruebas automatizadas mediante **Postman** y **Newman**, empleando **Javascript** para el flujo de CI/CD.
-- Generación de pruebas unitarias en la API empleando **Ginkgo**, **Gomega** y **Gomock**.
-- Generación de la documentación de la API empleando **Swagger**.
+**Logros destacados:**
+
+- Desarrollo y mantenimiento del backend de la app móvil, agregando nuevas características y optimizando el rendimiento de las APIs.
+- Implementación completa del frontend y backend de cajeros automáticos con arquitectura escalable.
+- Implementé pruebas automatizadas integrando el flujo de CI/CD para mejorar la calidad del código.
+- Desarrollé pruebas unitarias robustas, aumentando significativamente la cobertura de testing.
+- Creé documentación completa de APIs, facilitando la integración para otros equipos.
+
+**Stack tecnológico:**
+
+Golang • Redis • Postgres • React • Node.js • SQLite • Postman • Newman • JavaScript • Ginkgo • Gomega • Swagger
