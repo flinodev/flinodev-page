@@ -13,6 +13,12 @@ const projects = (await getCollection("projects"))
 const tags = [...new Set(projects.flatMap((project) => project.data.tags))].sort((a, b) =>
   a.localeCompare(b)
 );
+
+// Calcular estadísticas
+const totalProjects = projects.length;
+const totalTechs = tags.length;
+const currentYear = new Date().getFullYear();
+const projectsThisYear = projects.filter((project) => project.data.date.getFullYear() === currentYear).length;
 ---
 
 <PageLayout
@@ -23,6 +29,34 @@ const tags = [...new Set(projects.flatMap((project) => project.data.tags))].sort
   <TopLayout>
     <div class="animate page-heading">
       {PROJECTS.TITLE}
+    </div>
+
+    <!-- Estadísticas -->
+    <div class="animate grid grid-cols-3 gap-4 mt-8">
+      <div class="text-center p-4 bg-black/5 dark:bg-white/5 rounded-lg border border-black/10 dark:border-white/20">
+        <p class="text-3xl font-bold text-black dark:text-white">{totalProjects}</p>
+        <p class="text-sm opacity-75">Proyectos</p>
+      </div>
+      <div class="text-center p-4 bg-black/5 dark:bg-white/5 rounded-lg border border-black/10 dark:border-white/20">
+        <p class="text-3xl font-bold text-black dark:text-white">{totalTechs}</p>
+        <p class="text-sm opacity-75">Tecnologías</p>
+      </div>
+      <div class="text-center p-4 bg-black/5 dark:bg-white/5 rounded-lg border border-black/10 dark:border-white/20">
+        <p class="text-3xl font-bold text-black dark:text-white">{projectsThisYear}</p>
+        <p class="text-sm opacity-75">Nuevos en {currentYear}</p>
+      </div>
+    </div>
+
+    <!-- Link a GitHub -->
+    <div class="animate flex justify-center gap-4 mt-6">
+      <a
+        href="https://github.com/flinodev"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="py-2 px-4 rounded text-xs md:text-sm bg-black dark:bg-white text-white dark:text-black hover:opacity-75 transition-opacity duration-200"
+      >
+        🔗 Ver más en GitHub
+      </a>
     </div>
   </TopLayout>
   <BottomLayout>
