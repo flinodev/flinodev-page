@@ -19,6 +19,14 @@ const projects = (await getCollection("projects"))
   .filter((project) => !project.data.draft)
   .sort((a, b) => b.data.date.getTime() - a.data.date.getTime())
   .slice(0, 3);
+
+// Agrupar stack por categoría
+const stackByCategory = stack.reduce((acc, item) => {
+  const category = item.category || "Otros";
+  if (!acc[category]) acc[category] = [];
+  acc[category].push(item);
+  return acc;
+}, {} as Record<string, typeof stack>);
 ---
 
 <PageLayout title="Francisco Lino :: Software Developer" description={SITE.DESCRIPTION}>
@@ -67,30 +75,30 @@ const projects = (await getCollection("projects"))
     </div>
     <div class="animate absolute h-full w-full flex items-center justify-center">
       <div class="relative w-full h-full flex items-center justify-center">
-        <div class="p-5 text-center">
-          <p class="animated text-lg md:text-xl lg:text-2xl font-semibold opacity-75">
-            Hola, soy Francisco Lino
+        <div class="p-5 text-center space-y-2">
+          <p class="animated text-lg md:text-xl font-semibold opacity-75">
+            Full Stack • Security
           </p>
           <p
-            class="animated text-2xl md:text-3xl lg:text-4xl font-bold uppercase text-black dark:text-white"
+            class="animated text-xl md:text-2xl lg:text-3xl font-bold uppercase text-black dark:text-white leading-tight"
           >
-            Software Developer
+            Desarrollo web escalable y seguro
           </p>
-          <p class="animated text-sm md:text-base lg:text-lg opacity-75">
-            Apasionado por el desarrollo de software, la IA, y la ciberseguridad
+          <p class="animated text-sm md:text-base opacity-75">
+            Node.js • React • Angular • Golang • PostgreSQL
           </p>
-          <div id="ctaButtons" class="animated flex flex-wrap gap-4 justify-center mt-5">
+          <div id="ctaButtons" class="animated flex flex-wrap gap-4 justify-center mt-4">
             <a
               href="/blog"
               class="py-2 px-4 rounded truncate text-xs md:text-sm lg:text-base bg-black dark:bg-white text-white dark:text-black hover:opacity-75 blend"
             >
-              Lee mi blog
+              📚 Ver tutoriales
             </a>
             <a
-              href="/work"
+              href="/projects"
               class="py-2 px-4 truncate rounded text-xs md:text-sm lg:text-base border border-black/25 dark:border-white/25 hover:bg-black/5 hover:dark:bg-white/15 blend"
             >
-              Experiencia profesional
+              💼 Ver mi portfolio
             </a>
           </div>
         </div>
@@ -102,61 +110,120 @@ const projects = (await getCollection("projects"))
     <div class="mx-auto max-w-screen-sm p-5 space-y-24 pb-16">
       <!-- About Section -->
       <section class="animate">
-        <article>
-          <p>
-            Soy un <i>desarrollador de software</i>, <i>aficionado a la ciberseguridad</i>, <i
-              >escritor novato</i
-            >, <i>músico de ocasión</i>, <i>profesor de vocación</i>, <i
-              >estudiante de tiempo completo</i
-            > y <i>amante del café</i>. Me entusiasma todo el bienestar que se puede producir a
-            través de la tecnología y la educación
-          </p>
-          <p>
-            Me encantan los proyectos que involucran retos y desafíos que me sacan de mi zona de
-            confort, que me conducen a aprender nuevas formas de resolver un problema, y a dominar
-            nuevas herramientas. Creo que para crecer tienes que darle la bienvenida a lo nuevo y
-            desconocido, dejar por un momento lo familiar y abrazar la incomodidad que ello implica.
-          </p>
-          <p><b>Durante mi carrera</b></p>
-          <p>
-            He tenido la oportunidad de trabajar como desarrollador independiente, construyendo
-            sistemas web como apoyo en el área de la educación, aplicaciones móviles y páginas web
-            para promocionar negocios. También he trabajado para algunas empresas del sector
-            privado, donde he construido aplicaciones web, microservicios, API's, herramientas de
-            monitoreo, etc.
-          </p>
-          <p>
-            Me he desempeñado como <b>Backend Developer</b>, <b>Frontend Developer</b> y <b
-              >Full Stack Developer</b
-            > en consultoras de desarrollo de software, participando el diseño, desarrollo e implementación
-            de sistemas a la medida. Empleando tecnologías como <b>NodeJS</b>, <b>Express</b>, <b
-              >Angular</b
-            >, <b>NextJS</b>, <b>Flutter</b>, <b>Google Cloud Platform</b>, <b>Docker</b>, <b
-              >Firebase</b
-            >, entre otras.
-          </p>
-          <p><b>Hoy</b></p>
-          <p>
-            Actualmente trabajo como desarrollador <b>Full Stack Developer</b> manteniendo API's con tecnologías
-            como <b> NodeJS</b> y <b>Golang</b>, en el frontend participo en el desarrollo de
-            aplicaciones en <b>ReactJS</b> y <b>Flutter</b>. Para el manejo de datos empleo
-            tecnologías como <b>Postgres</b>, <b>SQLite</b> y <b>Redis</b>. Adicionalmente empleo <b
-              >Swagger</b
-            >, <b>Postman</b> y <b>Newman</b>.
-          </p>
-          <p>
-            Me gusta aprender nuevas tecnologías y herramientas, y aplicar mis conocimientos para
-            resolver problemas reales. Me gusta trabajar en equipo y colaborar con otros
-            desarrolladores para crear soluciones innovadoras.
-          </p>
-        </article>
+        <div class="space-y-6">
+          <!-- Intro personal -->
+          <article class="space-y-4">
+            <p>
+              Soy un <b>Full Stack Developer</b> con pasión por crear soluciones que impacten positivamente.
+              Me especializo en desarrollo web, APIs escalables y ciberseguridad.
+            </p>
+            <p>
+              Me encantan los proyectos que involucran retos y desafíos que me sacan de mi zona de
+              confort, que me conducen a aprender nuevas formas de resolver un problema, y a dominar
+              nuevas herramientas.
+            </p>
+          </article>
+
+          <!-- Métricas visuales -->
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-4 p-6 bg-black/5 dark:bg-white/5 rounded-lg border border-black/10 dark:border-white/20">
+            <div class="text-center">
+              <p class="text-3xl font-bold text-black dark:text-white">5+</p>
+              <p class="text-sm opacity-75">Años experiencia</p>
+            </div>
+            <div class="text-center">
+              <p class="text-3xl font-bold text-black dark:text-white">50+</p>
+              <p class="text-sm opacity-75">Proyectos</p>
+            </div>
+            <div class="text-center">
+              <p class="text-3xl font-bold text-black dark:text-white">15+</p>
+              <p class="text-sm opacity-75">Tecnologías</p>
+            </div>
+            <div class="text-center">
+              <p class="text-3xl font-bold text-black dark:text-white">∞</p>
+              <p class="text-sm opacity-75">Cafés ☕</p>
+            </div>
+          </div>
+
+          <!-- Especialidades -->
+          <div class="space-y-3">
+            <p class="font-semibold text-black dark:text-white">Especializado en:</p>
+            <ul class="space-y-2">
+              <li class="flex items-start gap-3">
+                <span class="text-lg">⚡</span>
+                <span class="opacity-75">Desarrollo de APIs REST y microservicios con Node.js y Golang</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-lg">🎨</span>
+                <span class="opacity-75">Aplicaciones web con React, Angular y Next.js</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-lg">☁️</span>
+                <span class="opacity-75">Arquitecturas escalables en cloud (GCP, AWS)</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-lg">🔒</span>
+                <span class="opacity-75">Seguridad web y ethical hacking</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Featured Content Section -->
+      <section class="animate">
+        <div class="space-y-4">
+          <p class="font-semibold text-black dark:text-white">⭐ Contenido destacado</p>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <!-- Post más popular - actualiza con tu post real -->
+            <a
+              href="/blog/thm/jwt-security"
+              class="group p-6 border border-black/10 dark:border-white/20 rounded-lg hover:bg-black/5 dark:hover:bg-white/5 transition-colors duration-300"
+            >
+              <div class="flex items-start gap-4">
+                <span class="text-3xl group-hover:scale-110 transition-transform duration-300">🔥</span>
+                <div class="flex-1">
+                  <p class="font-semibold text-black dark:text-white group-hover:underline">
+                    JWT Security
+                  </p>
+                  <p class="text-sm opacity-75 mt-1">
+                    Aprende sobre seguridad en JSON Web Tokens
+                  </p>
+                  <p class="text-xs opacity-50 mt-2">
+                    Post más leído
+                  </p>
+                </div>
+              </div>
+            </a>
+
+            <!-- Proyecto destacado - actualiza con tu proyecto real -->
+            <a
+              href="/projects/teslo-shop"
+              class="group p-6 border border-black/10 dark:border-white/20 rounded-lg hover:bg-black/5 dark:hover:bg-white/5 transition-colors duration-300"
+            >
+              <div class="flex items-start gap-4">
+                <span class="text-3xl group-hover:scale-110 transition-transform duration-300">💎</span>
+                <div class="flex-1">
+                  <p class="font-semibold text-black dark:text-white group-hover:underline">
+                    Teslo Shop
+                  </p>
+                  <p class="text-sm opacity-75 mt-1">
+                    E-commerce completo con Next.js y PostgreSQL
+                  </p>
+                  <p class="text-xs opacity-50 mt-2">
+                    Proyecto destacado
+                  </p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
       </section>
 
       <!-- Blog Preview Section -->
       <section class="animate">
         <div class="space-y-4">
           <div class="flex justify-between">
-            <p class="font-semibold text-black dark:text-white">Posts recientes</p>
+            <p class="font-semibold text-black dark:text-white">📝 Posts recientes</p>
             <a
               href="/blog"
               class="w-fit col-span-3 group flex gap-1 items-center underline decoration-[.5px] decoration-black/25 dark:decoration-white/50 hover:decoration-black dark:hover:decoration-white text-black dark:text-white underline-offset-2 blend"
@@ -183,13 +250,26 @@ const projects = (await getCollection("projects"))
       <!-- Tech Stack Section -->
       <section class="animate">
         <div class="space-y-4">
-          <p class="font-semibold text-black dark:text-white">Stack tecnológico</p>
+          <p class="font-semibold text-black dark:text-white">⚙️ Stack tecnológico</p>
           <p>
             En el transcurso de mi carrera he tenido la oportunidad de trabajar con las siguientes
             herramientas:
           </p>
-          <div class="flex flex-wrap items-center gap-2 mt-5">
-            {stack.map((item) => <StackCard text={item.text} icon={item.icon} href={item.href} />)}
+          <div class="space-y-6 mt-6">
+            {
+              Object.entries(stackByCategory).map(([category, items]) => (
+                <div>
+                  <h3 class="text-sm font-semibold text-black dark:text-white mb-3 opacity-75">
+                    {category}
+                  </h3>
+                  <div class="flex flex-wrap items-center gap-2">
+                    {items.map((item) => (
+                      <StackCard text={item.text} icon={item.icon} href={item.href} />
+                    ))}
+                  </div>
+                </div>
+              ))
+            }
           </div>
         </div>
       </section>
@@ -198,7 +278,7 @@ const projects = (await getCollection("projects"))
       <section class="animate">
         <div class="space-y-4">
           <div class="flex justify-between">
-            <p class="font-semibold text-black dark:text-white">Proyectos recientes</p>
+            <p class="font-semibold text-black dark:text-white">🚀 Proyectos recientes</p>
             <a
               href="/projects"
               class="w-fit col-span-3 group flex gap-1 items-center underline decoration-[.5px] decoration-black/25 dark:decoration-white/50 hover:decoration-black dark:hover:decoration-white text-black dark:text-white underline-offset-2 blend"
@@ -224,7 +304,7 @@ const projects = (await getCollection("projects"))
 
       <section class="animate">
         <div class="space-y-4">
-          <p class="font-semibold text-black dark:text-white">Educación continua</p>
+          <p class="font-semibold text-black dark:text-white">🎓 Educación continua</p>
           <p>
             Con el paso del tiempo, la tecnología avanza a pasos agigantados, y mantenerse
             actualizado es imprescindible. Te comparto mis perfiles en algunas de las plataformas de
@@ -240,7 +320,7 @@ const projects = (await getCollection("projects"))
       <!-- Contact Section -->
       <section class="animate">
         <div>
-          <p class="font-semibold text-black dark:text-white">Contáctame</p>
+          <p class="font-semibold text-black dark:text-white">📬 Contáctame</p>
           <p>Comunícate conmigo, con gusto te atenderé.</p>
           <div class="grid grid-cols-4 gap-y-2 mt-4 auto-cols-min">
             {
