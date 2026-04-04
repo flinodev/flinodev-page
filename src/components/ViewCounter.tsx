@@ -14,8 +14,13 @@ export default function ViewCounter(props: ViewCounterProps) {
   // Fetch and optionally track view
   onMount(async () => {
     try {
-      // Increment view count (only once per page load)
-      if (props.trackView !== false && !hasTracked) {
+      // Check if we're in development mode
+      const isDev = import.meta.env.DEV;
+
+      // Only increment view count in production
+      const shouldTrack = props.trackView !== false && !hasTracked && !isDev;
+
+      if (shouldTrack) {
         hasTracked = true;
         const response = await fetch(`/api/views/${props.slug}`, {
           method: 'POST',
@@ -23,10 +28,15 @@ export default function ViewCounter(props: ViewCounterProps) {
         const data = await response.json();
         setViews(data.views || 0);
       } else {
-        // Just fetch current views
+        // Just fetch current views (in dev or when tracking disabled)
         const response = await fetch(`/api/views/${props.slug}`);
         const data = await response.json();
         setViews(data.views || 0);
+      }
+
+      // Log in development mode
+      if (isDev) {
+        console.log(`[DEV] ViewCounter: Not incrementing views for "${props.slug}"`);
       }
     } catch (error) {
       console.error('Error fetching views:', error);
