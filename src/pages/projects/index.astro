@@ -63,5 +63,31 @@ const projectsThisYear = projects.filter((project) => project.data.date.getFullY
     <div class="animate">
       <Projects client:load tags={tags} data={projects} />
     </div>
+
+    <!-- CTA Final -->
+    <div class="animate mt-12 p-6 bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/20 rounded-lg text-center">
+      <h3 class="text-xl font-bold text-black dark:text-white mb-3">
+        🚀 ¿Tienes un proyecto en mente?
+      </h3>
+      <p class="opacity-75 mb-4">
+        Estoy disponible para colaborar en proyectos interesantes. Hablemos sobre cómo puedo ayudarte.
+      </p>
+      <div class="flex flex-wrap gap-3 justify-center">
+        <a
+          href="mailto:flinodev@gmail.com"
+          class="py-2 px-4 rounded text-xs md:text-sm bg-black dark:bg-white text-white dark:text-black hover:opacity-75 transition-opacity duration-200"
+        >
+          📧 Contactar por email
+        </a>
+        <a
+          href="https://www.linkedin.com/in/flinodev/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="py-2 px-4 rounded text-xs md:text-sm border border-black/25 dark:border-white/25 hover:bg-black/5 dark:hover:bg-white/5 transition-colors duration-200"
+        >
+          💼 Contactar por LinkedIn
+        </a>
+      </div>
+    </div>
   </BottomLayout>
 </PageLayout>
