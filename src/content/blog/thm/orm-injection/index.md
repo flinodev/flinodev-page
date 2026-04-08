@@ -5,10 +5,10 @@ date: "Apr 05 2026"
 draft: false
 tags:
   - Web Application Pentesting
-  - Network Security
+  - Injection Attacks
   - THM
   - TryHackMe
-image: "/images/blog/net-sec-challenge.webp"
+image: "/images/blog/orm_injection.webp"
 ---
 
 <a href="https://tryhackme.com/room/orminjection" target="_blank" rel="noopener noreferrer" style="text-decoration: none; cursor:pointer">Jr Web Application Pentesting > Injection Attacks > ORM Injection
