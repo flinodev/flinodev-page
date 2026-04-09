@@ -1,0 +1,30 @@
+---
+import PageLayout from "@layouts/PageLayout.astro";
+import Container from "@components/Container.astro";
+---
+
+<PageLayout title="404: Não Encontrado" description="Página não encontrada">
+  <Container size="md">
+    <div class="flex flex-col items-center justify-center min-h-[70vh] text-center space-y-6">
+      <h1 class="text-9xl font-bold text-black dark:text-white">404</h1>
+      <h2 class="text-3xl font-semibold text-black dark:text-white">Página Não Encontrada</h2>
+      <p class="text-lg opacity-75 max-w-md">
+        Ops! A página que você está procurando não existe ou foi movida.
+      </p>
+      <div class="flex gap-4 mt-8">
+        <a
+          href="/pt"
+          class="py-2 px-6 rounded text-sm bg-black dark:bg-white text-white dark:text-black hover:opacity-75 transition-opacity duration-200"
+        >
+          Ir para Início
+        </a>
+        <a
+          href="/pt/blog"
+          class="py-2 px-6 rounded text-sm border border-black/25 dark:border-white/25 hover:bg-black/5 dark:hover:bg-white/5 transition-colors duration-200"
+        >
+          Ver Blog
+        </a>
+      </div>
+    </div>
+  </Container>
+</PageLayout>

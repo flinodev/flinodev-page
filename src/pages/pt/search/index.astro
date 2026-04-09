@@ -1,0 +1,37 @@
+---
+import { type CollectionEntry } from "astro:content";
+import PageLayout from "@layouts/PageLayout.astro";
+import TopLayout from "@layouts/TopLayout.astro";
+import BottomLayout from "@layouts/BottomLayout.astro";
+import Search from "@components/Search";
+import { getLangFromUrl, useTranslations } from "@i18n/config";
+import { getBlogPosts, getProjects } from "@i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = await useTranslations(lang);
+
+const posts = await getBlogPosts(lang);
+const projects = await getProjects(lang);
+
+const data = [...posts, ...projects] as CollectionEntry<"blog">[];
+---
+
+<PageLayout title={t("search.title")} description={t("search.description")}>
+  <TopLayout>
+    <div class="animate page-heading">
+      {t("search.title")}
+    </div>
+  </TopLayout>
+  <BottomLayout>
+    <div class="animate">
+      <Search
+        client:load
+        data={data}
+        translations={{
+          searchPlaceholder: t("blog.searchPlaceholder"),
+          searchResults: t("blog.searchResults"),
+        }}
+      />
+    </div>
+  </BottomLayout>
+</PageLayout>
