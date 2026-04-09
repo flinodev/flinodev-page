@@ -1,0 +1,105 @@
+{
+  "site.title": "{flino|dev}",
+  "site.description": "Official website of Francisco Suriel Lino, software developer, freelancer and teacher. I share knowledge and enthusiasm for technology and programming",
+  "site.author": "Francisco Suriel Lino",
+
+  "nav.home": "Home",
+  "nav.work": "Career",
+  "nav.blog": "Blog",
+  "nav.projects": "Projects",
+
+  "hero.name": "Francisco Lino",
+  "hero.role": "Full Stack Developer • Security",
+  "hero.tagline": "Scalable and secure web development",
+  "hero.stack": "Node.js • React • Angular • Golang • PostgreSQL",
+  "hero.cta.tutorials": "View tutorials",
+  "hero.cta.portfolio": "View my portfolio",
+
+  "about.intro.p1": "I'm a <b>Full Stack Developer</b> passionate about creating solutions that make a positive impact. I specialize in web development, scalable APIs, and cybersecurity.",
+  "about.intro.p2": "I love projects that involve challenges that push me out of my comfort zone, lead me to learn new ways to solve problems, and master new tools.",
+
+  "metrics.years": "Years experience",
+  "metrics.projects": "Projects",
+  "metrics.technologies": "Technologies",
+  "metrics.coffees": "Coffees ☕",
+
+  "specialties.title": "Specialized in:",
+  "specialties.apis": "REST API and microservices development with Node.js and Golang",
+  "specialties.web": "Web applications with React, Angular and Next.js",
+  "specialties.cloud": "Scalable cloud architectures (GCP, AWS)",
+  "specialties.security": "Web security and ethical hacking",
+
+  "featured.title": "⭐ Featured content",
+  "featured.mostRead": "Most read post",
+  "featured.highlighted": "Featured project",
+
+  "blog.title": "📝 Recent posts",
+  "blog.viewAll": "All posts",
+  "blog.filters": "Filters",
+  "blog.clearAll": "Clear all",
+  "blog.showing": "Showing {count} of {total} Posts",
+  "blog.searchPlaceholder": "What are you looking for?",
+  "blog.searchResults": "Found {count} results for {query}",
+  "blog.stats.published": "Published posts",
+  "blog.stats.categories": "Categories",
+  "blog.stats.thisYear": "Posts in {year}",
+  "blog.cta.title": "💡 Like the content?",
+  "blog.cta.description": "Follow me on social media for more tutorials, tips and content about web development and cybersecurity.",
+  "blog.cta.linkedin": "🔗 Follow me on LinkedIn",
+  "blog.cta.twitter": "🐦 Follow me on X",
+
+  "projects.title": "🚀 Recent projects",
+  "projects.viewAll": "All projects",
+  "projects.stats.total": "Projects",
+  "projects.stats.technologies": "Technologies",
+  "projects.stats.thisYear": "New in {year}",
+  "projects.github": "🔗 See more on GitHub",
+  "projects.cta.title": "🚀 Have a project in mind?",
+  "projects.cta.description": "I'm available to collaborate on interesting projects. Let's talk about how I can help you.",
+  "projects.cta.email": "📧 Contact by email",
+  "projects.cta.linkedin": "💼 Contact via LinkedIn",
+
+  "stack.title": "⚙️ Tech stack",
+  "stack.description": "Throughout my career I have had the opportunity to work with the following tools:",
+
+  "education.title": "🎓 Continuous education",
+  "education.description": "As time goes by, technology advances by leaps and bounds, and staying up to date is essential. I share my profiles on some of the learning platforms where I train every day to be better prepared.",
+
+  "contact.title": "📬 Contact me",
+  "contact.description": "Get in touch with me, I'll be happy to assist you.",
+
+  "footer.backToTop": "Back to top",
+  "footer.allSystemsNormal": "All systems normal",
+  "footer.terms": "Terms",
+  "footer.privacy": "Privacy",
+  "footer.rights": "All rights reserved",
+
+  "work.title": "Professional experience",
+  "work.description": "Professional experience.",
+  "work.stats.years": "Years experience",
+  "work.stats.companies": "Companies",
+  "work.stats.technologies": "Technologies",
+  "work.linkedin": "Follow me on LinkedIn",
+  "work.skills.title": "🛠️ Most used technologies",
+  "work.cta.title": "💼 Looking for a Full Stack developer?",
+  "work.cta.description": "Currently available for freelance projects and collaborations.",
+  "work.cta.contact": "📧 Contact",
+  "work.cta.profile": "💼 View full profile",
+
+  "projects.description": "Projects I have worked on.",
+
+  "blog.description": "Posts about web development, cybersecurity, artificial intelligence and more",
+
+  "search.title": "Search",
+  "search.description": "Search for projects and posts by keywords.",
+
+  "views.singular": "view",
+  "views.plural": "views",
+
+  "aria.search": "Search blog posts and projects on {siteTitle}",
+  "aria.rss": "Rss feed for {siteTitle}",
+  "aria.theme": "Toggle light and dark theme",
+  "aria.drawer": "Toggle drawer open and closed",
+  "aria.backToTop": "Back to top of page",
+  "aria.social": "{siteTitle} on {socialName}"
+}

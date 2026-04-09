@@ -1,0 +1,105 @@
+{
+  "site.title": "{flino|dev}",
+  "site.description": "Sitio oficial de Francisco Suriel Lino, desarrollador de software, freelancer y profesor. Comparto el conocimiento y entusiasmo por la tecnología y la programación",
+  "site.author": "Francisco Suriel Lino",
+
+  "nav.home": "Inicio",
+  "nav.work": "Carrera",
+  "nav.blog": "Blog",
+  "nav.projects": "Proyectos",
+
+  "hero.name": "Francisco Lino",
+  "hero.role": "Full Stack Developer • Security",
+  "hero.tagline": "Desarrollo web escalable y seguro",
+  "hero.stack": "Node.js • React • Angular • Golang • PostgreSQL",
+  "hero.cta.tutorials": "Ver tutoriales",
+  "hero.cta.portfolio": "Ver mi portfolio",
+
+  "about.intro.p1": "Soy un <b>Full Stack Developer</b> con pasión por crear soluciones que impacten positivamente. Me especializo en desarrollo web, APIs escalables y ciberseguridad.",
+  "about.intro.p2": "Me encantan los proyectos que involucran retos y desafíos que me sacan de mi zona de confort, que me conducen a aprender nuevas formas de resolver un problema, y a dominar nuevas herramientas.",
+
+  "metrics.years": "Años experiencia",
+  "metrics.projects": "Proyectos",
+  "metrics.technologies": "Tecnologías",
+  "metrics.coffees": "Cafés ☕",
+
+  "specialties.title": "Especializado en:",
+  "specialties.apis": "Desarrollo de APIs REST y microservicios con Node.js y Golang",
+  "specialties.web": "Aplicaciones web con React, Angular y Next.js",
+  "specialties.cloud": "Arquitecturas escalables en cloud (GCP, AWS)",
+  "specialties.security": "Seguridad web y ethical hacking",
+
+  "featured.title": "⭐ Contenido destacado",
+  "featured.mostRead": "Post más leído",
+  "featured.highlighted": "Proyecto destacado",
+
+  "blog.title": "📝 Posts recientes",
+  "blog.viewAll": "Todos los posts",
+  "blog.filters": "Filtros",
+  "blog.clearAll": "Limpiar todo",
+  "blog.showing": "Mostrando {count} de {total} Publicaciones",
+  "blog.searchPlaceholder": "¿Qué estás buscando?",
+  "blog.searchResults": "Se encontraron {count} resultados para {query}",
+  "blog.stats.published": "Posts publicados",
+  "blog.stats.categories": "Categorías",
+  "blog.stats.thisYear": "Posts en {year}",
+  "blog.cta.title": "💡 ¿Te gusta el contenido?",
+  "blog.cta.description": "Sígueme en redes sociales para más tutoriales, tips y contenido sobre desarrollo web y ciberseguridad.",
+  "blog.cta.linkedin": "🔗 Sígueme en LinkedIn",
+  "blog.cta.twitter": "🐦 Sígueme en X",
+
+  "projects.title": "🚀 Proyectos recientes",
+  "projects.viewAll": "Todos los proyectos",
+  "projects.stats.total": "Proyectos",
+  "projects.stats.technologies": "Tecnologías",
+  "projects.stats.thisYear": "Nuevos en {year}",
+  "projects.github": "🔗 Ver más en GitHub",
+  "projects.cta.title": "🚀 ¿Tienes un proyecto en mente?",
+  "projects.cta.description": "Estoy disponible para colaborar en proyectos interesantes. Hablemos sobre cómo puedo ayudarte.",
+  "projects.cta.email": "📧 Contactar por email",
+  "projects.cta.linkedin": "💼 Contactar por LinkedIn",
+
+  "stack.title": "⚙️ Stack tecnológico",
+  "stack.description": "En el transcurso de mi carrera he tenido la oportunidad de trabajar con las siguientes herramientas:",
+
+  "education.title": "🎓 Educación continua",
+  "education.description": "Con el paso del tiempo, la tecnología avanza a pasos agigantados, y mantenerse actualizado es imprescindible. Te comparto mis perfiles en algunas de las plataformas de aprendizaje en donde día a día me capacito para encontrarme mejor preparado.",
+
+  "contact.title": "📬 Contáctame",
+  "contact.description": "Comunícate conmigo, con gusto te atenderé.",
+
+  "footer.backToTop": "Ir arriba",
+  "footer.allSystemsNormal": "All systems normal",
+  "footer.terms": "Terms",
+  "footer.privacy": "Privacy",
+  "footer.rights": "All rights reserved",
+
+  "work.title": "Experiencia profesional",
+  "work.description": "Experiencia profesional.",
+  "work.stats.years": "Años experiencia",
+  "work.stats.companies": "Empresas",
+  "work.stats.technologies": "Tecnologías",
+  "work.linkedin": "Sígueme en LinkedIn",
+  "work.skills.title": "🛠️ Tecnologías más utilizadas",
+  "work.cta.title": "💼 ¿Buscas un desarrollador Full Stack?",
+  "work.cta.description": "Actualmente disponible para proyectos freelance y colaboraciones.",
+  "work.cta.contact": "📧 Contactar",
+  "work.cta.profile": "💼 Ver perfil completo",
+
+  "projects.description": "Proyectos en los que he trabajado.",
+
+  "blog.description": "Publicaciones sobre temas de desarrollo web, seguridad informática, inteligencia artificial y más",
+
+  "search.title": "Búsqueda",
+  "search.description": "Búsqueda de proyectos y posts por palabras clave.",
+
+  "views.singular": "vista",
+  "views.plural": "vistas",
+
+  "aria.search": "Search blog posts and projects on {siteTitle}",
+  "aria.rss": "Rss feed for {siteTitle}",
+  "aria.theme": "Toggle light and dark theme",
+  "aria.drawer": "Toggle drawer open and closed",
+  "aria.backToTop": "Back to top of page",
+  "aria.social": "{siteTitle} on {socialName}"
+}
