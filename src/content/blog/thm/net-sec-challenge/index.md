@@ -9,6 +9,7 @@ tags:
   - THM
   - TryHackMe
 image: "/images/blog/net-sec-challenge.webp"
+lang: "en"
 ---
 
 <a href="https://tryhackme.com/room/netsecchallenge" target="_blank" rel="noopener noreferrer" style="text-decoration: none; cursor:pointer">Jr Penetration Tester > Network Security > Net Sec Challenge

@@ -9,6 +9,7 @@ tags:
   - THM
   - TryHackMe
 image: "/images/blogldap_injection.webp"
+lang: "en"
 ---
 
 <a href="https://tryhackme.com/room/orminjection" target="_blank" rel="noopener noreferrer" style="text-decoration: none; cursor:pointer">Web Application Pentesting > Injection Attacks > LDAP Injection

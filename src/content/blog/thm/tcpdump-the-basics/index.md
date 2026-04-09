@@ -9,6 +9,7 @@ tags:
   - THM
   - TryHackMe
 image: "/images/blog/tcpdump.webp"
+lang: "en"
 ---
 
 <a href="https://tryhackme.com/room/tcpdump" target="_blank" rel="noopener noreferrer" style="text-decoration: none; cursor:pointer"> Cyber Security 101 > Networking > Tcpdump: The Basics

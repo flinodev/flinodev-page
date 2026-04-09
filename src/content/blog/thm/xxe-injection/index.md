@@ -9,6 +9,7 @@ tags:
   - THM
   - TryHackMe
 image: "/images/blog/xxe_injection.webp"
+lang: "en"
 ---
 
 <a href="https://tryhackme.com/room/xxeinjection" target="_blank" rel="noopener noreferrer" style="text-decoration: none; cursor:pointer">Jr Web Application Pentesting > Injection Attacks > XXE Injection

@@ -9,6 +9,7 @@ tags:
   - THM
   - TryHackMe
 image: "/images/blog/metasploit_intro.webp"
+lang: "en"
 ---
 
 <a href="https://tryhackme.com/room/metasploitintro" target="_blank" rel="noopener noreferrer" style="text-decoration: none; cursor:pointer">Jr Penetration Tester > Metasploit > Metasploit: Introduction

@@ -9,6 +9,7 @@ tags:
   - THM
   - TryHackMe
 image: "/images/blog/eviction.webp"
+lang: "en"
 ---
 
 <a href="https://tryhackme.com/room/eviction" target="_blank" rel="noopener noreferrer" style="text-decoration: none; cursor:pointer">SOC Level 1 > Cyber Defence Frameworks > Eviction</a>

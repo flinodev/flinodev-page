@@ -9,6 +9,7 @@ tags:
   - TryHackMe
   - THM
 image: "/images/blog/ssti.webp"
+lang: "en"
 ---
 
 <a href="https://tryhackme.com/room/serversidetemplateinjection" target="_blank" rel="noopener noreferrer" style="text-decoration: none; cursor:pointer"> Web Application Pentesting > Injection Attacks > Server-side Template Injection </a>

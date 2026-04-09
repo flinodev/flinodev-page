@@ -9,6 +9,7 @@ tags:
   - THM
   - TryHackMe
 image: "/images/blog/cyber-kill-chain.webp"
+lang: "en"
 ---
 
 ### Task 1
