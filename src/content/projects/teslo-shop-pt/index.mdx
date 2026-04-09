@@ -1,0 +1,84 @@
+---
+title: "Teslo Shop"
+summary: "Aplicativo móvel para gerenciamento de inventário de loja digital"
+date: "Dec 7 2023"
+draft: false
+tags:
+  - Flutter
+  - Dart
+demoUrl: https://play.google.com/store/apps/details?id=dev.flino.tesloapp&pcampaignid=web_share
+repoUrl: https://github.com/flinodev/teslo-app
+image: "/images/projects/icon.webp"
+lang: "pt"
+---
+
+import StackCard from "@components/StackCard.astro";
+
+### Descrição
+
+Este aplicativo móvel permite o gerenciamento do inventário de um ecommerce. Permite alterar as características de cada produto, bem como adicionar novos itens ao catálogo.
+
+![Ícone teslo-shop](/images/projects/icon.webp)
+
+### Stack Tecnológico
+
+<div class="flex flex-wrap items-center gap-2 mt-5">
+  {[
+    {
+      text: "Flutter",
+      icon: "flutter",
+      href: "https://flutter.dev"
+    },
+    {
+      text: "Postgres",
+      icon: "postgres",
+      href: "https://www.postgresql.org/"
+    },
+    {
+      text: "NodeJS",
+      icon: "node",
+      href: "https://nodejs.org/en"
+    },
+
+].map((item) => (
+
+<StackCard text={item.text} icon={item.icon} href={item.href} />
+))}
+
+</div>
+
+### Funcionalidades
+
+#### Login
+
+O acesso e gerenciamento dos produtos requerem que o usuário esteja autenticado. Para isso, é fornecido um formulário de login, onde o usuário insere suas credenciais. Se estiverem corretas, o aplicativo concederá acesso ao inventário.
+
+![Login de teslo-shop](/images/projects/teslo_app_1.webp)
+
+#### Início
+
+Nesta primeira tela, todos os produtos disponíveis na loja virtual são exibidos com seu respectivo nome e uma foto alusiva ao produto. No canto inferior direito, você pode ver um botão para adicionar mais um produto ao inventário.
+
+![Home de teslo-shop](/images/projects/teslo_app_3.webp)
+
+#### Adicionar Novo Produto
+
+Nesta tela você pode adicionar um novo produto, onde os campos obrigatórios têm sua respectiva validação. A fotografia também pode ser carregada através da câmera ou galeria do telefone.
+
+![Novo produto em teslo-shop](/images/projects/teslo_app_6.webp)
+
+#### Detalhes do Produto
+
+Nesta tela você pode modificar um produto, onde os campos têm sua respectiva validação. Aqui é possível editar (remover, adicionar, etc.) as fotos correspondentes ao produto em questão.
+
+![Detalhes do produto em teslo-shop](/images/projects/teslo_app_4.webp)
+
+Todas as operações são persistentes. Por trás do aplicativo existe um backend que atende às solicitações do cliente, que neste caso é nosso app. As alterações são salvas em um banco de dados Postgres e as fotos em um provedor de terceiros.
+
+O código deste aplicativo foi desenvolvido colocando em prática os princípios SOLID e a Arquitetura Limpa.
+
+#### Nota:
+
+No momento, o aplicativo está em testes fechados. Uma vez aprovada a revisão, adicionarei o link da PlayStore nesta entrada. Por enquanto, se você gostaria de participar dos testes fechados, pode me enviar um email para flinodev@gmail.com com seu nome e email, e eu com prazer te adiciono e compartilho o usuário de teste do app.
+
+![Testes fechados teslo-shop](/images/projects/teslo-test-closed.webp)

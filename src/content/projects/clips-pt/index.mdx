@@ -1,0 +1,76 @@
+---
+title: "Clips"
+summary: "Sistema web para gerenciamento de clipes de videogames."
+date: "Aug 09 2024"
+draft: false
+tags:
+  - Angular
+  - Firebase
+  - Tailwind
+  - Firestore
+demoUrl: https://clips-flinodev.web.app/
+repoUrl: https://github.com/flinodev/clips-fb-ang
+image: "/images/projects/home-clips.webp"
+lang: "pt"
+---
+
+import StackCard from "@components/StackCard.astro";
+
+### Descrição
+
+Esta aplicação web gerencia o upload de clipes de vídeo sobre temas de videogames. Utiliza armazenamento em nuvem através do CloudStorage, autenticação do Firebase e Firestore como banco de dados.
+
+### Stack Tecnológico
+
+<div class="flex flex-wrap items-center gap-2 mt-5">
+  {[
+    {
+      text: "Angular",
+      icon: "angular",
+      href: "https://angular.dev"
+    },
+    {
+      text: "Firebase",
+      icon: "firebase",
+      href: "https://firebase.google.com"
+    },
+    {
+      text: "Tailwind",
+      icon: "tailwind",
+      href: "https://tailwindcss.com"
+    },
+
+].map((item) => (
+
+<StackCard text={item.text} icon={item.icon} href={item.href} />
+))}
+
+</div>
+
+### Funcionalidades
+
+#### Home
+
+Página inicial que mostra os últimos vídeos carregados pelos diferentes usuários. Para cada vídeo, é mostrado o usuário que carregou o vídeo, a data e uma miniatura do vídeo.
+
+![Home de Clips](/images/projects/home-clips.webp)
+
+![Home de Clips 2](/images/projects/home-clips-2.webp)
+
+#### Registro e Autenticação
+
+Para uso completo da aplicação, é necessário que o usuário esteja autenticado, sendo essa autenticação obtida através de um registro.
+
+![Registro de Clips](/images/projects/register-clips.webp)
+
+#### Gerenciamento de Videoclipes
+
+Neste módulo é possível editar o título do videoclipe, bem como excluí-lo ou carregar mais vídeos.
+
+![Gestão de Clips](/images/projects/manage-clips.webp)
+
+#### Reprodução de Videoclipes
+
+Neste módulo é possível visualizar os vídeos em tela cheia.
+
+![Reprodução de vídeo de Clips](/images/projects/video-play.webp)
