@@ -3,6 +3,7 @@ import SpeedInsights from "@vercel/speed-insights/astro";
 import Analytics from "@vercel/analytics/astro";
 import { ViewTransitions } from "astro:transitions";
 import { SITE } from "@consts";
+import { getLangFromUrl, languages, defaultLang } from "@i18n/config";
 
 interface Props {
   title: string;
@@ -11,8 +12,37 @@ interface Props {
 }
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
-
 const { title, description, image = "/flinodev.webp" } = Astro.props;
+const currentLang = getLangFromUrl(Astro.url);
+
+// Construir URLs alternativas para hreflang
+const alternateUrls = Object.keys(languages).map((lang) => {
+  let path = Astro.url.pathname;
+
+  // Remover prefijo de idioma actual si existe
+  Object.keys(languages).forEach((l) => {
+    if (path.startsWith(`/${l}/`)) {
+      path = path.replace(`/${l}`, "");
+    }
+  });
+
+  // Agregar prefijo si no es idioma default
+  if (lang !== defaultLang) {
+    path = `/${lang}${path}`;
+  }
+
+  return {
+    lang,
+    url: new URL(path, Astro.site),
+  };
+});
+
+// Locale codes para OG tags
+const localeMap = {
+  es: "es_ES",
+  en: "en_US",
+  pt: "pt_BR",
+};
 
 // Keywords for SEO
 const keywords = [
@@ -44,6 +74,12 @@ const keywords = [
 <!-- Canonical URL -->
 <link rel="canonical" href={canonicalURL} />
 
+<!-- Hreflang tags -->
+{alternateUrls.map(({ lang, url }) => (
+  <link rel="alternate" hreflang={lang} href={url} />
+))}
+<link rel="alternate" hreflang="x-default" href={new URL("/", Astro.site)} />
+
 <!-- Primary Meta Tags -->
 <title>{title}</title>
 <meta name="title" content={title} />
@@ -57,6 +93,7 @@ const keywords = [
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
 <meta property="og:image" content={new URL(image, Astro.url)} />
+<meta property="og:locale" content={localeMap[currentLang]} />
 
 <!-- Twitter -->
 <meta property="twitter:card" content="summary_large_image" />
@@ -69,7 +106,7 @@ const keywords = [
 <link rel="sitemap" href="/sitemap-index.xml" />
 
 <!-- RSS Feed -->
-<link rel="alternate" type="application/rss+xml" title={title} href={`${Astro.site}rss.xml`} />
+<link rel="alternate" type="application/rss+xml" title={title} href={`${Astro.site}${currentLang === defaultLang ? "" : currentLang + "/"}rss.xml`} />
 
 <!-- Structured Data (JSON-LD) -->
 <script
@@ -79,6 +116,7 @@ const keywords = [
     "@type": "Person",
     name: SITE.AUTHOR,
     url: Astro.site,
+    inLanguage: currentLang,
     sameAs: [
       "https://github.com/flinodev",
       "https://www.linkedin.com/in/flinodev/",
