@@ -1,0 +1,94 @@
+---
+import PageLayout from "@layouts/PageLayout.astro";
+import TopLayout from "@layouts/TopLayout.astro";
+import BottomLayout from "@layouts/BottomLayout.astro";
+import Projects from "@components/Projects";
+import { getLangFromUrl, useTranslations } from "@i18n/config";
+import { getProjects } from "@i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = await useTranslations(lang);
+
+const projects = await getProjects(lang);
+
+const tags = [...new Set(projects.flatMap((project) => project.data.tags))].sort((a, b) =>
+  a.localeCompare(b)
+);
+
+// Calcular estadísticas
+const totalProjects = projects.length;
+const totalTechs = tags.length;
+const currentYear = new Date().getFullYear();
+const projectsThisYear = projects.filter((project) => project.data.date.getFullYear() === currentYear).length;
+---
+
+<PageLayout
+  title={t("projects.title")}
+  description={t("projects.description")}
+  image={"/images/projects/main.webp"}
+>
+  <TopLayout>
+    <div class="animate page-heading">
+      {t("projects.title")}
+    </div>
+
+    <!-- Estadísticas -->
+    <div class="animate grid grid-cols-3 gap-4 mt-8">
+      <div class="text-center p-4 bg-black/5 dark:bg-white/5 rounded-lg border border-black/10 dark:border-white/20">
+        <p class="text-3xl font-bold text-black dark:text-white">{totalProjects}</p>
+        <p class="text-sm opacity-75">{t("projects.stats.total")}</p>
+      </div>
+      <div class="text-center p-4 bg-black/5 dark:bg-white/5 rounded-lg border border-black/10 dark:border-white/20">
+        <p class="text-3xl font-bold text-black dark:text-white">{totalTechs}</p>
+        <p class="text-sm opacity-75">{t("projects.stats.technologies")}</p>
+      </div>
+      <div class="text-center p-4 bg-black/5 dark:bg-white/5 rounded-lg border border-black/10 dark:border-white/20">
+        <p class="text-3xl font-bold text-black dark:text-white">{projectsThisYear}</p>
+        <p class="text-sm opacity-75">{t("projects.stats.thisYear").replace("{year}", currentYear.toString())}</p>
+      </div>
+    </div>
+
+    <!-- Link a GitHub -->
+    <div class="animate flex justify-center gap-4 mt-6">
+      <a
+        href="https://github.com/flinodev"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="py-2 px-4 rounded text-xs md:text-sm bg-black dark:bg-white text-white dark:text-black hover:opacity-75 transition-opacity duration-200"
+      >
+        {t("projects.github")}
+      </a>
+    </div>
+  </TopLayout>
+  <BottomLayout>
+    <div class="animate">
+      <Projects client:load tags={tags} data={projects} lang={lang} />
+    </div>
+
+    <!-- CTA Final -->
+    <div class="animate mt-12 p-6 bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/20 rounded-lg text-center">
+      <h3 class="text-xl font-bold text-black dark:text-white mb-3">
+        {t("projects.cta.title")}
+      </h3>
+      <p class="opacity-75 mb-4">
+        {t("projects.cta.description")}
+      </p>
+      <div class="flex flex-wrap gap-3 justify-center">
+        <a
+          href="mailto:flinodev@gmail.com"
+          class="py-2 px-4 rounded text-xs md:text-sm bg-black dark:bg-white text-white dark:text-black hover:opacity-75 transition-opacity duration-200"
+        >
+          {t("projects.cta.email")}
+        </a>
+        <a
+          href="https://www.linkedin.com/in/flinodev/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="py-2 px-4 rounded text-xs md:text-sm border border-black/25 dark:border-white/25 hover:bg-black/5 dark:hover:bg-white/5 transition-colors duration-200"
+        >
+          {t("projects.cta.linkedin")}
+        </a>
+      </div>
+    </div>
+  </BottomLayout>
+</PageLayout>
