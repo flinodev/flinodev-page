@@ -1,6 +1,6 @@
 ---
 title: "Ecommerce"
-summary: "Sistema web ecommerce para la administración y venta de productos online mediante pagos en linea."
+summary: "Ecommerce web system for online product administration and sales through online payments."
 date: "May 15 2024"
 draft: false
 tags:
@@ -10,42 +10,43 @@ tags:
 demoUrl: https://flinodev-shop.vercel.app/
 repoUrl: https://github.com/flinodev/next-teslo-shop
 image: "/images/projects/home-teslo.webp"
+lang: "en"
 ---
 
 import StackCard from "@components/StackCard.astro";
 
-### Descripción
+### Description
 
-Este sistema web cuenta con todas las características de un eccommerce tradicional, desde la visualización del catálogo completo de productos, carrito de compras, pagos en linea, administración de catalogo de productos y usuarios, autenticación, protección de rutas y más. Desarrollado con Next como framework de pila completa, Postgres como base datos, JWT y Tailwind.
+This web system has all the features of a traditional ecommerce, from viewing the complete product catalog, shopping cart, online payments, product catalog and user administration, authentication, route protection and more. Developed with Next as a full-stack framework, Postgres as database, JWT and Tailwind.
 
-### Stack tecnológico
+### Tech Stack
 
 <div class="flex flex-wrap items-center gap-2 mt-5">
   {[
-    { 
-      text: "NextJS", 
-      icon: "next", 
-      href: "https://nextjs.org/" 
+    {
+      text: "NextJS",
+      icon: "next",
+      href: "https://nextjs.org/"
     },
-    { 
-      text: "Typescript", 
-      icon: "typescript", 
-      href: "https://www.typescriptlang.org" 
+    {
+      text: "Typescript",
+      icon: "typescript",
+      href: "https://www.typescriptlang.org"
     },
-    { 
-      text: "Postgres", 
-      icon: "postgres", 
-      href: "https://www.postgresql.org/" 
+    {
+      text: "Postgres",
+      icon: "postgres",
+      href: "https://www.postgresql.org/"
     },
-    { 
-      text: "Tailwind", 
-      icon: "tailwind", 
-      href: "https://tailwindcss.com" 
+    {
+      text: "Tailwind",
+      icon: "tailwind",
+      href: "https://tailwindcss.com"
     },
-    { 
-      text: "JWT", 
-      icon: "jwt", 
-      href: "https://jwt.io/" 
+    {
+      text: "JWT",
+      icon: "jwt",
+      href: "https://jwt.io/"
     },
 
 ].map((item) => (
@@ -55,58 +56,58 @@ Este sistema web cuenta con todas las características de un eccommerce tradicio
 
 </div>
 
-### Funcionalidades
+### Features
 
 #### Home
 
-En esta pantalla se muestran un paginado de los productos disponibles en la tienda virtual. En la barra superior, al centro se puede filtrar el contenido por categorías. Aunque el sistema cuenta con autenticación, esta página se puede visualizar de manera no autenticada.
+This screen shows a paginated view of available products in the virtual store. In the top bar, at the center you can filter content by categories. Although the system has authentication, this page can be viewed unauthenticated.
 
-![Home de teslo-shop](/images/projects/home-teslo.webp)
+![Teslo-shop home](/images/projects/home-teslo.webp)
 
-#### Detalle del producto
+#### Product Detail
 
-Por cada producto se muestra la información más relevante, como sea, su precio, la cantidad de productos en stock, las tallas disponibles y una descripción del mismo. Ademas de la funcionalidad de agregarlo al carrito de compras.
+For each product, the most relevant information is shown, such as price, quantity of products in stock, available sizes and a description. Plus the functionality to add it to the shopping cart.
 
-![Detalle de producto en teslo-shop](/images/projects/product-teslo.webp)
+![Product detail in teslo-shop](/images/projects/product-teslo.webp)
 
-#### Carrito de compras
+#### Shopping Cart
 
-Después de agregar algunos productos, estos se van almacenando en el carrito de compras para su posterior adquisición. El almacenamiento se hace mediante el localStorage del navegador. Por lo tanto, para su uso, no es necesario estar autenticado.
+After adding some products, they are stored in the shopping cart for later purchase. Storage is done through the browser's localStorage. Therefore, for its use, it is not necessary to be authenticated.
 
-![Carrito de compras en teslo-shop](/images/projects/cart-teslo.webp)
+![Shopping cart in teslo-shop](/images/projects/cart-teslo.webp)
 
 #### Login
 
-Para realizar el pago de los productos, y realizar un conjunto de operaciones más allá de la exploración del catálogo de producto, es necesario autenticarse.
+To make payment for products, and perform a set of operations beyond exploring the product catalog, authentication is necessary.
 
-![Autenticación en teslo-shop](/images/projects/auth-teslo.webp)
+![Authentication in teslo-shop](/images/projects/auth-teslo.webp)
 
 #### Checkout
 
-Para confirmar la orden es necesario agregar la dirección de entrega de los productos, misma que tenemos la opción de guardar en la base de datos (Recordar dirección), o no, en cuyo caso solo se almacenará en el localStorage del navegador.
+To confirm the order it is necessary to add the delivery address for the products, which we have the option to save in the database (Remember address), or not, in which case it will only be stored in the browser's localStorage.
 
-![Checkout en teslo-shop](/images/projects/checkout-teslo.webp)
+![Checkout in teslo-shop](/images/projects/checkout-teslo.webp)
 
-Posterior a la verificación de nuestra orden, esta se almacena en la base de datos y está lista para ser pagada. La confirmación de nuestra orden impacta en el stock de nuestros productos, de tal manera que otros usuarios al solicitar el contenido de nuestros productos puedan ver la disponibilidad de los productos hasta ese momento.
+After verification of our order, it is stored in the database and is ready to be paid. Confirmation of our order impacts the stock of our products, so that other users when requesting the content of our products can see the availability of products up to that moment.
 
-![Checkout 2 en teslo-shop](/images/projects/checkout-2-teslo.webp)
+![Checkout 2 in teslo-shop](/images/projects/checkout-2-teslo.webp)
 
-#### Pagos en linea.
+#### Online Payments
 
-El sistema de comercio electrónico admite pagos en linea a través de Paypal así como tarjeta de débito y crédito.
+The ecommerce system supports online payments through Paypal as well as debit and credit cards.
 
-![Pagos en linea en teslo-shop](/images/projects/paypal-teslo.webp)
+![Online payments in teslo-shop](/images/projects/paypal-teslo.webp)
 
-#### Administración de catálogo de productos.
+#### Product Catalog Administration
 
-Esta página, protegida y permitida solo para usuarios administradores, permite dar mantenimiento al catálogo de productos. Tanto editar los ya existentes, como agregar nuevos productos.
+This page, protected and allowed only for administrator users, allows maintenance of the product catalog. Both editing existing ones and adding new products.
 
-![Administración de productos teslo-shop](/images/projects/admin-products-teslo.webp)
+![Product administration teslo-shop](/images/projects/admin-products-teslo.webp)
 
-Por cada producto podemos modificar cualquier campo de información incluyendo las fotografías. Estos cambios serán persistentes en la base de datos y se reflejarán para todos aquellos usuarios que visiten el sitio.
+For each product we can modify any information field including photographs. These changes will be persistent in the database and will be reflected for all users who visit the site.
 
-![Edición de productos en teslo-shop](/images/projects/edit-product-teslo.webp)
+![Product editing in teslo-shop](/images/projects/edit-product-teslo.webp)
 
 #### Metatags
 
-![Metatags en teslo-shop](/images/projects/metatags-teslo.webp)
+![Metatags in teslo-shop](/images/projects/metatags-teslo.webp)
