@@ -7,6 +7,7 @@ tags:
   - Node
   - Design Patterns
 image: "/images/blog/design_patterns.webp"
+lang: "es"
 ---
 
 ![Imagen de patrones de diseño](/images/blog/design_patterns.webp)

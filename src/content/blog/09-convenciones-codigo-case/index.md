@@ -6,6 +6,7 @@ draft: false
 tags:
   - Clean Code
 image: "/images/blog/nomenclatura.webp"
+lang: "es"
 ---
 
 ![Imagen de nomenclatura](/images/blog/nomenclatura.webp)
