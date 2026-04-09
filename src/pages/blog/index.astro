@@ -1,14 +1,15 @@
 ---
-import { getCollection } from "astro:content";
 import PageLayout from "@layouts/PageLayout.astro";
 import TopLayout from "@layouts/TopLayout.astro";
 import BottomLayout from "@layouts/BottomLayout.astro";
 import Blog from "@components/Blog";
-import { BLOG } from "@consts";
+import { getLangFromUrl, useTranslations } from "@i18n/config";
+import { getBlogPosts } from "@i18n/utils";
 
-const posts = (await getCollection("blog"))
-  .filter((post) => !post.data.draft)
-  .sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
+const lang = getLangFromUrl(Astro.url);
+const t = await useTranslations(lang);
+
+const posts = await getBlogPosts(lang);
 
 const tags = [...new Set(posts.flatMap((post) => post.data.tags))].sort((a, b) =>
   a.localeCompare(b)
@@ -21,40 +22,50 @@ const currentYear = new Date().getFullYear();
 const postsThisYear = posts.filter((post) => post.data.date.getFullYear() === currentYear).length;
 ---
 
-<PageLayout title={BLOG.TITLE} description={BLOG.DESCRIPTION} image={"/images/blog/main.webp"}>
+<PageLayout title={t("blog.title")} description={t("blog.description")} image={"/images/blog/main.webp"}>
   <TopLayout>
     <div class="animate page-heading">
-      {BLOG.TITLE}
+      {t("blog.title")}
     </div>
 
     <!-- Estadísticas -->
     <div class="animate grid grid-cols-3 gap-4 mt-8">
       <div class="text-center p-4 bg-black/5 dark:bg-white/5 rounded-lg border border-black/10 dark:border-white/20">
         <p class="text-3xl font-bold text-black dark:text-white">{totalPosts}</p>
-        <p class="text-sm opacity-75">Posts publicados</p>
+        <p class="text-sm opacity-75">{t("blog.stats.published")}</p>
       </div>
       <div class="text-center p-4 bg-black/5 dark:bg-white/5 rounded-lg border border-black/10 dark:border-white/20">
         <p class="text-3xl font-bold text-black dark:text-white">{totalCategories}</p>
-        <p class="text-sm opacity-75">Categorías</p>
+        <p class="text-sm opacity-75">{t("blog.stats.categories")}</p>
       </div>
       <div class="text-center p-4 bg-black/5 dark:bg-white/5 rounded-lg border border-black/10 dark:border-white/20">
         <p class="text-3xl font-bold text-black dark:text-white">{postsThisYear}</p>
-        <p class="text-sm opacity-75">Posts en {currentYear}</p>
+        <p class="text-sm opacity-75">{t("blog.stats.thisYear").replace("{year}", currentYear.toString())}</p>
       </div>
     </div>
   </TopLayout>
   <BottomLayout>
     <div class="animate">
-      <Blog client:load tags={tags} data={posts} />
+      <Blog
+        client:load
+        tags={tags}
+        data={posts}
+        lang={lang}
+        translations={{
+          filters: t("blog.filters"),
+          clearAll: t("blog.clearAll"),
+          showing: t("blog.showing"),
+        }}
+      />
     </div>
 
     <!-- CTA Final -->
     <div class="animate mt-12 p-6 bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/20 rounded-lg text-center">
       <h3 class="text-xl font-bold text-black dark:text-white mb-3">
-        💡 ¿Te gusta el contenido?
+        {t("blog.cta.title")}
       </h3>
       <p class="opacity-75 mb-4">
-        Sígueme en redes sociales para más tutoriales, tips y contenido sobre desarrollo web y ciberseguridad.
+        {t("blog.cta.description")}
       </p>
       <div class="flex flex-wrap gap-3 justify-center">
         <a
@@ -63,7 +74,7 @@ const postsThisYear = posts.filter((post) => post.data.date.getFullYear() === cu
           rel="noopener noreferrer"
           class="py-2 px-4 rounded text-xs md:text-sm bg-black dark:bg-white text-white dark:text-black hover:opacity-75 transition-opacity duration-200"
         >
-          🔗 Sígueme en LinkedIn
+          {t("blog.cta.linkedin")}
         </a>
         <a
           href="https://x.com/flinodev"
@@ -71,7 +82,7 @@ const postsThisYear = posts.filter((post) => post.data.date.getFullYear() === cu
           rel="noopener noreferrer"
           class="py-2 px-4 rounded text-xs md:text-sm border border-black/25 dark:border-white/25 hover:bg-black/5 dark:hover:bg-white/5 transition-colors duration-200"
         >
-          🐦 Sígueme en X
+          {t("blog.cta.twitter")}
         </a>
       </div>
     </div>

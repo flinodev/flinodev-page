@@ -1,14 +1,14 @@
 import rss from "@astrojs/rss";
-import { getCollection } from "astro:content";
 import { SITE } from "@consts";
+import { getBlogPosts, getProjects } from "@i18n/utils";
 
 type Context = {
   site: string;
 };
 
 export async function GET(context: Context) {
-  const posts = await getCollection("blog");
-  const projects = await getCollection("projects");
+  const posts = await getBlogPosts("en");
+  const projects = await getProjects("en");
 
   const items = [...posts, ...projects];
 
@@ -16,13 +16,13 @@ export async function GET(context: Context) {
 
   return rss({
     title: SITE.TITLE,
-    description: SITE.DESCRIPTION,
+    description: "Official website of Francisco Suriel Lino, software developer, freelancer and teacher",
     site: context.site,
     items: items.map((item) => ({
       title: item.data.title,
       description: item.data.summary,
       pubDate: item.data.date,
-      link: item.slug.startsWith("blog") ? `/blog/${item.slug}/` : `/projects/${item.slug}/`,
+      link: item.collection === "blog" ? `/en/blog/${item.slug}/` : `/en/projects/${item.slug}/`,
     })),
   });
 }

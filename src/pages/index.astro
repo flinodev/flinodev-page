@@ -1,5 +1,4 @@
 ---
-import { getCollection } from "astro:content";
 import PageLayout from "@layouts/PageLayout.astro";
 import ArrowCard from "@components/ArrowCard";
 import StackCard from "@components/StackCard.astro";
@@ -9,16 +8,14 @@ import MeteorShower from "@components/MeteorShower.astro";
 import EducationCard from "@components/EducationCard.astro";
 import { stack } from "@/data/stack";
 import { education } from "@/data/education";
+import { getLangFromUrl, useTranslations } from "@i18n/config";
+import { getBlogPosts, getProjects } from "@i18n/utils";
 
-const posts = (await getCollection("blog"))
-  .filter((post) => !post.data.draft)
-  .sort((a, b) => b.data.date.getTime() - a.data.date.getTime())
-  .slice(0, 3);
+const lang = getLangFromUrl(Astro.url);
+const t = await useTranslations(lang);
 
-const projects = (await getCollection("projects"))
-  .filter((project) => !project.data.draft)
-  .sort((a, b) => b.data.date.getTime() - a.data.date.getTime())
-  .slice(0, 3);
+const posts = (await getBlogPosts(lang)).slice(0, 3);
+const projects = (await getProjects(lang)).slice(0, 3);
 
 // Calcular años de experiencia desde primer empleo profesional en desarrollo (Real Metrics - Feb 2019)
 const startYear = 2019;
@@ -34,7 +31,7 @@ const stackByCategory = stack.reduce((acc, item) => {
 }, {} as Record<string, typeof stack>);
 ---
 
-<PageLayout title="Francisco Lino :: Software Developer" description={SITE.DESCRIPTION}>
+<PageLayout title={t("hero.name") + " :: Software Developer"} description={t("site.description")}>
   <!-- Light Mode: Particles -->
   <div class="absolute inset-0 block dark:hidden">
     <div id="particles1" class="fixed inset-0"></div>
@@ -83,32 +80,32 @@ const stackByCategory = stack.reduce((acc, item) => {
         <div class="p-5 text-center space-y-4">
           <div class="animated space-y-1">
             <p class="text-2xl md:text-3xl lg:text-4xl font-bold text-black dark:text-white">
-              Francisco Lino
+              {t("hero.name")}
             </p>
             <p class="text-lg md:text-xl font-semibold opacity-75">
-              Full Stack Developer • Security
+              {t("hero.role")}
             </p>
           </div>
           <p
             class="animated text-xl md:text-2xl lg:text-3xl font-bold uppercase text-black dark:text-white leading-tight"
           >
-            Desarrollo web escalable y seguro
+            {t("hero.tagline")}
           </p>
           <p class="animated text-sm md:text-base opacity-75">
-            Node.js • React • Angular • Golang • PostgreSQL
+            {t("hero.stack")}
           </p>
           <div id="ctaButtons" class="animated flex flex-wrap gap-4 justify-center mt-4">
             <a
               href="/blog"
               class="py-2 px-4 rounded truncate text-xs md:text-sm lg:text-base bg-black dark:bg-white text-white dark:text-black hover:opacity-75 blend"
             >
-              Ver tutoriales
+              {t("hero.cta.tutorials")}
             </a>
             <a
               href="/projects"
               class="py-2 px-4 truncate rounded text-xs md:text-sm lg:text-base border border-black/25 dark:border-white/25 hover:bg-black/5 hover:dark:bg-white/15 blend"
             >
-              Ver mi portfolio
+              {t("hero.cta.portfolio")}
             </a>
           </div>
         </div>
@@ -122,118 +119,58 @@ const stackByCategory = stack.reduce((acc, item) => {
       <section class="animate">
         <div class="space-y-6">
           <!-- Intro personal -->
-          <article class="space-y-4">
-            <p>
-              Soy un <b>Full Stack Developer</b> con pasión por crear soluciones que impacten positivamente.
-              Me especializo en desarrollo web, APIs escalables y ciberseguridad.
-            </p>
-            <p>
-              Me encantan los proyectos que involucran retos y desafíos que me sacan de mi zona de
-              confort, que me conducen a aprender nuevas formas de resolver un problema, y a dominar
-              nuevas herramientas.
-            </p>
-          </article>
+          <article class="space-y-4" set:html={`<p>${t("about.intro.p1")}</p><p>${t("about.intro.p2")}</p>`}></article>
 
           <!-- Métricas visuales -->
           <div class="grid grid-cols-2 md:grid-cols-4 gap-4 p-6 bg-black/5 dark:bg-white/5 rounded-lg border border-black/10 dark:border-white/20">
             <div class="text-center">
               <p class="text-3xl font-bold text-black dark:text-white">{yearsOfExperience}+</p>
-              <p class="text-sm opacity-75">Años experiencia</p>
+              <p class="text-sm opacity-75">{t("metrics.years")}</p>
             </div>
             <div class="text-center">
               <p class="text-3xl font-bold text-black dark:text-white">30+</p>
-              <p class="text-sm opacity-75">Proyectos</p>
+              <p class="text-sm opacity-75">{t("metrics.projects")}</p>
             </div>
             <div class="text-center">
               <p class="text-3xl font-bold text-black dark:text-white">15+</p>
-              <p class="text-sm opacity-75">Tecnologías</p>
+              <p class="text-sm opacity-75">{t("metrics.technologies")}</p>
             </div>
             <div class="text-center">
               <p class="text-3xl font-bold text-black dark:text-white">∞</p>
-              <p class="text-sm opacity-75">Cafés ☕</p>
+              <p class="text-sm opacity-75">{t("metrics.coffees")}</p>
             </div>
           </div>
 
           <!-- Especialidades -->
           <div class="space-y-3">
-            <p class="font-semibold text-black dark:text-white">Especializado en:</p>
+            <p class="font-semibold text-black dark:text-white">{t("specialties.title")}</p>
             <ul class="space-y-2">
               <li class="flex items-start gap-3">
                 <span class="text-lg">⚡</span>
-                <span class="opacity-75">Desarrollo de APIs REST y microservicios con Node.js y Golang</span>
+                <span class="opacity-75">{t("specialties.apis")}</span>
               </li>
               <li class="flex items-start gap-3">
                 <span class="text-lg">🎨</span>
-                <span class="opacity-75">Aplicaciones web con React, Angular y Next.js</span>
+                <span class="opacity-75">{t("specialties.web")}</span>
               </li>
               <li class="flex items-start gap-3">
                 <span class="text-lg">☁️</span>
-                <span class="opacity-75">Arquitecturas escalables en cloud (GCP, AWS)</span>
+                <span class="opacity-75">{t("specialties.cloud")}</span>
               </li>
               <li class="flex items-start gap-3">
                 <span class="text-lg">🔒</span>
-                <span class="opacity-75">Seguridad web y ethical hacking</span>
+                <span class="opacity-75">{t("specialties.security")}</span>
               </li>
             </ul>
           </div>
         </div>
       </section>
 
-      <!-- Featured Content Section -->
-      <section class="animate">
-        <div class="space-y-4">
-          <p class="font-semibold text-black dark:text-white">⭐ Contenido destacado</p>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <!-- Post más popular - actualiza con tu post real -->
-            <a
-              href="/blog/thm/jwt-security"
-              class="group p-6 border border-black/10 dark:border-white/20 rounded-lg hover:bg-black/5 dark:hover:bg-white/5 transition-colors duration-300"
-            >
-              <div class="flex items-start gap-4">
-                <span class="text-3xl group-hover:scale-110 transition-transform duration-300">🔥</span>
-                <div class="flex-1">
-                  <p class="font-semibold text-black dark:text-white group-hover:underline">
-                    JWT Security
-                  </p>
-                  <p class="text-sm opacity-75 mt-1">
-                    Aprende sobre seguridad en JSON Web Tokens
-                  </p>
-                  <p class="text-xs opacity-50 mt-2">
-                    Post más leído
-                  </p>
-                </div>
-              </div>
-            </a>
-
-            <!-- Proyecto destacado - actualiza con tu proyecto real -->
-            <a
-              href="/projects/teslo-shop"
-              class="group p-6 border border-black/10 dark:border-white/20 rounded-lg hover:bg-black/5 dark:hover:bg-white/5 transition-colors duration-300"
-            >
-              <div class="flex items-start gap-4">
-                <span class="text-3xl group-hover:scale-110 transition-transform duration-300">💎</span>
-                <div class="flex-1">
-                  <p class="font-semibold text-black dark:text-white group-hover:underline">
-                    Teslo Shop
-                  </p>
-                  <p class="text-sm opacity-75 mt-1">
-                    E-commerce completo con Next.js y PostgreSQL
-                  </p>
-                  <p class="text-xs opacity-50 mt-2">
-                    Proyecto destacado
-                  </p>
-                </div>
-              </div>
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <!-- Blog Preview Section -->
+      <!-- Blog Preview Section (sin featured content por ahora) -->
       <section class="animate">
         <div class="space-y-4">
           <div class="flex justify-between">
-            <p class="font-semibold text-black dark:text-white">📝 Posts recientes</p>
+            <p class="font-semibold text-black dark:text-white">{t("blog.title")}</p>
             <a
               href="/blog"
               class="w-fit col-span-3 group flex gap-1 items-center underline decoration-[.5px] decoration-black/25 dark:decoration-white/50 hover:decoration-black dark:hover:decoration-white text-black dark:text-white underline-offset-2 blend"
@@ -241,7 +178,7 @@ const stackByCategory = stack.reduce((acc, item) => {
               <span
                 class="text-black/75 dark:text-white/75 group-hover:text-black group-hover:dark:text-white blend"
               >
-                Todos los posts
+                {t("blog.viewAll")}
               </span>
             </a>
           </div>
@@ -249,7 +186,7 @@ const stackByCategory = stack.reduce((acc, item) => {
             {
               posts.map((post) => (
                 <li>
-                  <ArrowCard entry={post} />
+                  <ArrowCard entry={post} lang={lang} />
                 </li>
               ))
             }
@@ -260,10 +197,9 @@ const stackByCategory = stack.reduce((acc, item) => {
       <!-- Tech Stack Section -->
       <section class="animate">
         <div class="space-y-4">
-          <p class="font-semibold text-black dark:text-white">⚙️ Stack tecnológico</p>
+          <p class="font-semibold text-black dark:text-white">{t("stack.title")}</p>
           <p>
-            En el transcurso de mi carrera he tenido la oportunidad de trabajar con las siguientes
-            herramientas:
+            {t("stack.description")}
           </p>
           <div class="space-y-6 mt-6">
             {
@@ -288,7 +224,7 @@ const stackByCategory = stack.reduce((acc, item) => {
       <section class="animate">
         <div class="space-y-4">
           <div class="flex justify-between">
-            <p class="font-semibold text-black dark:text-white">🚀 Proyectos recientes</p>
+            <p class="font-semibold text-black dark:text-white">{t("projects.title")}</p>
             <a
               href="/projects"
               class="w-fit col-span-3 group flex gap-1 items-center underline decoration-[.5px] decoration-black/25 dark:decoration-white/50 hover:decoration-black dark:hover:decoration-white text-black dark:text-white underline-offset-2 blend"
@@ -296,7 +232,7 @@ const stackByCategory = stack.reduce((acc, item) => {
               <span
                 class="text-black/75 dark:text-white/75 group-hover:text-black group-hover:dark:text-white blend"
               >
-                Todos los proyectos
+                {t("projects.viewAll")}
               </span>
             </a>
           </div>
@@ -304,7 +240,7 @@ const stackByCategory = stack.reduce((acc, item) => {
             {
               projects.map((project) => (
                 <li>
-                  <ArrowCard entry={project} />
+                  <ArrowCard entry={project} lang={lang} />
                 </li>
               ))
             }
@@ -314,11 +250,9 @@ const stackByCategory = stack.reduce((acc, item) => {
 
       <section class="animate">
         <div class="space-y-4">
-          <p class="font-semibold text-black dark:text-white">🎓 Educación continua</p>
+          <p class="font-semibold text-black dark:text-white">{t("education.title")}</p>
           <p>
-            Con el paso del tiempo, la tecnología avanza a pasos agigantados, y mantenerse
-            actualizado es imprescindible. Te comparto mis perfiles en algunas de las plataformas de
-            aprendizaje en donde día a día me capacito para encontrarme mejor preparado.
+            {t("education.description")}
           </p>
 
           <div class="flex justify-center flex-wrap items-center gap-4 mt-5">
@@ -330,8 +264,8 @@ const stackByCategory = stack.reduce((acc, item) => {
       <!-- Contact Section -->
       <section class="animate">
         <div>
-          <p class="font-semibold text-black dark:text-white">📬 Contáctame</p>
-          <p>Comunícate conmigo, con gusto te atenderé.</p>
+          <p class="font-semibold text-black dark:text-white">{t("contact.title")}</p>
+          <p>{t("contact.description")}</p>
           <div class="grid grid-cols-4 gap-y-2 mt-4 auto-cols-min">
             {
               SOCIALS.map((social) => (
