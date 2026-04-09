@@ -6,15 +6,16 @@ import BottomLayout from "@layouts/BottomLayout.astro";
 import ArticleTopLayout from "@layouts/ArticleTopLayout.astro";
 import ArticleBottomLayout from "@layouts/ArticleBottomLayout.astro";
 import { SITE } from "@consts";
-import { readingTime } from "@lib/utils";
 
-// Create the static blog pages
+// Create the static blog pages for English
 export async function getStaticPaths() {
   const posts = await getCollection("blog");
-  return posts.map((post) => ({
-    params: { slug: post.slug },
-    props: post,
-  }));
+  return posts
+    .filter((post) => post.data.lang === "en" && !post.data.draft)
+    .map((post) => ({
+      params: { slug: post.slug },
+      props: post,
+    }));
 }
 
 // Get the requested post
@@ -61,7 +62,7 @@ const structuredData = {
   },
   keywords: tags.join(", "),
   articleSection: "Technology",
-  inLanguage: "es-ES",
+  inLanguage: "en-US",
   timeRequired: `PT${readingTimeMinutes}M`,
 };
 
@@ -73,7 +74,7 @@ const breadcrumbStructuredData = {
     {
       "@type": "ListItem",
       position: 1,
-      name: "Inicio",
+      name: "Home",
       item: Astro.site?.toString(),
     },
     {
@@ -100,7 +101,7 @@ const breadcrumbStructuredData = {
   </Fragment>
   <TopLayout>
     <div class="animate">
-      <ArticleTopLayout entry={post} />
+      <ArticleTopLayout entry={post} lang="en" />
     </div>
   </TopLayout>
   <BottomLayout>

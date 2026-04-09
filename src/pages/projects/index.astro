@@ -1,14 +1,15 @@
 ---
-import { getCollection } from "astro:content";
 import PageLayout from "@layouts/PageLayout.astro";
 import TopLayout from "@layouts/TopLayout.astro";
 import BottomLayout from "@layouts/BottomLayout.astro";
 import Projects from "@components/Projects";
-import { PROJECTS } from "@consts";
+import { getLangFromUrl, useTranslations } from "@i18n/config";
+import { getProjects } from "@i18n/utils";
 
-const projects = (await getCollection("projects"))
-  .filter((project) => !project.data.draft)
-  .sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
+const lang = getLangFromUrl(Astro.url);
+const t = await useTranslations(lang);
+
+const projects = await getProjects(lang);
 
 const tags = [...new Set(projects.flatMap((project) => project.data.tags))].sort((a, b) =>
   a.localeCompare(b)
@@ -22,28 +23,28 @@ const projectsThisYear = projects.filter((project) => project.data.date.getFullY
 ---
 
 <PageLayout
-  title={PROJECTS.TITLE}
-  description={PROJECTS.DESCRIPTION}
+  title={t("projects.title")}
+  description={t("projects.description")}
   image={"/images/projects/main.webp"}
 >
   <TopLayout>
     <div class="animate page-heading">
-      {PROJECTS.TITLE}
+      {t("projects.title")}
     </div>
 
     <!-- Estadísticas -->
     <div class="animate grid grid-cols-3 gap-4 mt-8">
       <div class="text-center p-4 bg-black/5 dark:bg-white/5 rounded-lg border border-black/10 dark:border-white/20">
         <p class="text-3xl font-bold text-black dark:text-white">{totalProjects}</p>
-        <p class="text-sm opacity-75">Proyectos</p>
+        <p class="text-sm opacity-75">{t("projects.stats.total")}</p>
       </div>
       <div class="text-center p-4 bg-black/5 dark:bg-white/5 rounded-lg border border-black/10 dark:border-white/20">
         <p class="text-3xl font-bold text-black dark:text-white">{totalTechs}</p>
-        <p class="text-sm opacity-75">Tecnologías</p>
+        <p class="text-sm opacity-75">{t("projects.stats.technologies")}</p>
       </div>
       <div class="text-center p-4 bg-black/5 dark:bg-white/5 rounded-lg border border-black/10 dark:border-white/20">
         <p class="text-3xl font-bold text-black dark:text-white">{projectsThisYear}</p>
-        <p class="text-sm opacity-75">Nuevos en {currentYear}</p>
+        <p class="text-sm opacity-75">{t("projects.stats.thisYear").replace("{year}", currentYear.toString())}</p>
       </div>
     </div>
 
@@ -55,29 +56,29 @@ const projectsThisYear = projects.filter((project) => project.data.date.getFullY
         rel="noopener noreferrer"
         class="py-2 px-4 rounded text-xs md:text-sm bg-black dark:bg-white text-white dark:text-black hover:opacity-75 transition-opacity duration-200"
       >
-        🔗 Ver más en GitHub
+        {t("projects.github")}
       </a>
     </div>
   </TopLayout>
   <BottomLayout>
     <div class="animate">
-      <Projects client:load tags={tags} data={projects} />
+      <Projects client:load tags={tags} data={projects} lang={lang} />
     </div>
 
     <!-- CTA Final -->
     <div class="animate mt-12 p-6 bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/20 rounded-lg text-center">
       <h3 class="text-xl font-bold text-black dark:text-white mb-3">
-        🚀 ¿Tienes un proyecto en mente?
+        {t("projects.cta.title")}
       </h3>
       <p class="opacity-75 mb-4">
-        Estoy disponible para colaborar en proyectos interesantes. Hablemos sobre cómo puedo ayudarte.
+        {t("projects.cta.description")}
       </p>
       <div class="flex flex-wrap gap-3 justify-center">
         <a
           href="mailto:flinodev@gmail.com"
           class="py-2 px-4 rounded text-xs md:text-sm bg-black dark:bg-white text-white dark:text-black hover:opacity-75 transition-opacity duration-200"
         >
-          📧 Contactar por email
+          {t("projects.cta.email")}
         </a>
         <a
           href="https://www.linkedin.com/in/flinodev/"
@@ -85,7 +86,7 @@ const projectsThisYear = projects.filter((project) => project.data.date.getFullY
           rel="noopener noreferrer"
           class="py-2 px-4 rounded text-xs md:text-sm border border-black/25 dark:border-white/25 hover:bg-black/5 dark:hover:bg-white/5 transition-colors duration-200"
         >
-          💼 Contactar por LinkedIn
+          {t("projects.cta.linkedin")}
         </a>
       </div>
     </div>

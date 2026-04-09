@@ -1,13 +1,16 @@
 ---
-import { getCollection } from "astro:content";
 import type { CollectionEntry } from "astro:content";
 import PageLayout from "@layouts/PageLayout.astro";
 import TopLayout from "@layouts/TopLayout.astro";
 import BottomLayout from "@layouts/BottomLayout.astro";
 import StackCard from "@components/StackCard.astro";
-import { WORK } from "@consts";
+import { getLangFromUrl, useTranslations } from "@i18n/config";
+import { getWork } from "@i18n/utils";
 
-const collection = await getCollection("work");
+const lang = getLangFromUrl(Astro.url);
+const t = await useTranslations(lang);
+
+const collection = await getWork(lang);
 
 collection.sort(
   (a, b) => new Date(b.data.dateStart).getTime() - new Date(a.data.dateStart).getTime()
@@ -52,25 +55,25 @@ const topSkills = [
 ];
 ---
 
-<PageLayout title={WORK.TITLE} description={WORK.DESCRIPTION}>
+<PageLayout title={t("work.title")} description={t("work.description")}>
   <TopLayout>
     <div class="animate page-heading">
-      {WORK.TITLE}
+      {t("work.title")}
     </div>
 
     <!-- Estadísticas -->
     <div class="animate grid grid-cols-2 md:grid-cols-3 gap-4 mt-8 mb-8">
       <div class="text-center p-4 bg-black/5 dark:bg-white/5 rounded-lg border border-black/10 dark:border-white/20">
         <p class="text-3xl font-bold text-black dark:text-white">{yearsOfExperience}+</p>
-        <p class="text-sm opacity-75">Años experiencia</p>
+        <p class="text-sm opacity-75">{t("work.stats.years")}</p>
       </div>
       <div class="text-center p-4 bg-black/5 dark:bg-white/5 rounded-lg border border-black/10 dark:border-white/20">
         <p class="text-3xl font-bold text-black dark:text-white">{totalCompanies}</p>
-        <p class="text-sm opacity-75">Empresas</p>
+        <p class="text-sm opacity-75">{t("work.stats.companies")}</p>
       </div>
       <div class="text-center p-4 bg-black/5 dark:bg-white/5 rounded-lg border border-black/10 dark:border-white/20 col-span-2 md:col-span-1">
         <p class="text-3xl font-bold text-black dark:text-white">10+</p>
-        <p class="text-sm opacity-75">Tecnologías</p>
+        <p class="text-sm opacity-75">{t("work.stats.technologies")}</p>
       </div>
     </div>
 
@@ -80,7 +83,7 @@ const topSkills = [
         class="libutton text-xs md:text-sm lg:text-base"
         href="https://www.linkedin.com/comm/mynetwork/discovery-see-all?usecase=PEOPLE_FOLLOWS&followMember=flinodev"
         target="_blank"
-        rel="noopener noreferrer">Sígueme en LinkedIn</a
+        rel="noopener noreferrer">{t("work.linkedin")}</a
       >
     </div>
   </TopLayout>
@@ -129,7 +132,7 @@ const topSkills = [
     <!-- Sección de Skills destacadas -->
     <div class="animate mt-16 pt-8 border-t border-black/10 dark:border-white/25">
       <h2 class="text-2xl font-bold text-black dark:text-white mb-6">
-        🛠️ Tecnologías más utilizadas
+        {t("work.skills.title")}
       </h2>
       <div class="flex flex-wrap items-center gap-2">
         {topSkills.map((skill) => <StackCard text={skill.text} icon={skill.icon} href={skill.href} />)}
@@ -140,10 +143,10 @@ const topSkills = [
     <div class="animate mt-12 p-6 bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/20 rounded-lg">
       <div class="text-center mb-6">
         <h3 class="text-xl font-bold text-black dark:text-white mb-3">
-          💼 ¿Buscas un desarrollador Full Stack?
+          {t("work.cta.title")}
         </h3>
         <p class="opacity-75">
-          Actualmente disponible para proyectos freelance y colaboraciones.
+          {t("work.cta.description")}
         </p>
       </div>
       <div class="flex flex-wrap gap-3 justify-center">
@@ -151,7 +154,7 @@ const topSkills = [
           href="mailto:flinodev@gmail.com"
           class="py-2 px-4 rounded text-xs md:text-sm bg-black dark:bg-white text-white dark:text-black hover:opacity-75 transition-opacity duration-200"
         >
-          📧 Contactar
+          {t("work.cta.contact")}
         </a>
         <a
           href="https://www.linkedin.com/in/flinodev/"
@@ -159,7 +162,7 @@ const topSkills = [
           rel="noopener noreferrer"
           class="py-2 px-4 rounded text-xs md:text-sm border border-black/25 dark:border-white/25 hover:bg-black/5 dark:hover:bg-white/5 transition-colors duration-200"
         >
-          💼 Ver perfil completo
+          {t("work.cta.profile")}
         </a>
       </div>
     </div>
