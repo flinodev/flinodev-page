@@ -7,6 +7,7 @@ También se introduce el operador != para buscar valores diferentes a uno determ
 Los estudiantes comienzan a entender cómo construir consultas más precisas para responder preguntas específicas sobre los datos."
 date: "March 5 2026"
 draft: false
+lang: "es"
 tags:
   - SQL
   - Base de datos

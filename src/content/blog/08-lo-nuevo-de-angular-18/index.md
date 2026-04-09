@@ -3,6 +3,7 @@ title: "Lo nuevo de angular 18"
 summary: "Descubre las nuevas características de este poderoso framework"
 date: "Sept 19 2024"
 draft: false
+lang: "es"
 tags:
   - Angular
   - Web

@@ -5,6 +5,7 @@ summary: "En esta clase se introduce SQL (Structured Query Language), el lenguaj
 El estudiante aprende a seleccionar columnas específicas o todas las columnas de una tabla utilizando SELECT y FROM. Este es el primer paso para comenzar a interactuar con una base de datos."
 date: "March 5 2026"
 draft: false
+lang: "es"
 tags:
   - SQL
   - Base de datos

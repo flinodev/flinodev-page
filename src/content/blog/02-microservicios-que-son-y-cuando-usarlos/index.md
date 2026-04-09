@@ -7,6 +7,7 @@ tags:
   - Microservices
   - Backend
 image: "/images/blog/microservices.webp"
+lang: "es"
 ---
 
 ![Imagen de nomenclatura](/images/blog/microservices.webp)

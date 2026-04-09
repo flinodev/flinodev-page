@@ -9,6 +9,7 @@ tags:
   - Vue
   - Web
 image: "/images/blog/angular_react_vue.webp"
+lang: "es"
 ---
 
 ![Home de Clips](/images/blog/angular_react_vue.webp)

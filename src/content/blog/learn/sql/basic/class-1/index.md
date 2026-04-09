@@ -9,6 +9,7 @@ tags:
   - SQL
   - Base de datos
 image: "/images/blog/main.webp"
+lang: "es"
 ---
 
 ## Introducción a las bases de datos

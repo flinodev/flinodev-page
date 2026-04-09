@@ -13,6 +13,7 @@ menor que (<)
 Este tema es fundamental para realizar consultas útiles dentro de una base de datos."
 date: "March 5 2026"
 draft: false
+lang: "es"
 tags:
   - SQL
   - Base de datos
