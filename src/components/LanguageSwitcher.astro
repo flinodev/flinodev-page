@@ -1,0 +1,67 @@
+---
+import { languages, getLangFromUrl, defaultLang } from "@i18n/config";
+
+const currentLang = getLangFromUrl(Astro.url);
+let currentPath = Astro.url.pathname;
+
+// Normalizar path (quitar prefijo de idioma)
+Object.keys(languages).forEach((lang) => {
+  if (currentPath.startsWith(`/${lang}/`)) {
+    currentPath = currentPath.replace(`/${lang}`, "");
+  }
+});
+
+// Ordenar idiomas con inglés primero
+const languageOrder = ["en", "es", "pt"];
+const languageUrls = languageOrder.map((lang) => {
+  let url = currentPath;
+  if (lang !== defaultLang) {
+    url = `/${lang}${currentPath}`;
+  }
+  return {
+    lang,
+    label: languages[lang as keyof typeof languages],
+    url,
+    active: lang === currentLang
+  };
+});
+---
+
+<div class="relative">
+  <select
+    id="language-selector"
+    class="px-3 py-1 rounded text-xs bg-transparent border border-black/25 dark:border-white/25 hover:bg-black/5 dark:hover:bg-white/10 transition-colors duration-200 cursor-pointer appearance-none pr-8"
+    aria-label="Select language"
+  >
+    {languageUrls.map(({ lang, label, active }) => (
+      <option
+        value={lang}
+        selected={active}
+        class="bg-white dark:bg-black text-black dark:text-white"
+      >
+        {label}
+      </option>
+    ))}
+  </select>
+  <svg
+    class="absolute right-2 top-1/2 -translate-y-1/2 size-3 pointer-events-none"
+    fill="none"
+    stroke="currentColor"
+    viewBox="0 0 24 24"
+  >
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+  </svg>
+</div>
+
+<script define:vars={{ languageUrls }}>
+  const selector = document.getElementById('language-selector');
+  if (selector) {
+    selector.addEventListener('change', (e) => {
+      const selectedLang = e.target.value;
+      const selectedUrl = languageUrls.find(l => l.lang === selectedLang)?.url;
+      if (selectedUrl) {
+        window.location.href = selectedUrl;
+      }
+    });
+  }
+</script>
