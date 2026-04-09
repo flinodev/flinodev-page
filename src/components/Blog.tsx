@@ -6,20 +6,28 @@ import { cn } from "@lib/utils";
 type Props = {
   tags: string[];
   data: CollectionEntry<"blog">[];
+  translations: {
+    filters: string;
+    clearAll: string;
+    showing: string;
+  };
+  lang?: string;
 };
 
-export default function Blog({ data, tags }: Props) {
+export default function Blog({ data, tags, translations, lang = "en" }: Props) {
   const [filter, setFilter] = createSignal(new Set<string>());
-  const [posts, setPosts] = createSignal<CollectionEntry<"blog">[]>([]);
+  const [posts, setPosts] = createSignal<CollectionEntry<"blog">[]>(data);
   const [showFilters, setShowFilters] = createSignal(false);
 
   createEffect(() => {
     setPosts(
-      data.filter((entry) =>
-        Array.from(filter()).every((value) =>
-          entry.data.tags.some((tag: string) => tag.toLowerCase() === String(value).toLowerCase())
-        )
-      )
+      filter().size === 0
+        ? data
+        : data.filter((entry) =>
+            Array.from(filter()).every((value) =>
+              entry.data.tags.some((tag: string) => tag.toLowerCase() === String(value).toLowerCase())
+            )
+          )
     );
   });
 
@@ -42,7 +50,7 @@ export default function Blog({ data, tags }: Props) {
           class="sm:hidden w-full mb-4 px-4 py-2 rounded-lg bg-black/5 dark:bg-white/10 hover:bg-black/10 hover:dark:bg-white/15 transition-colors duration-200 flex items-center justify-between"
         >
           <span class="text-sm font-semibold text-black dark:text-white">
-            Filtros {filter().size > 0 && `(${filter().size})`}
+            {translations.filters} {filter().size > 0 && `(${filter().size})`}
           </span>
           <svg
             class={cn(
@@ -77,7 +85,7 @@ export default function Blog({ data, tags }: Props) {
               onClick={clearFilters}
               class="px-3 py-1 text-xs rounded-full border border-black/25 dark:border-white/25 hover:bg-black/5 dark:hover:bg-white/5 transition-colors duration-200"
             >
-              Limpiar todo
+              {translations.clearAll}
             </button>
           </div>
         )}
@@ -91,7 +99,7 @@ export default function Blog({ data, tags }: Props) {
           )}
         >
           <div class="text-sm font-semibold uppercase mb-2 text-black dark:text-white hidden sm:block">
-            Filtros
+            {translations.filters}
           </div>
           <ul class="flex flex-wrap sm:flex-col gap-1.5 pr-2">
             <For each={tags}>
@@ -136,12 +144,14 @@ export default function Blog({ data, tags }: Props) {
       <div class="col-span-3 sm:col-span-2">
         <div class="flex flex-col">
           <div class="text-sm uppercase mb-2">
-            Mostrando {posts().length} de {data.length} Publicaciones
+            {translations.showing
+              .replace("{count}", posts().length.toString())
+              .replace("{total}", data.length.toString())}
           </div>
           <ul class="flex flex-col gap-3">
             {posts().map((post) => (
               <li>
-                <ArrowCard entry={post} />
+                <ArrowCard entry={post} lang={lang} />
               </li>
             ))}
           </ul>

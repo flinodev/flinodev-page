@@ -5,9 +5,13 @@ import ArrowCard from "@components/ArrowCard";
 
 type Props = {
   data: CollectionEntry<"blog">[];
+  translations: {
+    searchPlaceholder: string;
+    searchResults: string;
+  };
 };
 
-export default function Search({ data }: Props) {
+export default function Search({ data, translations }: Props) {
   const [query, setQuery] = createSignal("");
   const [results, setResults] = createSignal<CollectionEntry<"blog">[]>([]);
 
@@ -41,7 +45,7 @@ export default function Search({ data }: Props) {
           onInput={onInput}
           autocomplete="off"
           spellcheck={false}
-          placeholder="¿Qué estás buscando?"
+          placeholder={translations.searchPlaceholder}
           class="w-full px-2.5 py-1.5 pl-10 rounded outline-none text-black dark:text-white bg-black/5 dark:bg-white/15 border border-black/10 dark:border-white/20 focus:border-black focus:dark:border-white"
         />
         <svg class="absolute size-6 left-1.5 top-1/2 -translate-y-1/2 stroke-current">
@@ -51,7 +55,9 @@ export default function Search({ data }: Props) {
       {query().length >= 2 && results().length >= 1 && (
         <div class="mt-12">
           <div class="text-sm uppercase mb-2">
-            Se encontraron {results().length} resultados para {`'${query()}'`}
+            {translations.searchResults
+              .replace("{count}", results().length.toString())
+              .replace("{query}", `'${query()}'`)}
           </div>
           <ul class="flex flex-col gap-3">
             {results().map((result) => (

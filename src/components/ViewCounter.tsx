@@ -3,6 +3,11 @@ import { createSignal, createEffect, onMount, onCleanup } from 'solid-js';
 interface ViewCounterProps {
   slug: string;
   trackView?: boolean;
+  locale?: string;
+  translations: {
+    singular: string;
+    plural: string;
+  };
 }
 
 export default function ViewCounter(props: ViewCounterProps) {
@@ -71,7 +76,8 @@ export default function ViewCounter(props: ViewCounterProps) {
 
   // Format number with commas
   const formatNumber = (num: number) => {
-    return num.toLocaleString('es-ES');
+    const locale = props.locale || "es-ES";
+    return num.toLocaleString(locale);
   };
 
   return (
@@ -121,7 +127,7 @@ export default function ViewCounter(props: ViewCounterProps) {
             />
           </svg>
           <span class="tabular-nums">
-            {formatNumber(displayViews())} {displayViews() === 1 ? 'vista' : 'vistas'}
+            {formatNumber(displayViews())} {displayViews() === 1 ? props.translations.singular : props.translations.plural}
           </span>
         </>
       )}
