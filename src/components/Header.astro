@@ -1,9 +1,22 @@
 ---
-import { SITE, LINKS } from "@consts";
+import { SITE } from "@consts";
 import { cn } from "@lib/utils";
+import { getLangFromUrl, useTranslations, getLocalizedUrl } from "@i18n/config";
+import LanguageSwitcher from "@components/LanguageSwitcher.astro";
+
 const { pathname } = Astro.url;
 const subpath = pathname.match(/[^/]+/g);
 import Container from "@components/Container.astro";
+
+const lang = getLangFromUrl(Astro.url);
+const t = await useTranslations(lang);
+
+const LINKS = [
+  { TEXT: t("nav.home"), HREF: getLocalizedUrl("/", lang) },
+  { TEXT: t("nav.work"), HREF: getLocalizedUrl("/work", lang) },
+  { TEXT: t("nav.blog"), HREF: getLocalizedUrl("/blog", lang) },
+  { TEXT: t("nav.projects"), HREF: getLocalizedUrl("/projects", lang) },
+];
 ---
 
 <header id="header" class="fixed top-0 w-full h-16 z-50">
@@ -43,9 +56,11 @@ import Container from "@components/Container.astro";
       </div>
 
       <div class="buttons absolute right-0 top-1/2 -translate-y-1/2 flex gap-1">
+        <LanguageSwitcher />
+
         <a
-          href="/search"
-          aria-label={`Search blog posts and projects on ${SITE.TITLE}`}
+          href={getLocalizedUrl("/search", lang)}
+          aria-label={t("aria.search").replace("{siteTitle}", SITE.TITLE)}
           class={cn(
             "hidden md:flex",
             "size-9 rounded-full p-2 items-center justify-center",
@@ -64,10 +79,10 @@ import Container from "@components/Container.astro";
         </a>
 
         <a
-          href="/rss.xml"
+          href={getLocalizedUrl("/rss.xml", lang)}
           target="_blank"
           rel="noopener noreferrer"
-          aria-label={`Rss feed for ${SITE.TITLE}`}
+          aria-label={t("aria.rss").replace("{siteTitle}", SITE.TITLE)}
           class={cn(
             "hidden md:flex",
             "size-9 rounded-full p-2 items-center justify-center",
@@ -84,7 +99,7 @@ import Container from "@components/Container.astro";
 
         <button
           id="header-theme-button"
-          aria-label={`Toggle light and dark theme`}
+          aria-label={t("aria.theme")}
           class={cn(
             "hidden md:flex",
             "size-9 rounded-full p-2 items-center justify-center",
@@ -104,7 +119,7 @@ import Container from "@components/Container.astro";
 
         <button
           id="header-drawer-button"
-          aria-label={`Toggle drawer open and closed`}
+          aria-label={t("aria.drawer")}
           class={cn(
             "flex md:hidden",
             "size-9 rounded-full p-2 items-center justify-center",
