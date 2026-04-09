@@ -1,6 +1,6 @@
 ---
 title: "Cognos Tech"
-summary: "Plataforma web para cursos en linea"
+summary: "Web platform for online courses"
 date: "Jan 21 2023"
 draft: false
 tags:
@@ -12,42 +12,43 @@ tags:
 demoUrl: https://edu-tech-6630a.web.app
 repoUrl: https://edu-tech-6630a.web.app
 image: "/images/projects/cognos-main.webp"
+lang: "en"
 ---
 
 import StackCard from "@components/StackCard.astro";
 
-### Descripción
+### Description
 
-Plataforma web como herramienta de apoyo en la impartición de cursos de inglés y simulación de aplicación de exámenes para el ingreso al nivel medio superior. Desarrollada con Angular 14, Angular Material, Firebase Auth, Firestore como base datos y Cloud Functions con NodeJS.
+Web platform as a support tool for teaching English courses and simulating entrance exams for high school level. Developed with Angular 14, Angular Material, Firebase Auth, Firestore as database, and Cloud Functions with NodeJS.
 
-### Stack tecnológico
+### Tech Stack
 
 <div class="flex flex-wrap items-center gap-2 mt-5">
   {[
-    { 
-      text: "Angular", 
-      icon: "angular", 
-      href: "https://angular.dev" 
+    {
+      text: "Angular",
+      icon: "angular",
+      href: "https://angular.dev"
     },
-    { 
-      text: "Typescript", 
-      icon: "typescript", 
-      href: "https://www.typescriptlang.org" 
+    {
+      text: "Typescript",
+      icon: "typescript",
+      href: "https://www.typescriptlang.org"
     },
-    { 
-      text: "Firebase", 
-      icon: "firebase", 
-      href: "https://firebase.google.com" 
+    {
+      text: "Firebase",
+      icon: "firebase",
+      href: "https://firebase.google.com"
     },
-    { 
-      text: "NodeJS", 
-      icon: "node", 
-      href: "https://nodejs.org/en" 
+    {
+      text: "NodeJS",
+      icon: "node",
+      href: "https://nodejs.org/en"
     },
-    { 
-      text: "GCP", 
-      icon: "gcp", 
-      href: "https://cloud.google.com" 
+    {
+      text: "GCP",
+      icon: "gcp",
+      href: "https://cloud.google.com"
     },
 
 ].map((item) => (
@@ -57,44 +58,44 @@ Plataforma web como herramienta de apoyo en la impartición de cursos de inglés
 
 </div>
 
-### Funcionalidades
+### Features
 
 #### Dashboard
 
-La herramienta cuenta con un dashboard que entre otras cosas muestra
+The tool has a dashboard that among other things shows:
 
-- El progreso del alumno
-- El tiempo dedicado en la plataforma
-- Los cursos a los que está inscrito
-- Los cursos disponibles en la plataforma.
+- Student progress
+- Time spent on the platform
+- Courses enrolled in
+- Available courses on the platform
 
-Dentro de cada curso se puede consultar una breve descripción del mismo, el contenido seccionado por módulos, el tiempo dedicado a cada uno, así como el progreso actual.
+Within each course you can consult a brief description, content sectioned by modules, time spent on each, as well as current progress.
 
-![Dashboard de CognosTech](/images/projects/cognos-main.webp)
+![CognosTech Dashboard](/images/projects/cognos-main.webp)
 
-#### Módulos por materia
+#### Subject Modules
 
-Por cada módulo se cuenta con una serie de lecciones, ejercicios y recursos adicionales (pdf, fotos, audios, presentaciones, etc) por cada tema tratado en el módulo.
+Each module has a series of lessons, exercises, and additional resources (pdf, photos, audios, presentations, etc.) for each topic covered in the module.
 
-![Resumen del módulo en CognosTech](/images/projects/module-resume.webp)
+![Module summary in CognosTech](/images/projects/module-resume.webp)
 
-#### Ejercicios por lección
+#### Lesson Exercises
 
-En la sección de ejercicios podemos encontrar reactivos de múltiples tipos:
+In the exercises section we can find multiple types of questions:
 
-- Opción múltiple
+- Multiple choice
 - Drag and Drop
-- Entrada de texto
-- Salida de audio
+- Text input
+- Audio output
 
-Cada reactivo tiene un peso en puntos, que se irán acumulando o no, de acuerdo a lo que conteste el usuario. Además, por cada reactivo se registra el tiempo empleado por el usuario para responderlo.
+Each question has a point weight, which will accumulate or not, according to what the user answers. Additionally, for each question the time spent by the user to answer it is recorded.
 
-![Tipos de ejercicios en CognosTech](/images/projects/exercises.webp)
+![Exercise types in CognosTech](/images/projects/exercises.webp)
 
-#### Características adicionales
+#### Additional Features
 
-La aplicación cuenta con otros módulos como el resumen de las respuestas previo al envio de las respuestas, un módulo para los datos del usuario asi como su edición, ranking semanal y global, un módulo para el seguimiento para los pagos de los usuarios, entre otros.
+The application has other modules such as the summary of answers prior to submitting responses, a module for user data as well as its edition, weekly and global ranking, a module for tracking user payments, among others.
 
-![Otros módulos en CognosTech](/images/projects/others.webp)
+![Other modules in CognosTech](/images/projects/others.webp)
 
-Adicionalmente se está trabajando en la optimización de los módulos para la administración del contenido, como sea, la carga de lecciones, ejercicios y contenido adicional.
+Additionally, work is being done on optimizing modules for content administration, such as uploading lessons, exercises, and additional content.
