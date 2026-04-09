@@ -11,7 +11,28 @@ export default defineConfig({
   site: "https://www.flino.dev",
   output: "hybrid",
   adapter: vercel(),
-  integrations: [mdx(), sitemap(), solidJs(), tailwind({ applyBaseStyles: false })],
+  integrations: [
+    mdx(),
+    sitemap({
+      i18n: {
+        defaultLocale: 'en',
+        locales: {
+          es: 'es-ES',
+          en: 'en-US',
+          pt: 'pt-BR',
+        },
+      },
+    }),
+    solidJs(),
+    tailwind({ applyBaseStyles: false })
+  ],
+  i18n: {
+    defaultLocale: "en",
+    locales: ["es", "en", "pt"],
+    routing: {
+      prefixDefaultLocale: false,
+    },
+  },
   markdown: {
     shikiConfig: {
       theme: "dracula",
