@@ -1,0 +1,105 @@
+{
+  "site.title": "{flino|dev}",
+  "site.description": "Site oficial de Francisco Suriel Lino, desenvolvedor de software, freelancer e professor. Compartilho conhecimento e entusiasmo pela tecnologia e programação",
+  "site.author": "Francisco Suriel Lino",
+
+  "nav.home": "Início",
+  "nav.work": "Carreira",
+  "nav.blog": "Blog",
+  "nav.projects": "Projetos",
+
+  "hero.name": "Francisco Lino",
+  "hero.role": "Full Stack Developer • Security",
+  "hero.tagline": "Desenvolvimento web escalável e seguro",
+  "hero.stack": "Node.js • React • Angular • Golang • PostgreSQL",
+  "hero.cta.tutorials": "Ver tutoriais",
+  "hero.cta.portfolio": "Ver meu portfólio",
+
+  "about.intro.p1": "Sou um <b>Full Stack Developer</b> apaixonado por criar soluções que causem um impacto positivo. Sou especializado em desenvolvimento web, APIs escaláveis e cibersegurança.",
+  "about.intro.p2": "Adoro projetos que envolvem desafios que me tiram da minha zona de conforto, que me levam a aprender novas formas de resolver problemas e a dominar novas ferramentas.",
+
+  "metrics.years": "Anos de experiência",
+  "metrics.projects": "Projetos",
+  "metrics.technologies": "Tecnologias",
+  "metrics.coffees": "Cafés ☕",
+
+  "specialties.title": "Especializado em:",
+  "specialties.apis": "Desenvolvimento de APIs REST e microserviços com Node.js e Golang",
+  "specialties.web": "Aplicações web com React, Angular e Next.js",
+  "specialties.cloud": "Arquiteturas escaláveis em cloud (GCP, AWS)",
+  "specialties.security": "Segurança web e ethical hacking",
+
+  "featured.title": "⭐ Conteúdo em destaque",
+  "featured.mostRead": "Post mais lido",
+  "featured.highlighted": "Projeto em destaque",
+
+  "blog.title": "📝 Posts recentes",
+  "blog.viewAll": "Todos os posts",
+  "blog.filters": "Filtros",
+  "blog.clearAll": "Limpar tudo",
+  "blog.showing": "Mostrando {count} de {total} Publicações",
+  "blog.searchPlaceholder": "O que você está procurando?",
+  "blog.searchResults": "Foram encontrados {count} resultados para {query}",
+  "blog.stats.published": "Posts publicados",
+  "blog.stats.categories": "Categorias",
+  "blog.stats.thisYear": "Posts em {year}",
+  "blog.cta.title": "💡 Gosta do conteúdo?",
+  "blog.cta.description": "Siga-me nas redes sociais para mais tutoriais, dicas e conteúdo sobre desenvolvimento web e cibersegurança.",
+  "blog.cta.linkedin": "🔗 Siga-me no LinkedIn",
+  "blog.cta.twitter": "🐦 Siga-me no X",
+
+  "projects.title": "🚀 Projetos recentes",
+  "projects.viewAll": "Todos os projetos",
+  "projects.stats.total": "Projetos",
+  "projects.stats.technologies": "Tecnologias",
+  "projects.stats.thisYear": "Novos em {year}",
+  "projects.github": "🔗 Ver mais no GitHub",
+  "projects.cta.title": "🚀 Tem um projeto em mente?",
+  "projects.cta.description": "Estou disponível para colaborar em projetos interessantes. Vamos conversar sobre como posso ajudá-lo.",
+  "projects.cta.email": "📧 Contato por email",
+  "projects.cta.linkedin": "💼 Contato via LinkedIn",
+
+  "stack.title": "⚙️ Stack tecnológico",
+  "stack.description": "Ao longo da minha carreira tive a oportunidade de trabalhar com as seguintes ferramentas:",
+
+  "education.title": "🎓 Educação contínua",
+  "education.description": "Com o passar do tempo, a tecnologia avança a passos largos, e manter-se atualizado é essencial. Compartilho meus perfis em algumas das plataformas de aprendizagem onde me capacito diariamente para estar melhor preparado.",
+
+  "contact.title": "📬 Contate-me",
+  "contact.description": "Entre em contato comigo, terei prazer em atendê-lo.",
+
+  "footer.backToTop": "Voltar ao topo",
+  "footer.allSystemsNormal": "All systems normal",
+  "footer.terms": "Terms",
+  "footer.privacy": "Privacy",
+  "footer.rights": "All rights reserved",
+
+  "work.title": "Experiência profissional",
+  "work.description": "Experiência profissional.",
+  "work.stats.years": "Anos de experiência",
+  "work.stats.companies": "Empresas",
+  "work.stats.technologies": "Tecnologias",
+  "work.linkedin": "Siga-me no LinkedIn",
+  "work.skills.title": "🛠️ Tecnologias mais utilizadas",
+  "work.cta.title": "💼 Procura um desenvolvedor Full Stack?",
+  "work.cta.description": "Atualmente disponível para projetos freelance e colaborações.",
+  "work.cta.contact": "📧 Contato",
+  "work.cta.profile": "💼 Ver perfil completo",
+
+  "projects.description": "Projetos em que trabalhei.",
+
+  "blog.description": "Publicações sobre desenvolvimento web, segurança cibernética, inteligência artificial e mais",
+
+  "search.title": "Busca",
+  "search.description": "Busca de projetos e posts por palavras-chave.",
+
+  "views.singular": "visualização",
+  "views.plural": "visualizações",
+
+  "aria.search": "Search blog posts and projects on {siteTitle}",
+  "aria.rss": "Rss feed for {siteTitle}",
+  "aria.theme": "Toggle light and dark theme",
+  "aria.drawer": "Toggle drawer open and closed",
+  "aria.backToTop": "Back to top of page",
+  "aria.social": "{siteTitle} on {socialName}"
+}
