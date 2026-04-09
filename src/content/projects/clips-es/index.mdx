@@ -1,0 +1,76 @@
+---
+title: "Clips"
+summary: "Sistema web para la gestión de clips de videojuegos."
+date: "Aug 09 2024"
+draft: false
+tags:
+  - Angular
+  - Firebase
+  - Tailwind
+  - Firestore
+demoUrl: https://clips-flinodev.web.app/
+repoUrl: https://github.com/flinodev/clips-fb-ang
+image: "/images/projects/home-clips.webp"
+lang: "es"
+---
+
+import StackCard from "@components/StackCard.astro";
+
+### Descripción
+
+Esta aplicación web gestiona la carga de video clips en torno a la temática de videojuegos. Se emplea el almacenamiento en la nube mediante CloudStorage, autenticación de Firebase y Firestore como base de datos.
+
+### Stack tecnológico
+
+<div class="flex flex-wrap items-center gap-2 mt-5">
+  {[
+    { 
+      text: "Angular", 
+      icon: "angular", 
+      href: "https://angular.dev" 
+    },
+    { 
+      text: "Firebase", 
+      icon: "firebase", 
+      href: "https://firebase.google.com" 
+    },
+    { 
+      text: "Tailwind", 
+      icon: "tailwind", 
+      href: "https://tailwindcss.com" 
+    },
+
+].map((item) => (
+
+<StackCard text={item.text} icon={item.icon} href={item.href} />
+))}
+
+</div>
+
+### Funcionalidades
+
+#### Home
+
+Página de inicio que muestra los últimos videos cargados por los distintos usuarios. Por cada video se muestra el usuario que cargó le video, la fecha y una miniatura del video.
+
+![Home de Clips](/images/projects/home-clips.webp)
+
+![Home de Clips 2](/images/projects/home-clips-2.webp)
+
+#### Registro y autenticación
+
+Para el uso completo de la aplicación se requiere que el usuario esté autenticado, dicha autenticación se obtiene mediante un registro.
+
+![Registro de Clips](/images/projects/register-clips.webp)
+
+#### Administración de videoclips
+
+En este módulo se pueden editar el título del videoclip, así como eliminarlo o cargar más videos.
+
+![Gestión de Clips](/images/projects/manage-clips.webp)
+
+#### Visualización de videoclips
+
+En este módulo se pueden visualizar los videos en pantalla completa.
+
+![Video play de Clips](/images/projects/video-play.webp)

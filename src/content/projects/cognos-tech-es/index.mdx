@@ -1,0 +1,101 @@
+---
+title: "Cognos Tech"
+summary: "Plataforma web para cursos en linea"
+date: "Jan 21 2023"
+draft: false
+tags:
+  - Typescript
+  - Angular
+  - Angular Material
+  - Firebase
+  - Node
+demoUrl: https://edu-tech-6630a.web.app
+repoUrl: https://edu-tech-6630a.web.app
+image: "/images/projects/cognos-main.webp"
+lang: "es"
+---
+
+import StackCard from "@components/StackCard.astro";
+
+### Descripción
+
+Plataforma web como herramienta de apoyo en la impartición de cursos de inglés y simulación de aplicación de exámenes para el ingreso al nivel medio superior. Desarrollada con Angular 14, Angular Material, Firebase Auth, Firestore como base datos y Cloud Functions con NodeJS.
+
+### Stack tecnológico
+
+<div class="flex flex-wrap items-center gap-2 mt-5">
+  {[
+    { 
+      text: "Angular", 
+      icon: "angular", 
+      href: "https://angular.dev" 
+    },
+    { 
+      text: "Typescript", 
+      icon: "typescript", 
+      href: "https://www.typescriptlang.org" 
+    },
+    { 
+      text: "Firebase", 
+      icon: "firebase", 
+      href: "https://firebase.google.com" 
+    },
+    { 
+      text: "NodeJS", 
+      icon: "node", 
+      href: "https://nodejs.org/en" 
+    },
+    { 
+      text: "GCP", 
+      icon: "gcp", 
+      href: "https://cloud.google.com" 
+    },
+
+].map((item) => (
+
+<StackCard text={item.text} icon={item.icon} href={item.href} />
+))}
+
+</div>
+
+### Funcionalidades
+
+#### Dashboard
+
+La herramienta cuenta con un dashboard que entre otras cosas muestra
+
+- El progreso del alumno
+- El tiempo dedicado en la plataforma
+- Los cursos a los que está inscrito
+- Los cursos disponibles en la plataforma.
+
+Dentro de cada curso se puede consultar una breve descripción del mismo, el contenido seccionado por módulos, el tiempo dedicado a cada uno, así como el progreso actual.
+
+![Dashboard de CognosTech](/images/projects/cognos-main.webp)
+
+#### Módulos por materia
+
+Por cada módulo se cuenta con una serie de lecciones, ejercicios y recursos adicionales (pdf, fotos, audios, presentaciones, etc) por cada tema tratado en el módulo.
+
+![Resumen del módulo en CognosTech](/images/projects/module-resume.webp)
+
+#### Ejercicios por lección
+
+En la sección de ejercicios podemos encontrar reactivos de múltiples tipos:
+
+- Opción múltiple
+- Drag and Drop
+- Entrada de texto
+- Salida de audio
+
+Cada reactivo tiene un peso en puntos, que se irán acumulando o no, de acuerdo a lo que conteste el usuario. Además, por cada reactivo se registra el tiempo empleado por el usuario para responderlo.
+
+![Tipos de ejercicios en CognosTech](/images/projects/exercises.webp)
+
+#### Características adicionales
+
+La aplicación cuenta con otros módulos como el resumen de las respuestas previo al envio de las respuestas, un módulo para los datos del usuario asi como su edición, ranking semanal y global, un módulo para el seguimiento para los pagos de los usuarios, entre otros.
+
+![Otros módulos en CognosTech](/images/projects/others.webp)
+
+Adicionalmente se está trabajando en la optimización de los módulos para la administración del contenido, como sea, la carga de lecciones, ejercicios y contenido adicional.
