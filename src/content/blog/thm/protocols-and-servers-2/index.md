@@ -9,6 +9,7 @@ tags:
   - THM
   - TryHackMe
 image: "/images/blog/protocols-servers-2.webp"
+lang: "en"
 ---
 
 <a href="https://tryhackme.com/room/protocolsandservers2" target="_blank" rel="noopener noreferrer" style="text-decoration: none; cursor:pointer">Jr Penetration Tester > Network Security > Protocols and Servers 2

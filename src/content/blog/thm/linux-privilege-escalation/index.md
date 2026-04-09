@@ -9,6 +9,7 @@ tags:
   - THM
   - TryHackMe
 image: "/images/blog/linux-privilege-escalation.webp"
+lang: "en"
 ---
 
 <a href="https://tryhackme.com/room/linprivesc" target="_blank" rel="noopener noreferrer" style="text-decoration: none; cursor:pointer">Jr Penetration Tester > Privilege Escalation > Linux Privilege Escalation
