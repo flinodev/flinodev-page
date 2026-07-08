@@ -1,0 +1,58 @@
+---
+import { getCollection } from "astro:content";
+import PageLayout from "@layouts/PageLayout.astro";
+import TopLayout from "@layouts/TopLayout.astro";
+import BottomLayout from "@layouts/BottomLayout.astro";
+import Blog from "@components/Blog";
+import { WRITEUPS } from "@consts";
+import { isWriteup } from "@lib/utils";
+
+const posts = (await getCollection("blog"))
+  .filter((post) => !post.data.draft && isWriteup(post))
+  .sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
+
+const tags = [...new Set(posts.flatMap((post) => post.data.tags))].sort((a, b) =>
+  a.localeCompare(b)
+);
+
+// Calcular estadísticas
+const totalWriteups = posts.length;
+const totalCategories = tags.length;
+const currentYear = new Date().getFullYear();
+const writeupsThisYear = posts.filter(
+  (post) => post.data.date.getFullYear() === currentYear
+).length;
+---
+
+<PageLayout title={WRITEUPS.TITLE} description={WRITEUPS.DESCRIPTION} image={"/images/blog/main.webp"}>
+  <TopLayout>
+    <div class="animate page-heading">
+      {WRITEUPS.TITLE}
+    </div>
+
+    <p class="animate mt-4 opacity-75">
+      {WRITEUPS.DESCRIPTION}
+    </p>
+
+    <!-- Estadísticas -->
+    <div class="animate grid grid-cols-3 gap-4 mt-8">
+      <div class="text-center p-4 bg-black/5 dark:bg-white/5 rounded-lg border border-black/10 dark:border-white/20">
+        <p class="text-3xl font-bold text-black dark:text-white">{totalWriteups}</p>
+        <p class="text-sm opacity-75">Writeups publicados</p>
+      </div>
+      <div class="text-center p-4 bg-black/5 dark:bg-white/5 rounded-lg border border-black/10 dark:border-white/20">
+        <p class="text-3xl font-bold text-black dark:text-white">{totalCategories}</p>
+        <p class="text-sm opacity-75">Categorías</p>
+      </div>
+      <div class="text-center p-4 bg-black/5 dark:bg-white/5 rounded-lg border border-black/10 dark:border-white/20">
+        <p class="text-3xl font-bold text-black dark:text-white">{writeupsThisYear}</p>
+        <p class="text-sm opacity-75">Writeups en {currentYear}</p>
+      </div>
+    </div>
+  </TopLayout>
+  <BottomLayout>
+    <div class="animate">
+      <Blog client:load tags={tags} data={posts} />
+    </div>
+  </BottomLayout>
+</PageLayout>

@@ -6,7 +6,7 @@ import BottomLayout from "@layouts/BottomLayout.astro";
 import ArticleTopLayout from "@layouts/ArticleTopLayout.astro";
 import ArticleBottomLayout from "@layouts/ArticleBottomLayout.astro";
 import { SITE } from "@consts";
-import { readingTime } from "@lib/utils";
+import { isWriteup } from "@lib/utils";
 
 // Create the static blog pages
 export async function getStaticPaths() {
@@ -79,8 +79,8 @@ const breadcrumbStructuredData = {
     {
       "@type": "ListItem",
       position: 2,
-      name: "Blog",
-      item: new URL("/blog", Astro.site).toString(),
+      name: isWriteup(post) ? "Writeups" : "Blog",
+      item: new URL(isWriteup(post) ? "/writeups" : "/blog", Astro.site).toString(),
     },
     {
       "@type": "ListItem",
@@ -92,7 +92,7 @@ const breadcrumbStructuredData = {
 };
 ---
 
-<PageLayout title={title} description={summary} image={ogImage}>
+<PageLayout title={title} description={summary} image={ogImage} pubDate={date} articleTags={tags}>
   <!-- Structured Data -->
   <Fragment slot="head">
     <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />

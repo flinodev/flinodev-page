@@ -5,9 +5,11 @@ import TopLayout from "@layouts/TopLayout.astro";
 import BottomLayout from "@layouts/BottomLayout.astro";
 import Blog from "@components/Blog";
 import { BLOG } from "@consts";
+import { isWriteup } from "@lib/utils";
 
+// Los writeups de seguridad tienen su propia sección en /writeups
 const posts = (await getCollection("blog"))
-  .filter((post) => !post.data.draft)
+  .filter((post) => !post.data.draft && !isWriteup(post))
   .sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
 
 const tags = [...new Set(posts.flatMap((post) => post.data.tags))].sort((a, b) =>

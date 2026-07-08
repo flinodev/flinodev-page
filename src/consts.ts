@@ -21,6 +21,13 @@ export const BLOG: Page = {
     "Publicaciones sobre temas de desarrollo web, seguridad informática, inteligencia artificial y más",
 };
 
+// Writeups Page
+export const WRITEUPS: Page = {
+  TITLE: "Writeups",
+  DESCRIPTION:
+    "Writeups de laboratorios y rooms de seguridad ofensiva: pentesting web, escalación de privilegios, análisis de red y más",
+};
+
 // Projects Page
 export const PROJECTS: Page = {
   TITLE: "Proyectos",
@@ -46,6 +53,10 @@ export const LINKS: Links = [
   {
     TEXT: "Blog",
     HREF: "/blog",
+  },
+  {
+    TEXT: "Writeups",
+    HREF: "/writeups",
   },
   {
     TEXT: "Proyectos",
