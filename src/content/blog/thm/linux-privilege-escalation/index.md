@@ -14,7 +14,7 @@ image: "/images/blog/linux-privilege-escalation.webp"
 <a href="https://tryhackme.com/room/linprivesc" target="_blank" rel="noopener noreferrer" style="text-decoration: none; cursor:pointer">Jr Penetration Tester > Privilege Escalation > Linux Privilege Escalation
 </a>
 
-![Linux Privilege Escalation](/images/blog/linux-privilege-escalation.webp)
+![Linux Privilege Escalation](../../../../assets/images/blog/linux-privilege-escalation.webp)
 
 ### Task 1
 

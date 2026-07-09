@@ -14,7 +14,7 @@ image: "/images/blog/tcpdump.webp"
 <a href="https://tryhackme.com/room/tcpdump" target="_blank" rel="noopener noreferrer" style="text-decoration: none; cursor:pointer"> Cyber Security 101 > Networking > Tcpdump: The Basics
 </a>
 
-![tcpdump the basics](/images/blog/tcpdump.webp)
+![tcpdump the basics](../../../../assets/images/blog/tcpdump.webp)
 
 ### Task 1
 

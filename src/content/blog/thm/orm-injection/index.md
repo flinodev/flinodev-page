@@ -14,7 +14,7 @@ image: "/images/blog/orm_injection.webp"
 <a href="https://tryhackme.com/room/orminjection" target="_blank" rel="noopener noreferrer" style="text-decoration: none; cursor:pointer">Jr Web Application Pentesting > Injection Attacks > ORM Injection
 </a>
 
-![ORM Injection](/images/blog/orm_injection.webp)
+![ORM Injection](../../../../assets/images/blog/orm_injection.webp)
 
 ### Task 1
 

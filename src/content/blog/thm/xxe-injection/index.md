@@ -14,7 +14,7 @@ image: "/images/blog/xxe_injection.webp"
 <a href="https://tryhackme.com/room/xxeinjection" target="_blank" rel="noopener noreferrer" style="text-decoration: none; cursor:pointer">Jr Web Application Pentesting > Injection Attacks > XXE Injection
 </a>
 
-![ORM Injection](/images/blog/xxe_injection.webp)
+![ORM Injection](../../../../assets/images/blog/xxe_injection.webp)
 
 ### Task 1
 

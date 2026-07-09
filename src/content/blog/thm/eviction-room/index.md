@@ -13,7 +13,7 @@ image: "/images/blog/eviction.webp"
 
 <a href="https://tryhackme.com/room/eviction" target="_blank" rel="noopener noreferrer" style="text-decoration: none; cursor:pointer">SOC Level 1 > Cyber Defence Frameworks > Eviction</a>
 
-![Eviction](/images/blog/eviction.webp)
+![Eviction](../../../../assets/images/blog/eviction.webp)
 
 ### Task 1
 

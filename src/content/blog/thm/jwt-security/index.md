@@ -13,7 +13,7 @@ image: "/images/blog/jwt_sec.webp"
 
 <a href="https://tryhackme.com/room/jwtsecurity" target="_blank" rel="noopener noreferrer" style="text-decoration: none; cursor:pointer"> Web Application Pentesting > Authentication > JWT Security </a>
 
-![Diamond Model](/images/blog/jwt_sec.webp)
+![Diamond Model](../../../../assets/images/blog/jwt_sec.webp)
 
 ### Task 1
 

@@ -13,7 +13,7 @@ image: "/images/blog/diamond-model-room.webp"
 
 <a href="https://tryhackme.com/room/mitre" target="_blank" rel="noopener noreferrer" style="text-decoration: none; cursor:pointer">SOC Level 1 > Cyber Defence Frameworks > MITRE
 
-![Imagen de nomenclatura](/images/blog/mitre.webp)
+![Imagen de nomenclatura](../../../../assets/images/blog/mitre.webp)
 
 ### Task 1
 
@@ -54,7 +54,7 @@ Red Teamers
    ¿Cuál es el ID de esta técnica?
 
 Siguiendo la página de <a href="https://attack.mitre.org/techniques/T1566/" target="_blank" rel="noopener noreferrer">attack.mitre.org para la técnica Phising</a> encontramos que el ID es el T1566
-![T1566](/images/blog/t1566.webp)
+![T1566](../../../../assets/images/blog/t1566.webp)
 
 <blockquote>
 T1566
@@ -64,7 +64,7 @@ T1566
    _Según esta técnica, ¿qué mitigación abarca la identificación de técnicas de ingeniería social?_
 
 En la misma <a href="https://attack.mitre.org/techniques/T1566/" target="_blank" rel="noopener noreferrer">página para la técnica Phising</a> en la sección **Mitigations** encontramos la respuesta a esta pregunta
-![userTraining](/images/blog/user_training.webp)
+![userTraining](../../../../assets/images/blog/user_training.webp)
 
 <blockquote>
 User Training
@@ -83,7 +83,7 @@ Application Log,File,Network Traffic
    _¿Cuáles son los dos primeros grupos que utilizaron spear-phishing en sus campañas? (formato: grupo1,grupo2)_
 
 En la misma <a href="https://attack.mitre.org/techniques/T1566/" target="_blank" rel="noopener noreferrer">página para la técnica Phising</a> en la sección **Procedure Examples** encontramos la respuesta a esta pregunta
-![procedureExamples](/images/blog/procedureExamples.webp)
+![procedureExamples](../../../../assets/images/blog/procedureExamples.webp)
 
 <blockquote>
 Axiom,Gold SOUTHFIELD
@@ -102,7 +102,7 @@ Group 72
    _¿Qué software está asociado a este grupo que incluye el phishing como una de sus técnicas?_
 
 En la <a href="https://attack.mitre.org/groups/G0001/" target="_blank" rel="noopener noreferrer">página del grupo Axiom</a> en la sección **Software** encontramos la respuesta a esta pregunta
-![softwarePhising](/images/blog/softwarePhising.webp)
+![softwarePhising](../../../../assets/images/blog/softwarePhising.webp)
 
 <blockquote>
 Hikit
@@ -121,7 +121,7 @@ Hikit is malware that has been used by Axiom for late-stage persistence and exfi
    _¿Con qué otro grupo se superpone (ligeramente) este grupo?_
 
 En la <a href="https://attack.mitre.org/groups/G0001/" target="_blank" rel="noopener noreferrer">página del grupo Axiom</a> encontramos la respuesta a esta pregunta
-![WinntiGroup](/images/blog/WinntiGroup.webp)
+![WinntiGroup](../../../../assets/images/blog/WinntiGroup.webp)
 
 <blockquote>
 Winnti Group
@@ -146,7 +146,7 @@ En la <a href="https://attack.mitre.org/software/S0009/" target="_blank" rel="no
    _¿Qué táctica tiene el ID TA0003?_
 
 Revisando en primer instancia la <a href="https://car.mitre.org/analytics/CAR-2020-09-001/" target="_blank" rel="noopener noreferrer">página de CAR-2020-09-001: Scheduled Task - FileAccess</a> en la sección **Tactics** encontramos 4 tácticas (Execution, Persistence, Privilege Escalation). Explorando una por una, encontramos que la táctica con el ID **TA0003** es <a href="https://attack.mitre.org/tactics/TA0003/" target="_blank" rel="noopener noreferrer">Persistence</a>
-![Persistence](/images/blog/Persistence.webp)
+![Persistence](../../../../assets/images/blog/Persistence.webp)
 
 <blockquote>
 Persistence
@@ -156,7 +156,7 @@ Persistence
    _¿Cuál es el nombre de la biblioteca que es una colección de scripts de Zeek (BRO)?_
 
 En la <a href="https://car.mitre.org/" target="_blank" rel="noopener noreferrer">página principal</a> en la sección **Analytic Source Code Libraries** encontramos la respuesta a esta pregunta.
-![BZAR](/images/blog/BZAR.webp)
+![BZAR](../../../../assets/images/blog/BZAR.webp)
 
 <blockquote>
 BZAR
@@ -190,7 +190,7 @@ Unit Tests
    _En la fase de Preparar (Prepare), ¿cuál es el ID SAC0002?_
 
 En la página <a href="https://engage.mitre.org/matrix/?activity=persona-creation" target="_blank" rel="noopener noreferrer">MITRE Engage</a> en la sección **Prepare** encontramos respuesta a esta pregunta.
-![PersonaCreation](/images/blog/PersonaCreation.webp)
+![PersonaCreation](../../../../assets/images/blog/PersonaCreation.webp)
 
 <blockquote>
 Persona Creation
@@ -209,7 +209,7 @@ Persona Profile Worksheet
    _¿Qué actividad de involucramiento provoca una respuesta específica por parte del adversario?_
 
 Revisando el <a href="https://engage.mitre.org/wp-content/uploads/2022/04/EngageHandbook-v1.0.pdf" target="_blank" rel="noopener noreferrer">Engage Handbook</a> en la página 21, sección 3.3.4 encontramos la respuesta
-![Lures](/images/blog/Lures.webp)
+![Lures](../../../../assets/images/blog/Lures.webp)
 
 <blockquote>
 Lures
@@ -232,7 +232,7 @@ A risk assessment that models organizational strengths and weaknesses
    _¿Cuál es la primera técnica de MITRE ATT&CK que aparece en la lista desplegable de búsqueda de ATT&CK (ATT&CK Lookup)?_
 
 En la página <a href="https://d3fend.mitre.org/" target="_blank" rel="noopener noreferrer">D3fend MITRE</a> al hacer click en **ATT&CK Lookup** encontramos la respuesta a la pregunta.
-![dataObfuscation](/images/blog/dataObfuscation.webp)
+![dataObfuscation](../../../../assets/images/blog/dataObfuscation.webp)
 
 <blockquote>
 Data Obfuscation
@@ -242,7 +242,7 @@ Data Obfuscation
    _En las Relaciones Inferidas de D3FEND, ¿qué produce la técnica de ATT&CK mencionada en la pregunta anterior?_
 
 En el diagrama de la página <a href="https://d3fend.mitre.org/offensive-technique/attack/T1001.003/" target="_blank" rel="noopener noreferrer">Protocol or Service Impersonation - T1001.003</a> encontramos la respuesta.
-![InferredRelationships](/images/blog/InferredRelationships.webp)
+![InferredRelationships](../../../../assets/images/blog/InferredRelationships.webp)
 
 <blockquote>
 Outbound Internet Network Traffic
@@ -307,7 +307,7 @@ P.A.S.,S0598
    _¿Cuál es un grupo que apunta a tu sector y ha estado en operación desde al menos 2013?_
 
 En la página <a href="https://attack.mitre.org/groups/" target="_blank" rel="noopener noreferrer">MITRE ACC&CK Groups</a> encontramos la respuesta a la pregunta.
-![APT33](/images/blog/APT33.webp)
+![APT33](../../../../assets/images/blog/APT33.webp)
 
 <blockquote>
 APT33
@@ -317,7 +317,7 @@ APT33
    _A medida que tu organización migra a la nube, ¿hay algo atribuido a este grupo APT en lo que deberías enfocarte? Si es así, ¿qué es?_
 
 Examinando las técnicas usadas por este grupo <a href="https://attack.mitre.org/groups/G0064/" target="_blank" rel="noopener noreferrer">G0064</a> encontramos la respuesta a la pregunta.
-![cloudAccounts](/images/blog/cloudAccounts.webp)
+![cloudAccounts](../../../../assets/images/blog/cloudAccounts.webp)
 
 <blockquote>
 Cloud Accounts
@@ -336,7 +336,7 @@ Ruler
    _En referencia a la técnica de la pregunta 2, ¿qué método de mitigación sugiere el uso de mensajes SMS como alternativa para su implementación?_
 
 En la técnica <a href="https://attack.mitre.org/techniques/T1078/004/" target="_blank" rel="noopener noreferrer">Cloud Accounts</a> en la sección **Mitigations** encontramos la respuesta a esta pregunta
-![multifactor](/images/blog/multifactor.webp)
+![multifactor](../../../../assets/images/blog/multifactor.webp)
 
 <blockquote>
 Multi-factor Authentication

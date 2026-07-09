@@ -13,7 +13,7 @@ image: "/images/blog/cyber-kill-chain.webp"
 
 <a href="https://tryhackme.com/room/cyberkillchainzmt" target="_blank" rel="noopener noreferrer" style="text-decoration: none; cursor:pointer">SOC Level 1 > Cyber Defence Frameworks > Cyber Kill Chain</a>
 
-![Imagen de nomenclatura](/images/blog/cyber-kill-chain.webp)
+![Imagen de nomenclatura](../../../../assets/images/blog/cyber-kill-chain.webp)
 
 ### Task 1
 
@@ -136,7 +136,7 @@ _¿Puede proporcionar el nombre de un ciberataque dirigido a una vulnerabilidad 
 1. **What is the flag after you complete the static site?**  
    _¿Cuál es la bandera después de completar el sitio estático?_
 
-![Imagen de nomenclatura](/images/blog/cyber-kill-chain-practical.webp)
+![Imagen de nomenclatura](../../../../assets/images/blog/cyber-kill-chain-practical.webp)
 
 Asociamos cada elemento con su respectiva etapa, quedando de la siguiente manera:
 

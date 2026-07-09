@@ -8,7 +8,7 @@ type Props = {
 };
 
 const { entry } = Astro.props;
-const { collection, data, body, slug } = entry;
+const { collection, data, body, id } = entry;
 const { title, summary, date } = data;
 
 const demoUrl = collection === "projects" ? data.demoUrl : null;
@@ -63,9 +63,9 @@ const section = collection === "blog" && isWriteup(entry) ? "writeups" : collect
       <svg class="size-5 stroke-current">
         <use href="/ui.svg#book-open"></use>
       </svg>
-      {readingTime(body)}
+      {readingTime(body ?? "")}
     </div>
-    <ViewCounter slug={slug} client:load />
+    <ViewCounter slug={id} client:load />
   </div>
   <h1 class="text-3xl font-semibold text-black dark:text-white mt-2">
     {title}
