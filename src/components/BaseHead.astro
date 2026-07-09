@@ -1,6 +1,4 @@
 ---
-import SpeedInsights from "@vercel/speed-insights/astro";
-import Analytics from "@vercel/analytics/astro";
 import { ClientRouter } from "astro:transitions";
 import { SITE } from "@consts";
 
@@ -88,9 +86,6 @@ const ogType = pubDate ? "article" : "website";
     ],
   })}
 />
-
-<Analytics />
-<SpeedInsights />
 
 <!-- Global Scripts -->
 <script defer is:inline src="/js/theme.js"></script>
