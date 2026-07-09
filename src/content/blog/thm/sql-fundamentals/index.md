@@ -14,7 +14,7 @@ image: "/images/blog/sql-fundamentals.webp"
 <a href="https://tryhackme.com/room/sqlfundamentals" target="_blank" rel="noopener noreferrer" style="text-decoration: none; cursor:pointer"> Cyber Security 101 > Web Hacking > SQL Fundamentals
 </a>
 
-![tcpdump the basics](/images/blog/sql-fundamentals.webp)
+![tcpdump the basics](../../../../assets/images/blog/sql-fundamentals.webp)
 
 ### Task 1
 

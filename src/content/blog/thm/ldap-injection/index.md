@@ -15,7 +15,7 @@ image: "/images/blogldap_injection.webp"
 
 </a>
 
-![LADP Injection](/images/blog/ldap_injection.webp)
+![LADP Injection](../../../../assets/images/blog/ldap_injection.webp)
 
 ### Task 1
 

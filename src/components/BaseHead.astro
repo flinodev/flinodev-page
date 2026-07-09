@@ -1,7 +1,7 @@
 ---
 import SpeedInsights from "@vercel/speed-insights/astro";
 import Analytics from "@vercel/analytics/astro";
-import { ViewTransitions } from "astro:transitions";
+import { ClientRouter } from "astro:transitions";
 import { SITE } from "@consts";
 
 interface Props {
@@ -97,7 +97,7 @@ const ogType = pubDate ? "article" : "website";
 <script defer is:inline src="/js/scroll.js"></script>
 <script defer is:inline src="/js/animate.js"></script>
 
-<ViewTransitions />
+<ClientRouter />
 
 <script>
   import type { TransitionBeforeSwapEvent } from "astro:transitions/client";

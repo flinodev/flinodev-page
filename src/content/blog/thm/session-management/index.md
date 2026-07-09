@@ -14,7 +14,7 @@ image: "/images/blog/session-management.webp"
 <a href="https://tryhackme.com/room/sessionmanagement" target="_blank" rel="noopener noreferrer" style="text-decoration: none; cursor:pointer"> Web Application Pentesting > Authentication > Session Management
 </a>
 
-![Net Sec Challenge](/images/blog/session-management.webp)
+![Net Sec Challenge](../../../../assets/images/blog/session-management.webp)
 
 Learn about session management and the different attacks that can be performed against insecure implementations.
 

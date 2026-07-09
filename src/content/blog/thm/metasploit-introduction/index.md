@@ -14,7 +14,7 @@ image: "/images/blog/metasploit_intro.webp"
 <a href="https://tryhackme.com/room/metasploitintro" target="_blank" rel="noopener noreferrer" style="text-decoration: none; cursor:pointer">Jr Penetration Tester > Metasploit > Metasploit: Introduction
 </a>
 
-![Metasploit Introduction](/images/blog/metasploit_intro.webp)
+![Metasploit Introduction](../../../../assets/images/blog/metasploit_intro.webp)
 
 ### Task 1
 

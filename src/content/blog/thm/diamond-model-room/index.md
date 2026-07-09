@@ -14,7 +14,7 @@ image: "/images/blog/diamond-model-room.webp"
 <a href="https://tryhackme.com/room/diamondmodelrmuwwg42" target="_blank" rel="noopener noreferrer" style="text-decoration: none; cursor:pointer">SOC Level 1 > Cyber Defence Frameworks > Diamond Model
 </a>
 
-![Diamond Model](/images/blog/diamond-model-room.webp)
+![Diamond Model](../../../../assets/images/blog/diamond-model-room.webp)
 
 ### Task 1
 

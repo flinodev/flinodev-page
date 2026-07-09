@@ -1,7 +1,16 @@
 import { defineCollection, z } from "astro:content";
+import { glob } from "astro/loaders";
+
+// Preserva los slugs de Astro 4: `thm/xxe-injection/index.md` -> `thm/xxe-injection`
+const contentGlob = (base: string) =>
+  glob({
+    pattern: "**/[^_]*.{md,mdx}",
+    base,
+    generateId: ({ entry }) => entry.replace(/\.(md|mdx)$/, "").replace(/\/?index$/, ""),
+  });
 
 const work = defineCollection({
-  type: "content",
+  loader: contentGlob("./src/content/work"),
   schema: z.object({
     company: z.string(),
     role: z.string(),
@@ -11,7 +20,7 @@ const work = defineCollection({
 });
 
 const blog = defineCollection({
-  type: "content",
+  loader: contentGlob("./src/content/blog"),
   schema: z.object({
     title: z.string(),
     summary: z.string(),
@@ -24,7 +33,7 @@ const blog = defineCollection({
 });
 
 const projects = defineCollection({
-  type: "content",
+  loader: contentGlob("./src/content/projects"),
   schema: z.object({
     title: z.string(),
     summary: z.string(),
@@ -39,7 +48,7 @@ const projects = defineCollection({
 });
 
 const legal = defineCollection({
-  type: "content",
+  loader: contentGlob("./src/content/legal"),
   schema: z.object({
     title: z.string(),
     date: z.coerce.date(),

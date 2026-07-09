@@ -13,7 +13,7 @@ image: "/images/blog/ssti.webp"
 
 <a href="https://tryhackme.com/room/serversidetemplateinjection" target="_blank" rel="noopener noreferrer" style="text-decoration: none; cursor:pointer"> Web Application Pentesting > Injection Attacks > Server-side Template Injection </a>
 
-![Diamond Model](/images/blog/ssti.webp)
+![Diamond Model](../../../../assets/images/blog/ssti.webp)
 
 ### Task 1
 

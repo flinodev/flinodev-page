@@ -28,17 +28,17 @@ Sitio personal de Francisco Lino: desarrollo web full-stack (Node.js, Golang, Re
 
 ## Writeups de seguridad
 
-${writeups.map((w) => entry(w.slug, w.data.title, w.data.summary)).join("\n")}
+${writeups.map((w) => entry(w.id, w.data.title, w.data.summary)).join("\n")}
 
 ## Blog
 
-${posts.map((p) => entry(p.slug, p.data.title, p.data.summary)).join("\n")}
+${posts.map((p) => entry(p.id, p.data.title, p.data.summary)).join("\n")}
 
 ## Proyectos
 
 ${projects
   .map(
-    (p) => `- [${p.data.title}](${new URL(`/projects/${p.slug}`, site).href}): ${p.data.summary}`
+    (p) => `- [${p.data.title}](${new URL(`/projects/${p.id}`, site).href}): ${p.data.summary}`
   )
   .join("\n")}
 

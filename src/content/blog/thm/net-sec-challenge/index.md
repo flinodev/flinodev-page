@@ -14,7 +14,7 @@ image: "/images/blog/net-sec-challenge.webp"
 <a href="https://tryhackme.com/room/netsecchallenge" target="_blank" rel="noopener noreferrer" style="text-decoration: none; cursor:pointer">Jr Penetration Tester > Network Security > Net Sec Challenge
 </a>
 
-![Net Sec Challenge](/images/blog/net-sec-challenge.webp)
+![Net Sec Challenge](../../../../assets/images/blog/net-sec-challenge.webp)
 
 Use this challenge to test your mastery of the skills you have acquired in the Network Security module. All the questions in this challenge can be solved using only **nmap**, **telnet**, and **hydra**.
 

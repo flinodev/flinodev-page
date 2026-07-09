@@ -20,6 +20,6 @@ export function readingTime(html: string) {
   return `${readingTimeMinutes} min read`;
 }
 
-export function isWriteup(post: { slug: string }) {
-  return post.slug.startsWith("thm/");
+export function isWriteup(post: { id: string }) {
+  return post.id.startsWith("thm/");
 }
