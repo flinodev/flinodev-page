@@ -1,8 +1,6 @@
 ---
-title: "SQL Básico - Clase 1"
-summary: "En esta primera clase se explican los conceptos fundamentales de las bases de datos. Se introduce la idea de datos estructurados y cómo estos se organizan dentro de tablas compuestas por filas y columnas. También se explica qué es un registro y cómo una base de datos permite almacenar información de manera ordenada para poder consultarla posteriormente.
-
-El objetivo de esta clase es que el estudiante entienda que una base de datos funciona de manera similar a una hoja de cálculo, donde cada fila representa un elemento (por ejemplo, una persona o un producto) y cada columna representa un tipo de información."
+title: "SQL básico - Clase 1"
+summary: "Fundamentos de bases de datos: datos estructurados, tablas, filas, columnas y registros."
 date: "March 5 2026"
 draft: false
 tags:

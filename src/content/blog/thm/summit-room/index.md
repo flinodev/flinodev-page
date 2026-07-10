@@ -1,6 +1,6 @@
 ---
 title: "Summit Room"
-summary: "Can you chase a simulated adversary up the Pyramid of Pain until they finally back down?"
+summary: "Caza de un adversario simulado subiendo la Pirámide del Dolor: de hashes e IPs hasta sus TTPs."
 date: "May 08 2025"
 draft: false
 tags:

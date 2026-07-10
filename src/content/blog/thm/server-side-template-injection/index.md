@@ -1,6 +1,6 @@
 ---
 title: "Server-side Template Injection"
-summary: "Exploit various templating engines that lead to SSTI vulnerability."
+summary: "Explotación de SSTI en distintos motores de plantillas: de la detección a la ejecución remota de código."
 date: "Oct 25 2025"
 draft: false
 tags:

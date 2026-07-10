@@ -1,6 +1,6 @@
 ---
 title: "Session Management"
-summary: "Learn about session management and the different attacks that can be performed against insecure implementations."
+summary: "Fallos en la gestión de sesiones: fijación, secuestro y manejo inseguro de identificadores."
 date: "Jul 02 2025"
 draft: false
 tags:

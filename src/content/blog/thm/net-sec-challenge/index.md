@@ -1,6 +1,6 @@
 ---
 title: "Net Sec Challenge"
-summary: "Practice the skills you have learned in the Network Security module."
+summary: "Reto práctico de seguridad de redes: enumeración de puertos y servicios con nmap, telnet e hydra."
 date: "Jun 22 2025"
 draft: false
 tags:

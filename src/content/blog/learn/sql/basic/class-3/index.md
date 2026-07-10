@@ -1,16 +1,6 @@
 ---
 title: "SQL básico - Clase 3"
-summary: "En esta clase se aprende a filtrar información dentro de una tabla utilizando la cláusula WHERE. Esto permite seleccionar únicamente los registros que cumplen ciertas condiciones.
-
-También se introducen operadores de comparación como:
-
-igual (=)
-
-mayor que (>)
-
-menor que (<)
-
-Este tema es fundamental para realizar consultas útiles dentro de una base de datos."
+summary: "Filtrado de registros con la cláusula WHERE y los operadores de comparación =, > y <."
 date: "March 5 2026"
 draft: false
 tags:

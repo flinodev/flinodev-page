@@ -1,6 +1,6 @@
 ---
 title: "LDAP Injection"
-summary: "Exploiting Lightweight Directory Access Protocol."
+summary: "Explotación de inyección LDAP para eludir autenticación y extraer información del directorio."
 date: "Apr 08 2026"
 draft: false
 tags:

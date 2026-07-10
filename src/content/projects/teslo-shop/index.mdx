@@ -1,6 +1,6 @@
 ---
-title: "Teslo Shop"
-summary: "Aplicación móvil para la administración de inventarios de una tienda digital"
+title: "Teslo Shop — App móvil"
+summary: "Aplicación móvil en Flutter para la administración de inventarios de una tienda digital, publicada en Play Store."
 date: "Dec 7 2023"
 draft: false
 tags:
@@ -15,7 +15,9 @@ import StackCard from "@components/StackCard.astro";
 
 ### Descripción
 
-Esta aplicación móvil permite la administración del inventario de un ecommerce. Permite cambiar las características de cada producto, así como agregar nuevos elementos al catalogo.
+Esta aplicación móvil permite la administración del inventario de un ecommerce: cambiar las características de cada producto, así como agregar nuevos elementos al catálogo.
+
+Proyecto de práctica construido durante un curso de Flutter, aplicando principios SOLID y Clean Architecture.
 
 ![Icono teslo-shop](../../../assets/images/projects/icon.webp)
 
@@ -56,7 +58,7 @@ El acceso y administración de los productos requiere que el usuario se encuentr
 
 #### Inicio
 
-En esta primer pantalla se muestran todos los productos disponibles en la tienda virtual, con su respectivo nombre y una foto alusiva al producto. En la esquina inferior derecha se puede apreciar un botón para agregar un producto más al inventario.
+En esta primera pantalla se muestran todos los productos disponibles en la tienda virtual, con su respectivo nombre y una foto alusiva al producto. En la esquina inferior derecha se puede apreciar un botón para agregar un producto más al inventario.
 
 ![Home de teslo-shop](../../../assets/images/projects/teslo_app_3.webp)
 
@@ -68,16 +70,10 @@ En esta pantalla se puede agregar un nuevo producto, en donde los campos requeri
 
 #### Detalles del producto
 
-En esta pantalla se puede modificar un nuevo producto, en donde los campos tienen su respectiva validación. Aqui es posible editar (quitar, añadir, etc.) las fotos correspondientes al producto en cuestión.
+En esta pantalla se puede modificar un producto existente, en donde los campos tienen su respectiva validación. Aquí es posible editar (quitar, añadir, etc.) las fotos correspondientes al producto en cuestión.
 
 ![Nuevo producto en teslo-shop](../../../assets/images/projects/teslo_app_4.webp)
 
-Todas las operaciones son persistentes. Detrás de la aplicación existe un backend que atiende a las solicitudes del cliente, que en este caso es nuestra app. Los cambios se guardan en una base de datos Postgres y las fotos en un proovedor de terceros.
+Todas las operaciones son persistentes. Detrás de la aplicación existe un backend que atiende las solicitudes del cliente, que en este caso es nuestra app. Los cambios se guardan en una base de datos Postgres y las fotos en un proveedor de terceros.
 
-El código de esta aplicación se desarrollo poniendo en práctica los principios SOLID y la Arquitectura Limpia.
-
-#### Nota:
-
-Por el momento la aplicación se encuentra en pruebas cerradas. Una vez aprobada la revisión, agregaré el link de la PlayStore en este entrada. Por ahora si gustas unirte a las pruebas cerradas, puedes enviarme un correo a flinodev@gmail.com con tu nombre y tu email, y yo con gusto te agrego y te comparto el usuario de prueba de la app.
-
-![Nuevo producto en teslo-shop](../../../assets/images/projects/teslo-test-closed.webp)
+El código de esta aplicación se desarrolló poniendo en práctica los principios SOLID y la Arquitectura Limpia. La app está disponible en la Play Store (enlace en el botón de demo).

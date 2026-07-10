@@ -1,5 +1,5 @@
 ---
-title: "Vue, Angular y React."
+title: "Vue, Angular y React"
 summary: "Comparación entre tres de los frameworks más populares para el desarrollo frontend. Ventajas y desventajas de cada uno."
 date: "Sept 19 2024"
 draft: false

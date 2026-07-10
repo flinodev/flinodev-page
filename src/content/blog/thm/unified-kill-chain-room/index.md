@@ -1,6 +1,6 @@
 ---
 title: "Unified Kill Chain Room"
-summary: "The Unified Kill Chain is a framework which establishes the phases of an attack, and a means of identifying and mitigating risk to IT assets."
+summary: "La Unified Kill Chain: 18 fases que unifican y extienden los modelos clásicos para describir un ataque completo."
 date: "Apr 26 2025"
 draft: false
 tags:

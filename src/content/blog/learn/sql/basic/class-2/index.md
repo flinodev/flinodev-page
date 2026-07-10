@@ -1,8 +1,6 @@
 ---
 title: "SQL básico - Clase 2"
-summary: "En esta clase se introduce SQL (Structured Query Language), el lenguaje utilizado para consultar bases de datos. Se presenta la instrucción SELECT, que permite obtener información almacenada en una tabla.
-
-El estudiante aprende a seleccionar columnas específicas o todas las columnas de una tabla utilizando SELECT y FROM. Este es el primer paso para comenzar a interactuar con una base de datos."
+summary: "Introducción a SQL: primeras consultas con SELECT y FROM para leer datos de una tabla."
 date: "March 5 2026"
 draft: false
 tags:

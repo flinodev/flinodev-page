@@ -1,6 +1,6 @@
 ---
 title: "Protocols and Servers 2"
-summary: "Learn about attacks against passwords and cleartext traffic; explore options for mitigation via SSH and SSL/TLS."
+summary: "Ataques a protocolos en texto claro y contra contraseñas, y su mitigación con SSH y SSL/TLS."
 date: "Jun 22 2025"
 draft: false
 tags:

@@ -4,14 +4,15 @@ import type { Site, Page, Links, Socials } from "@types";
 export const SITE: Site = {
   TITLE: "{flino|dev}",
   DESCRIPTION:
-    "Sitio oficial de Francisco Suriel Lino, desarrollador de software, freelancer y profesor. Comparto el conocimiento y entusiasmo por la tecnología y la programación",
+    "Sitio de Francisco Lino, desarrollador full stack especializado en backend y seguridad web. Escribo sobre desarrollo de software, seguridad ofensiva y comparto writeups de laboratorios",
   AUTHOR: "Francisco Suriel Lino",
 };
 
 // Work Page
 export const WORK: Page = {
   TITLE: "Experiencia profesional",
-  DESCRIPTION: "Experiencia profesional.",
+  DESCRIPTION:
+    "Trayectoria profesional de Francisco Lino: desarrollo full stack en fintech, arquitecturas cloud en GCP y proyectos freelance.",
 };
 
 // Blog Page
@@ -31,7 +32,8 @@ export const WRITEUPS: Page = {
 // Projects Page
 export const PROJECTS: Page = {
   TITLE: "Proyectos",
-  DESCRIPTION: "Proyectos en los que he trabajado.",
+  DESCRIPTION:
+    "Proyectos web y móviles desarrollados por Francisco Lino: plataformas educativas, ecommerce y aplicaciones cloud.",
 };
 
 // Search Page

@@ -1,6 +1,6 @@
 ---
 title: "Metasploit: Introduction"
-summary: "An introduction to the main components of the Metasploit Framework."
+summary: "Introducción al framework Metasploit: msfconsole, módulos, exploits y payloads."
 date: "Jun 26 2025"
 draft: false
 tags:
