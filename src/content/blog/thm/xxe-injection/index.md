@@ -1,6 +1,6 @@
 ---
 title: "XXE Injection"
-summary: "Exploiting XML External Entities."
+summary: "Explotación de entidades externas XML (XXE) para leer archivos del servidor y realizar SSRF."
 date: "Apr 08 2026"
 draft: false
 tags:

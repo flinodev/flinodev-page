@@ -9,11 +9,16 @@ import MeteorShower from "@components/MeteorShower.astro";
 import EducationCard from "@components/EducationCard.astro";
 import { stack } from "@/data/stack";
 import { education } from "@/data/education";
+import { isWriteup } from "@lib/utils";
 
-const posts = (await getCollection("blog"))
-  .filter((post) => !post.data.draft)
+const allPosts = (await getCollection("blog")).filter((post) => !post.data.draft);
+
+const posts = allPosts
+  .filter((post) => !isWriteup(post))
   .sort((a, b) => b.data.date.getTime() - a.data.date.getTime())
   .slice(0, 3);
+
+const writeupsCount = allPosts.filter(isWriteup).length;
 
 const projects = (await getCollection("projects"))
   .filter((project) => !project.data.draft)
@@ -34,7 +39,7 @@ const stackByCategory = stack.reduce((acc, item) => {
 }, {} as Record<string, typeof stack>);
 ---
 
-<PageLayout title="Francisco Lino :: Software Developer" description={SITE.DESCRIPTION}>
+<PageLayout title="Francisco Lino — Full Stack Developer" description={SITE.DESCRIPTION}>
   <!-- Light Mode: Particles -->
   <div class="absolute inset-0 block dark:hidden">
     <div id="particles1" class="fixed inset-0"></div>
@@ -99,16 +104,16 @@ const stackByCategory = stack.reduce((acc, item) => {
           </p>
           <div id="ctaButtons" class="animated flex flex-wrap gap-4 justify-center mt-4">
             <a
-              href="/blog"
+              href="/projects"
               class="py-2 px-4 rounded truncate text-xs md:text-sm lg:text-base bg-black dark:bg-white text-white dark:text-black hover:opacity-75 blend"
             >
-              Ver tutoriales
+              Ver proyectos
             </a>
             <a
-              href="/projects"
+              href="/writeups"
               class="py-2 px-4 truncate rounded text-xs md:text-sm lg:text-base border border-black/25 dark:border-white/25 hover:bg-black/5 hover:dark:bg-white/15 blend"
             >
-              Ver mi portfolio
+              Leer writeups
             </a>
           </div>
         </div>
@@ -124,56 +129,37 @@ const stackByCategory = stack.reduce((acc, item) => {
           <!-- Intro personal -->
           <article class="space-y-4">
             <p>
-              Soy un <b>Full Stack Developer</b> con pasión por crear soluciones que impacten positivamente.
-              Me especializo en desarrollo web, APIs escalables y ciberseguridad.
+              Soy <b>desarrollador full stack</b> con más de {yearsOfExperience} años de
+              experiencia. Actualmente construyo el backend de una aplicación fintech y el sistema
+              de cajeros automáticos en Montebit, trabajando con Go, PostgreSQL y Redis.
             </p>
             <p>
-              Me encantan los proyectos que involucran retos y desafíos que me sacan de mi zona de
-              confort, que me conducen a aprender nuevas formas de resolver un problema, y a dominar
-              nuevas herramientas.
+              Antes diseñé y migré arquitecturas en Google Cloud para procesar grandes volúmenes de
+              datos. Fuera del trabajo estudio seguridad ofensiva —publico writeups de los
+              laboratorios que resuelvo— y doy clases de programación.
             </p>
           </article>
 
           <!-- Métricas visuales -->
-          <div class="grid grid-cols-2 md:grid-cols-4 gap-4 p-6 bg-black/5 dark:bg-white/5 rounded-lg border border-black/10 dark:border-white/20">
+          <div class="grid grid-cols-2 gap-4 p-6 bg-black/5 dark:bg-white/5 rounded-lg border border-black/10 dark:border-white/20">
             <div class="text-center">
               <p class="text-3xl font-bold text-black dark:text-white">{yearsOfExperience}+</p>
-              <p class="text-sm opacity-75">Años experiencia</p>
+              <p class="text-sm opacity-75">Años de experiencia</p>
             </div>
             <div class="text-center">
-              <p class="text-3xl font-bold text-black dark:text-white">30+</p>
-              <p class="text-sm opacity-75">Proyectos</p>
-            </div>
-            <div class="text-center">
-              <p class="text-3xl font-bold text-black dark:text-white">15+</p>
-              <p class="text-sm opacity-75">Tecnologías</p>
-            </div>
-            <div class="text-center">
-              <p class="text-3xl font-bold text-black dark:text-white">∞</p>
-              <p class="text-sm opacity-75">Cafés ☕</p>
+              <p class="text-3xl font-bold text-black dark:text-white">{writeupsCount}</p>
+              <p class="text-sm opacity-75">Writeups de seguridad</p>
             </div>
           </div>
 
           <!-- Especialidades -->
           <div class="space-y-3">
-            <p class="font-semibold text-black dark:text-white">Especializado en:</p>
-            <ul class="space-y-2">
-              <li class="flex items-start gap-3">
-                <span class="text-lg">⚡</span>
-                <span class="opacity-75">Desarrollo de APIs REST y microservicios con Node.js y Golang</span>
-              </li>
-              <li class="flex items-start gap-3">
-                <span class="text-lg">🎨</span>
-                <span class="opacity-75">Aplicaciones web con React, Angular y Next.js</span>
-              </li>
-              <li class="flex items-start gap-3">
-                <span class="text-lg">☁️</span>
-                <span class="opacity-75">Arquitecturas escalables en cloud (GCP, AWS)</span>
-              </li>
-              <li class="flex items-start gap-3">
-                <span class="text-lg">🔒</span>
-                <span class="opacity-75">Seguridad web y ethical hacking</span>
-              </li>
+            <h2 class="font-semibold text-black dark:text-white">Especialidades</h2>
+            <ul class="list-disc pl-5 space-y-2 opacity-75">
+              <li>Desarrollo de APIs REST y microservicios con Node.js y Golang</li>
+              <li>Aplicaciones web con React, Angular y Next.js</li>
+              <li>Arquitecturas escalables en cloud (GCP, AWS)</li>
+              <li>Seguridad web y ethical hacking</li>
             </ul>
           </div>
         </div>
@@ -182,47 +168,39 @@ const stackByCategory = stack.reduce((acc, item) => {
       <!-- Featured Content Section -->
       <section class="animate">
         <div class="space-y-4">
-          <p class="font-semibold text-black dark:text-white">⭐ Contenido destacado</p>
+          <h2 class="font-semibold text-black dark:text-white">Contenido destacado</h2>
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <!-- Post más popular - actualiza con tu post real -->
             <a
               href="/blog/thm/jwt-security"
               class="group p-6 border border-black/10 dark:border-white/20 rounded-lg hover:bg-black/5 dark:hover:bg-white/5 transition-colors duration-300"
             >
-              <div class="flex items-start gap-4">
-                <span class="text-3xl group-hover:scale-110 transition-transform duration-300">🔥</span>
-                <div class="flex-1">
-                  <p class="font-semibold text-black dark:text-white group-hover:underline">
-                    JWT Security
-                  </p>
-                  <p class="text-sm opacity-75 mt-1">
-                    Aprende sobre seguridad en JSON Web Tokens
-                  </p>
-                  <p class="text-xs opacity-50 mt-2">
-                    Post más leído
-                  </p>
-                </div>
+              <div class="flex-1">
+                <p class="font-semibold text-black dark:text-white group-hover:underline">
+                  JWT Security
+                </p>
+                <p class="text-sm opacity-75 mt-1">
+                  Vulnerabilidades comunes en JSON Web Tokens y cómo mitigarlas
+                </p>
+                <p class="text-xs opacity-50 mt-2">
+                  Writeup más leído
+                </p>
               </div>
             </a>
 
-            <!-- Proyecto destacado - actualiza con tu proyecto real -->
             <a
-              href="/projects/teslo-shop"
+              href="/projects/cognos-tech"
               class="group p-6 border border-black/10 dark:border-white/20 rounded-lg hover:bg-black/5 dark:hover:bg-white/5 transition-colors duration-300"
             >
-              <div class="flex items-start gap-4">
-                <span class="text-3xl group-hover:scale-110 transition-transform duration-300">💎</span>
-                <div class="flex-1">
-                  <p class="font-semibold text-black dark:text-white group-hover:underline">
-                    Teslo Shop
-                  </p>
-                  <p class="text-sm opacity-75 mt-1">
-                    E-commerce completo con Next.js y PostgreSQL
-                  </p>
-                  <p class="text-xs opacity-50 mt-2">
-                    Proyecto destacado
-                  </p>
-                </div>
+              <div class="flex-1">
+                <p class="font-semibold text-black dark:text-white group-hover:underline">
+                  Cognos Tech
+                </p>
+                <p class="text-sm opacity-75 mt-1">
+                  Plataforma educativa para cursos de inglés, construida para un cliente real
+                </p>
+                <p class="text-xs opacity-50 mt-2">
+                  Proyecto destacado
+                </p>
               </div>
             </a>
           </div>
@@ -233,7 +211,7 @@ const stackByCategory = stack.reduce((acc, item) => {
       <section class="animate">
         <div class="space-y-4">
           <div class="flex justify-between">
-            <p class="font-semibold text-black dark:text-white">📝 Posts recientes</p>
+            <h2 class="font-semibold text-black dark:text-white">Posts recientes</h2>
             <a
               href="/blog"
               class="w-fit col-span-3 group flex gap-1 items-center underline decoration-[.5px] decoration-black/25 dark:decoration-white/50 hover:decoration-black dark:hover:decoration-white text-black dark:text-white underline-offset-2 blend"
@@ -260,11 +238,8 @@ const stackByCategory = stack.reduce((acc, item) => {
       <!-- Tech Stack Section -->
       <section class="animate">
         <div class="space-y-4">
-          <p class="font-semibold text-black dark:text-white">⚙️ Stack tecnológico</p>
-          <p>
-            En el transcurso de mi carrera he tenido la oportunidad de trabajar con las siguientes
-            herramientas:
-          </p>
+          <h2 class="font-semibold text-black dark:text-white">Stack tecnológico</h2>
+          <p>Herramientas con las que trabajo a diario o he usado en proyectos reales:</p>
           <div class="space-y-6 mt-6">
             {
               Object.entries(stackByCategory).map(([category, items]) => (
@@ -288,7 +263,7 @@ const stackByCategory = stack.reduce((acc, item) => {
       <section class="animate">
         <div class="space-y-4">
           <div class="flex justify-between">
-            <p class="font-semibold text-black dark:text-white">🚀 Proyectos recientes</p>
+            <h2 class="font-semibold text-black dark:text-white">Proyectos recientes</h2>
             <a
               href="/projects"
               class="w-fit col-span-3 group flex gap-1 items-center underline decoration-[.5px] decoration-black/25 dark:decoration-white/50 hover:decoration-black dark:hover:decoration-white text-black dark:text-white underline-offset-2 blend"
@@ -314,11 +289,10 @@ const stackByCategory = stack.reduce((acc, item) => {
 
       <section class="animate">
         <div class="space-y-4">
-          <p class="font-semibold text-black dark:text-white">🎓 Educación continua</p>
+          <h2 class="font-semibold text-black dark:text-white">Educación continua</h2>
           <p>
-            Con el paso del tiempo, la tecnología avanza a pasos agigantados, y mantenerse
-            actualizado es imprescindible. Te comparto mis perfiles en algunas de las plataformas de
-            aprendizaje en donde día a día me capacito para encontrarme mejor preparado.
+            La tecnología avanza rápido y mantenerse actualizado es parte del trabajo. Estos son
+            mis perfiles en las plataformas donde me capacito continuamente:
           </p>
 
           <div class="flex justify-center flex-wrap items-center gap-4 mt-5">
@@ -330,8 +304,8 @@ const stackByCategory = stack.reduce((acc, item) => {
       <!-- Contact Section -->
       <section class="animate">
         <div>
-          <p class="font-semibold text-black dark:text-white">📬 Contáctame</p>
-          <p>Comunícate conmigo, con gusto te atenderé.</p>
+          <h2 class="font-semibold text-black dark:text-white">Contáctame</h2>
+          <p>¿Tienes un proyecto o una propuesta? Escríbeme por cualquiera de estos medios.</p>
           <div class="grid grid-cols-4 gap-y-2 mt-4 auto-cols-min">
             {
               SOCIALS.map((social) => (

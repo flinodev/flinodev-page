@@ -1,6 +1,6 @@
 ---
-title: "Convenciones de Nomenclatura en Programación."
-summary: "Una buena convención de nomeclatura hace que el código sea más legible y mantenible. Camel Case, Pascal Case, Snake Case, entre otros son ejemplos de convenciones."
+title: "Convenciones de nomenclatura en programación"
+summary: "Una buena convención de nomenclatura hace que el código sea más legible y mantenible. Camel Case, Pascal Case y Snake Case son algunos ejemplos."
 date: "Oct 08 2024"
 draft: false
 tags:
@@ -10,7 +10,7 @@ image: "/images/blog/nomenclatura.webp"
 
 ![Imagen de nomenclatura](../../../assets/images/blog/nomenclatura.webp)
 
-La nomenclatura de variables, funciones, y métodos es una parte importante del desarrollo de software. Una buena convención de nomeclatura hace que el código sea más legible y mantenible. A lo largo del tiempo, se han establecido diversas convenciones que ayudan a mejorar la claridad y consistencia en el código.
+La nomenclatura de variables, funciones, y métodos es una parte importante del desarrollo de software. Una buena convención de nomenclatura hace que el código sea más legible y mantenible. A lo largo del tiempo, se han establecido diversas convenciones que ayudan a mejorar la claridad y consistencia en el código.
 
 A continuación, repasaremos algunas de las convenciones más populares como Camel Case, Pascal Case, Snake Case, entre otras, junto con ejemplos de código.
 

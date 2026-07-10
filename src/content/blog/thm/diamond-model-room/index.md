@@ -1,6 +1,6 @@
 ---
 title: "Diamond Model Room"
-summary: "Learn about the four core features of the Diamond Model of Intrusion Analysis: adversary, infrastructure, capability, and victim."
+summary: "El Modelo Diamante de análisis de intrusiones y sus cuatro vértices: adversario, infraestructura, capacidad y víctima."
 date: "Apr 28 2025"
 draft: false
 tags:

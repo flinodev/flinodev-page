@@ -1,6 +1,6 @@
 ---
 title: "JWT Security"
-summary: "Learn about JWTs, where they are used, and how they need to be secured."
+summary: "Vulnerabilidades comunes en JSON Web Tokens: algoritmos débiles, firmas sin validar y cómo mitigarlas."
 date: "Oct 25 2025"
 draft: false
 tags:

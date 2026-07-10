@@ -1,6 +1,6 @@
 ---
 title: "Tcpdump: The basics"
-summary: "Learn how to use Tcpdump to save, filter, and display packets."
+summary: "Captura, filtrado y análisis de paquetes de red con tcpdump desde la línea de comandos."
 date: "Jul 19 2025"
 draft: false
 tags:

@@ -1,6 +1,6 @@
 ---
 title: "SQL Fundamentals"
-summary: "Learn how to perform basic SQL queries to retrieve and manage data in a database."
+summary: "Fundamentos de SQL desde la perspectiva de seguridad: consultas básicas para leer y manipular datos."
 date: "Jul 24 2025"
 draft: false
 tags:

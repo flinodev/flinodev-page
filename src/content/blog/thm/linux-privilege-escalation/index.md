@@ -1,6 +1,6 @@
 ---
 title: "Linux Privilege Escalation"
-summary: "Learn the fundamentals of Linux privilege escalation. From enumeration to exploitation, get hands-on with over 8 different privilege escalation techniques."
+summary: "Técnicas de escalación de privilegios en Linux: enumeración, SUID, sudo, cron, kernel exploits y más."
 date: "Jun 27 2025"
 draft: false
 tags:

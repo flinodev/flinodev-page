@@ -1,6 +1,6 @@
 ---
 title: "Eviction Room"
-summary: "Unearth the monster from under your bed."
+summary: "Uso del MITRE ATT&CK Navigator para mapear las TTPs de un adversario y expulsarlo de la red."
 date: "May 07 2025"
 draft: false
 tags:

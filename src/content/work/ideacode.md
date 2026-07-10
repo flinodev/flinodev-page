@@ -5,7 +5,7 @@ dateStart: "05/01/2021"
 dateEnd: "01/07/2025"
 ---
 
-En <a href="https://realmetrics.io/" target="_blank" rel="noopener noreferrer">Idea Code</a> colaboré con los equipos de frontend y backend en el diseño, desarrollo e implementación de aplicaciones en la nube.
+En Idea Code colaboré con los equipos de frontend y backend en el diseño, desarrollo e implementación de aplicaciones en la nube.
 
 **Logros destacados:**
 

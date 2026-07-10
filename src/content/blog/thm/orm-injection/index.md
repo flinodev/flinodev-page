@@ -1,6 +1,6 @@
 ---
 title: "ORM Injection"
-summary: "Learn how to exploit injection vulnerabilities in an ORM-based web app."
+summary: "Explotación de vulnerabilidades de inyección en aplicaciones web construidas sobre un ORM."
 date: "Apr 05 2026"
 draft: false
 tags:

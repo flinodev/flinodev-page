@@ -1,6 +1,6 @@
 ---
 title: "Mitre Room"
-summary: "This room will discuss the various resources MITRE has made available for the cybersecurity community."
+summary: "Los recursos de MITRE para la comunidad de ciberseguridad: ATT&CK, CAR, ENGAGE y D3FEND."
 date: "Apr 29 2025"
 draft: false
 tags:

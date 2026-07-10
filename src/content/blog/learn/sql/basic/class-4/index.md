@@ -1,10 +1,6 @@
 ---
 title: "SQL básico - Clase 4"
-summary: "Esta clase explica cómo combinar varias condiciones dentro de una consulta utilizando operadores lógicos como AND y OR. Esto permite construir consultas más específicas y complejas.
-
-También se introduce el operador != para buscar valores diferentes a uno determinado.
-
-Los estudiantes comienzan a entender cómo construir consultas más precisas para responder preguntas específicas sobre los datos."
+summary: "Consultas con múltiples condiciones: operadores lógicos AND y OR, y el operador de desigualdad !=."
 date: "March 5 2026"
 draft: false
 tags:
