@@ -1,0 +1,66 @@
+---
+title: "flino.link"
+summary: "Acortador de URLs en producción sobre la red edge de Cloudflare: redirects en menos de 10 ms, contador de clicks sin latencia extra y costo de infraestructura cero."
+date: "Jul 18 2026"
+draft: false
+tags:
+  - Cloudflare Workers
+  - TypeScript
+  - Serverless
+demoUrl: https://flino.link/me
+repoUrl: https://github.com/flinodev/url-shortened
+image: "/images/projects/flino-link.webp"
+---
+
+import StackCard from "@components/StackCard.astro";
+
+### Descripción
+
+Acortador de URLs personal corriendo en producción en [flino.link](https://flino.link/me). Un solo Cloudflare Worker atiende todo el dominio: sirve los redirects desde más de 300 ubicaciones edge en menos de 10 ms, expone una API REST con autenticación Bearer y entrega un dashboard de administración — todo sin servidores, sin base de datos que administrar y sin dependencias en runtime.
+
+El proyecto cubre el ciclo completo de un sistema real: registro y delegación DNS del dominio, cómputo distribuido, dos tipos de storage elegidos por semántica, autenticación y observabilidad. Costo total de operación: $4.68 al año (el dominio).
+
+### Stack tecnológico
+
+<div class="flex flex-wrap items-center gap-2 mt-5">
+  {[
+    {
+      text: "Cloudflare Workers",
+      icon: "cloudflare",
+      href: "https://workers.cloudflare.com"
+    },
+    {
+      text: "TypeScript",
+      icon: "typescript",
+      href: "https://www.typescriptlang.org"
+    },
+
+].map((item) => (
+
+<StackCard text={item.text} icon={item.icon} href={item.href} />
+))}
+
+</div>
+
+### Arquitectura
+
+- **Workers KV** guarda los mapeos `slug → URL`: replicación global y lecturas desde el edge, ideal para el patrón de muchas lecturas y pocas escrituras de un acortador.
+- **Durable Object con SQLite** lleva el conteo de clicks por link. KV es eventualmente consistente y no sirve para contar; el Durable Object da un punto único con escrituras transaccionales.
+- El incremento del contador se ejecuta con `ctx.waitUntil()` **después** de enviar el redirect, así que la analítica no añade latencia al camino crítico.
+- Slugs inexistentes y la raíz del dominio redirigen a este sitio: un link roto nunca muestra un error.
+
+### Funcionalidades
+
+#### Dashboard de administración
+
+Panel en `/admin` servido inline desde el propio Worker — una sola página HTML sin framework ni build step. Permite crear links (con slug personalizado o aleatorio), copiarlos, borrarlos y ver los clicks de cada uno, con dark mode automático.
+
+![Dashboard de flino.link](../../../assets/images/projects/flino-link.webp)
+
+#### API REST
+
+CRUD completo de links (`/api/links`) protegido con API key almacenada como secret cifrado del Worker. Crear un link devuelve la URL corta lista para compartir.
+
+### Más detalles
+
+En el blog está el caso de estudio completo, con las decisiones de diseño y el código: [Construí un acortador de URLs sin servidores por $4.68 al año](/blog/10-acortador-url-cloudflare-workers).
