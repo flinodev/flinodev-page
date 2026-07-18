@@ -4,9 +4,11 @@ Personal blog and portfolio of Francisco Lino - Full Stack Developer & Cybersecu
 
 🌐 **Live Site:** [flino.dev](https://flino.dev)
 
+![Lighthouse score: 100 in Performance, Accessibility, Best Practices and SEO](docs/lighthouse.png)
+
 ## 🚀 Tech Stack
 
-- **Framework:** [Astro](https://astro.build) v4
+- **Framework:** [Astro](https://astro.build) v5
 - **Styling:** [Tailwind CSS](https://tailwindcss.com)
 - **UI Components:** [Solid.js](https://www.solidjs.com)
 - **Deployment:** [Vercel](https://vercel.com)
@@ -15,12 +17,14 @@ Personal blog and portfolio of Francisco Lino - Full Stack Developer & Cybersecu
 
 ## ✨ Features
 
-- 📝 Blog with markdown/MDX support
+- 📝 Blog with markdown/MDX support (Astro content collections)
 - 💬 Comments system with GitHub Discussions
 - 👁️ Animated view counter per post
 - 🌙 Dark mode support
-- 🔍 Search functionality
-- 📊 RSS feed
+- 🔍 Client-side search powered by [Fuse.js](https://www.fusejs.io)
+- 🖼️ Open Graph image generation with `@vercel/og`
+- 📊 RSS feed and sitemap
+- 📈 Vercel Analytics & Speed Insights
 - 🎨 Responsive design
 - ⚡ Optimized performance (SSG + Serverless)
 
@@ -28,76 +32,82 @@ Personal blog and portfolio of Francisco Lino - Full Stack Developer & Cybersecu
 
 ### Prerequisites
 
-- Node.js 18+ or 20+
-- Yarn package manager
+- Node.js 20+
+- Yarn (classic)
 
-### Install dependencies
+### Setup
 
 ```bash
 yarn install
-```
-
-### Setup environment variables
-
-Copy `.env.example` to `.env` and fill in your credentials:
-
-```bash
 cp .env.example .env
 ```
 
-Required environment variables:
-- `UPSTASH_REDIS_REST_URL` - For view counter (get from [Upstash](https://console.upstash.com))
-- `UPSTASH_REDIS_REST_TOKEN` - For view counter
-- `GISCUS_REPO_ID` - For comments (get from [Giscus](https://giscus.app))
-- `GISCUS_CATEGORY_ID` - For comments
+Fill in the credentials in `.env`:
 
-### Run development server
+| Variable                   | Purpose                                                           |
+| -------------------------- | ----------------------------------------------------------------- |
+| `UPSTASH_REDIS_REST_URL`   | View counter — see [VIEW_COUNTER_SETUP.md](VIEW_COUNTER_SETUP.md) |
+| `UPSTASH_REDIS_REST_TOKEN` | View counter                                                      |
+| `GISCUS_REPO_ID`           | Comments — see [GISCUS_SETUP.md](GISCUS_SETUP.md)                 |
+| `GISCUS_CATEGORY_ID`       | Comments                                                          |
 
-```bash
-yarn dev
+### Commands
+
+| Command                             | Action                                                      |
+| ----------------------------------- | ----------------------------------------------------------- |
+| `yarn dev`                          | Start dev server at [localhost:4321](http://localhost:4321) |
+| `yarn dev:network`                  | Dev server accessible from other devices on the network     |
+| `yarn build`                        | Type-check (`astro check`) and build for production         |
+| `yarn preview`                      | Preview the production build locally                        |
+| `yarn lint` / `yarn lint:fix`       | Lint with ESLint                                            |
+| `yarn format` / `yarn format:check` | Format with Prettier                                        |
+| `yarn optimize:images`              | Convert images in `public/images` to WebP                   |
+
+## ✍️ Writing a Post
+
+Posts live in `src/content/blog/<slug>/index.md` (or `.mdx`). The slug of the folder becomes the URL. Frontmatter schema (validated in [`src/content.config.ts`](src/content.config.ts)):
+
+```yaml
+---
+title: "Post title"
+summary: "Short description used in listings and SEO."
+date: "Oct 09 2024"
+tags:
+  - Node
+draft: false # optional — hides the post when true
+image: "/images/blog/cover.webp" # optional — cover image
+comments: true # optional — defaults to true
+---
 ```
 
-Open [http://localhost:4321](http://localhost:4321)
-
-### Build for production
-
-```bash
-yarn build
-```
-
-### View statistics
-
-```bash
-# View post view statistics
-yarn views:stats
-```
+Files prefixed with `_` are ignored by the content loader. The `projects`, `work` and `legal` collections follow the same pattern with their own schemas.
 
 ## 📂 Project Structure
 
 ```
-├── public/           # Static assets
+├── public/            # Static assets
 ├── src/
-│   ├── components/   # Reusable components
-│   ├── content/      # Blog posts and projects
-│   ├── layouts/      # Page layouts
-│   ├── pages/        # Routes and API endpoints
-│   └── styles/       # Global styles
-├── scripts/          # Utility scripts
-└── astro.config.mjs  # Astro configuration
+│   ├── components/    # Reusable components
+│   ├── content/       # Content collections: blog, projects, work, legal
+│   ├── layouts/       # Page layouts
+│   ├── pages/         # Routes and API endpoints
+│   └── styles/        # Global styles
+├── scripts/           # Build scripts (Vercel post-build)
+├── docs/              # README assets
+└── astro.config.mjs   # Astro configuration
 ```
 
 ## 🚢 Deployment
 
 This site is automatically deployed to Vercel on every push to `main`.
 
-### Environment Variables on Vercel
+Add the same four environment variables from [Setup](#setup) in your Vercel project settings.
 
-Make sure to add the following environment variables in your Vercel project settings:
+## 📚 Additional Docs
 
-- `UPSTASH_REDIS_REST_URL`
-- `UPSTASH_REDIS_REST_TOKEN`
-- `GISCUS_REPO_ID`
-- `GISCUS_CATEGORY_ID`
+- [GISCUS_SETUP.md](GISCUS_SETUP.md) — configuring the comments system
+- [VIEW_COUNTER_SETUP.md](VIEW_COUNTER_SETUP.md) — configuring the Upstash view counter
+- [OPTIMIZATION.md](OPTIMIZATION.md) — performance optimization notes
 
 ## 📄 License
 
