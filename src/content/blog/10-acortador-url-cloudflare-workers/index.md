@@ -100,4 +100,4 @@ Para un proyecto de este tamaño, un framework de frontend habría sido más inf
 2. **Elegir el storage por semántica, no por costumbre.** KV y Durable Objects conviven en el mismo Worker haciendo cada uno lo que sabe hacer: replicación global para leer, consistencia fuerte para contar.
 3. **`waitUntil` es el patrón más subestimado de Workers.** Todo lo que no necesita el visitante — métricas, logs, contadores — puede salir del camino crítico.
 
-El código completo está en [GitHub](https://github.com/flinodev/url-shortened), y si quieres ver el sistema funcionando, este link pasa por él: [flino.link/me](https://flino.link/me).
+El código completo está en [GitHub](https://github.com/flinodev/flino-link), y si quieres ver el sistema funcionando, este link pasa por él: [flino.link/me](https://flino.link/me).
