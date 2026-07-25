@@ -29,6 +29,9 @@ html {
   color-scheme: light;
   background-color: white;
   font-family: "Atkinson", sans-serif;
+  /* El header es fixed (h-16 = 4rem); sin esto los enlaces a #anclas
+     dejan el título justo debajo del header. 1rem extra de aire. */
+  scroll-padding-top: 5rem;
 }
 
 html.dark {
