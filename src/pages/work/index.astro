@@ -31,10 +31,13 @@ function formatWorkDate(input: Date | string) {
   return `${month} ${year}`;
 }
 
-// Calcular estadísticas
-const startYear = 2019; // Real Metrics - primer empleo profesional en desarrollo
+// Calcular estadísticas. Mismas dos cifras que en la portada: el total cuenta
+// desde el freelance; el detalle de cuántos son en empresa (Real Metrics,
+// feb 2019) se explica en la portada. Aquí lo respalda el timeline de abajo.
+const freelanceStartYear = 2017;
+
 const currentYear = new Date().getFullYear();
-const yearsOfExperience = currentYear - startYear;
+const yearsOfExperience = currentYear - freelanceStartYear;
 const totalCompanies = collection.length;
 
 // Tecnologías destacadas (extraídas manualmente de las experiencias)
@@ -62,7 +65,7 @@ const topSkills = [
     <div class="animate grid grid-cols-2 md:grid-cols-3 gap-4 mt-8 mb-8">
       <div class="text-center p-4 bg-black/5 dark:bg-white/5 rounded-lg border border-black/10 dark:border-white/20">
         <p class="text-3xl font-bold text-black dark:text-white">{yearsOfExperience}+</p>
-        <p class="text-sm opacity-75">Años experiencia</p>
+        <p class="text-sm opacity-75">Años desarrollando</p>
       </div>
       <div class="text-center p-4 bg-black/5 dark:bg-white/5 rounded-lg border border-black/10 dark:border-white/20">
         <p class="text-3xl font-bold text-black dark:text-white">{totalCompanies}</p>

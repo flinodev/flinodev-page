@@ -23,10 +23,15 @@ const projects = (await getCollection("projects"))
   .sort((a, b) => b.data.date.getTime() - a.data.date.getTime())
   .slice(0, 3);
 
-// Calcular años de experiencia desde primer empleo profesional en desarrollo (Real Metrics - Feb 2019)
-const startYear = 2019;
+// Dos cifras a propósito: el total incluye los años de freelance, y aparte se
+// dice cuántos son en empresa (Real Metrics, feb 2019). Publicar solo el total
+// choca con las fechas de /work; publicar solo el de empresa se come dos años
+// reales. Decir las dos desarma las dos lecturas.
+const freelanceStartYear = 2017;
+const companyStartYear = 2019;
 const currentYear = new Date().getFullYear();
-const yearsOfExperience = currentYear - startYear;
+const yearsOfExperience = currentYear - freelanceStartYear;
+const yearsInCompanies = currentYear - companyStartYear;
 
 // Agrupar stack por categoría
 const stackByCategory = stack.reduce((acc, item) => {
@@ -128,9 +133,10 @@ const stackByCategory = stack.reduce((acc, item) => {
           <!-- Intro personal -->
           <article class="space-y-4">
             <p>
-              Soy <b>desarrollador full stack</b> con más de {yearsOfExperience} años de
-              experiencia. Actualmente construyo el backend de una aplicación fintech y el sistema
-              de cajeros automáticos en Montebit, trabajando con Go, PostgreSQL y Redis.
+              Soy <b>desarrollador full stack</b> con más de {yearsOfExperience} años desarrollando
+              software, {yearsInCompanies} de ellos en empresa. Actualmente construyo el backend de
+              una aplicación fintech y el sistema de cajeros automáticos en Montebit, trabajando con
+              Go, PostgreSQL y Redis.
             </p>
             <p>
               Antes diseñé y migré arquitecturas en Google Cloud para procesar grandes volúmenes de
