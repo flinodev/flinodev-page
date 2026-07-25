@@ -18,7 +18,7 @@ export async function getStaticPaths() {
 // Get the requested project
 type Props = CollectionEntry<"projects">;
 const project = Astro.props;
-const { title, summary, date, tags, image = "/flinodev.webp" } = project.data;
+const { title, summary, date, tags, image = "/flinodev.png" } = project.data;
 ---
 
 <PageLayout title={title} description={summary} image={image} pubDate={date} articleTags={tags}>
