@@ -2,7 +2,7 @@ import type { Site, Page, Links, Socials } from "@types";
 
 // Global
 export const SITE: Site = {
-  TITLE: "{flino|dev}",
+  TITLE: "flino.dev",
   DESCRIPTION:
     "Sitio de Francisco Lino, desarrollador full stack especializado en backend y seguridad web. Escribo sobre desarrollo de software, seguridad ofensiva y comparto writeups de laboratorios",
   AUTHOR: "Francisco Suriel Lino",

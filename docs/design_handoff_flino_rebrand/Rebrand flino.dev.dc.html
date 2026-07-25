@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="design_doc_mode" content="canvas">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&family=Archivo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  body { margin: 0; background: #E7E5E0; }
+  a { color: #0E0F10; }
+  a:hover { color: #3A7D5C; }
+</style>
+</helmet>
+
+<section style="padding: 72px 72px 32px; display: flex; flex-direction: column; gap: 40px; font-family: Archivo, Helvetica, sans-serif;">
+  <div style="display: flex; flex-direction: column; gap: 10px; max-width: 760px;">
+    <div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: #6E6A63;">Turno 2 &middot; aplicado a flino.dev</div>
+    <h1 style="margin: 0; font-size: 34px; font-weight: 700; letter-spacing: -0.02em; color: #14150F;">Cursor, en monocromo</h1>
+    <p style="margin: 0; font-size: 16px; line-height: 1.55; color: #4A4741; text-wrap: pretty;">Tu sitio es blanco y negro con voz de terminal. Aquí el color no decora: solo marca estado (verde = ok, ámbar = writeup/seguridad). Regla: máximo un elemento con acento por pantalla.</p>
+  </div>
+
+  <div id="2a" style="width: 1040px; border: 1px solid #CFCCC5; background: #0B0B0B; display: flex; flex-direction: column;">
+    <div style="display: flex; align-items: center; justify-content: space-between; padding: 18px 32px; border-bottom: 1px solid #1E1E1E;">
+      <div style="display: flex; align-items: flex-end; font-family: 'JetBrains Mono', monospace; font-size: 20px; font-weight: 800; letter-spacing: -0.03em; color: #FAFAF8; line-height: 1;">
+        <span>flino</span>
+        <span style="width: 5px; height: 5px; background: #3FA075; margin: 0 2px 3px;"></span>
+        <span style="font-weight: 400; color: #8A8A85;">dev</span>
+      </div>
+      <div style="display: flex; align-items: center; gap: 26px; font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #A8A8A2;">
+        <span style="color: #FAFAF8;">Inicio</span>
+        <span>Carrera</span>
+        <span>Blog</span>
+        <span>Writeups</span>
+        <span>Proyectos</span>
+      </div>
+      <div style="display: flex; align-items: center; gap: 14px; font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #6E6E68;">
+        <span>/search</span>
+        <span>/rss.xml</span>
+      </div>
+    </div>
+
+    <div style="padding: 72px 32px 64px; display: flex; flex-direction: column; gap: 26px; border-bottom: 1px solid #1E1E1E;">
+      <div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; color: #6E6E68;">Full stack developer &middot; security</div>
+      <div style="display: flex; align-items: flex-end; font-family: 'JetBrains Mono', monospace; font-size: 84px; font-weight: 800; letter-spacing: -0.045em; color: #FAFAF8; line-height: 0.88;">
+        <span>flino</span>
+        <span style="width: 17px; height: 17px; background: #3FA075; margin: 0 7px 15px;"></span>
+        <span style="font-weight: 400; color: #8A8A85;">dev</span>
+      </div>
+      <div style="font-family: 'JetBrains Mono', monospace; font-size: 17px; line-height: 1.6; color: #A8A8A2; max-width: 620px;">Construyo y opero sistemas en producción. Go, PostgreSQL, Redis.<br>Y documento lo que aprendo rompiendo cosas.</div>
+      <div style="display: flex; gap: 12px; margin-top: 8px;">
+        <span style="font-family: 'JetBrains Mono', monospace; font-size: 13px; font-weight: 700; color: #0B0B0B; background: #FAFAF8; padding: 12px 20px;">Ver proyectos</span>
+        <span style="font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #FAFAF8; border: 1px solid #33332F; padding: 12px 20px;">Leer writeups</span>
+      </div>
+    </div>
+
+    <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; border-bottom: 1px solid #1E1E1E;">
+      <div style="padding: 26px 32px; border-right: 1px solid #1E1E1E; display: flex; flex-direction: column; gap: 10px;">
+        <span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.16em; color: #6E6E68;">WRITEUP</span>
+        <span style="font-family: 'JetBrains Mono', monospace; font-size: 20px; font-weight: 700; letter-spacing: -0.02em; color: #FAFAF8;">JWT Security</span>
+        <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #8A8A85;">Vulnerabilidades comunes en JSON Web Tokens.</span>
+        <span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #C9A227; margin-top: 4px;">● alto impacto</span>
+      </div>
+      <div style="padding: 26px 32px; border-right: 1px solid #1E1E1E; display: flex; flex-direction: column; gap: 10px;">
+        <span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.16em; color: #6E6E68;">PROYECTO</span>
+        <span style="font-family: 'JetBrains Mono', monospace; font-size: 20px; font-weight: 700; letter-spacing: -0.02em; color: #FAFAF8;">flino.link</span>
+        <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #8A8A85;">Redirects en &lt;10&nbsp;ms desde el edge. $4.68 al año.</span>
+        <span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #3FA075; margin-top: 4px;">● en producción</span>
+      </div>
+      <div style="padding: 26px 32px; display: flex; flex-direction: column; gap: 10px;">
+        <span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.16em; color: #6E6E68;">EXPERIENCIA</span>
+        <span style="font-family: 'JetBrains Mono', monospace; font-size: 40px; font-weight: 800; letter-spacing: -0.04em; color: #FAFAF8; line-height: 1;">7+</span>
+        <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #8A8A85;">años · 19 writeups publicados</span>
+      </div>
+    </div>
+
+    <div style="display: flex; align-items: center; justify-content: space-between; padding: 16px 32px; font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #6E6E68;">
+      <span>© 2026 flino.dev</span>
+      <span style="display: flex; align-items: center; gap: 8px; color: #A8A8A2;"><span style="width: 7px; height: 7px; border-radius: 999px; background: #3FA075;"></span>All systems normal</span>
+    </div>
+  </div>
+
+  <div style="width: 1040px; border: 1px solid #CFCCC5; background: #FFFFFF; padding: 28px 32px; display: flex; flex-direction: column; gap: 18px;">
+    <span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.16em; color: #9A968E;">DOSIS DE COLOR — SISTEMA DE ESTADO</span>
+    <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px;">
+      <div style="display: flex; flex-direction: column; gap: 8px;">
+        <div style="height: 48px; background: #0B0B0B;"></div>
+        <span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #14150F;">tinta · #0B0B0B</span>
+        <span style="font-family: 'JetBrains Mono', monospace; font-size: 10px; color: #7A766E;">todo el texto y la marca</span>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 8px;">
+        <div style="height: 48px; background: #FAFAF8; border: 1px solid #E5E2DB;"></div>
+        <span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #14150F;">papel · #FAFAF8</span>
+        <span style="font-family: 'JetBrains Mono', monospace; font-size: 10px; color: #7A766E;">fondo claro / inverso</span>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 8px;">
+        <div style="height: 48px; background: #3FA075;"></div>
+        <span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #14150F;">señal · #3FA075</span>
+        <span style="font-family: 'JetBrains Mono', monospace; font-size: 10px; color: #7A766E;">ok, en producción, el punto</span>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 8px;">
+        <div style="height: 48px; background: #C9A227;"></div>
+        <span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #14150F;">alerta · #C9A227</span>
+        <span style="font-family: 'JetBrains Mono', monospace; font-size: 10px; color: #7A766E;">writeups y seguridad</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="padding: 40px 72px 120px; display: flex; flex-direction: column; gap: 40px; font-family: Archivo, Helvetica, sans-serif;">
+  <div style="display: flex; flex-direction: column; gap: 10px; max-width: 760px;">
+    <div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: #6E6A63;">Turno 1 &middot; dos direcciones</div>
+    <h1 style="margin: 0; font-size: 34px; font-weight: 700; letter-spacing: -0.02em; color: #14150F;">Rebrand flino.dev</h1>
+    <p style="margin: 0; font-size: 16px; line-height: 1.55; color: #4A4741; text-wrap: pretty;">Fuera las llaves y el patrón <span style="font-family: 'JetBrains Mono', monospace;">{a/b}</span>. Dos identidades construidas sobre lo que haces: construir, operar y documentar sistemas en producción. Referencia <a href="#1a">1a</a> o <a href="#1b">1b</a> en el chat.</p>
+  </div>
+
+  <div style="display: flex; flex-wrap: wrap; gap: 32px; align-items: flex-start;">
+
+    <div id="1a" style="width: 880px; display: flex; flex-direction: column; gap: 0; border: 1px solid #CFCCC5; background: #FFFFFF;">
+      <div style="display: flex; align-items: baseline; gap: 14px; padding: 18px 28px; border-bottom: 1px solid #E5E2DB;">
+        <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; font-weight: 700; letter-spacing: 0.1em; background: #14150F; color: #F6F5F1; padding: 4px 8px;">1A</span>
+        <span style="font-size: 18px; font-weight: 700; letter-spacing: -0.01em; color: #14150F;">Cursor</span>
+        <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #7A766E;">monoespaciada · el punto que sigue escribiendo</span>
+      </div>
+
+      <div style="padding: 56px 28px 64px; display: flex; flex-direction: column; align-items: center; gap: 14px; background: #FBFAF8;">
+        <div style="display: flex; align-items: center; gap: 18px;">
+          <div style="width: 88px; height: 88px; background: #14150F; display: flex; align-items: center; justify-content: center;">
+            <span style="font-family: 'JetBrains Mono', monospace; font-size: 54px; font-weight: 800; color: #F6F5F1; line-height: 1;">f</span>
+            <span style="width: 11px; height: 11px; background: #3FA075; margin-left: 2px; align-self: flex-end; margin-bottom: 20px;"></span>
+          </div>
+          <div style="display: flex; align-items: flex-end; font-family: 'JetBrains Mono', monospace; font-size: 62px; font-weight: 800; letter-spacing: -0.035em; color: #14150F; line-height: 0.9;">
+            <span>flino</span>
+            <span style="width: 13px; height: 13px; background: #3FA075; margin: 0 5px 11px;"></span>
+            <span style="font-weight: 400; color: #57534C;">dev</span>
+          </div>
+        </div>
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: #9A968E;">lockup horizontal</div>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid #E5E2DB;">
+        <div style="padding: 26px 20px; display: flex; flex-direction: column; align-items: center; gap: 12px; border-right: 1px solid #E5E2DB;">
+          <div style="width: 72px; height: 72px; background: #14150F; display: flex; align-items: center; justify-content: center;">
+            <span style="font-family: 'JetBrains Mono', monospace; font-size: 44px; font-weight: 800; color: #F6F5F1; line-height: 1;">f</span>
+            <span style="width: 9px; height: 9px; background: #3FA075; margin-left: 2px; align-self: flex-end; margin-bottom: 16px;"></span>
+          </div>
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.14em; color: #9A968E;">AVATAR</span>
+        </div>
+        <div style="padding: 26px 20px; display: flex; flex-direction: column; align-items: center; gap: 12px; border-right: 1px solid #E5E2DB;">
+          <div style="width: 72px; height: 72px; border-radius: 999px; background: #14150F; display: flex; align-items: center; justify-content: center;">
+            <span style="font-family: 'JetBrains Mono', monospace; font-size: 40px; font-weight: 800; color: #F6F5F1; line-height: 1;">f</span>
+            <span style="width: 8px; height: 8px; background: #3FA075; margin-left: 2px; align-self: flex-end; margin-bottom: 18px;"></span>
+          </div>
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.14em; color: #9A968E;">CIRCULAR</span>
+        </div>
+        <div style="padding: 26px 20px; display: flex; flex-direction: column; align-items: center; gap: 12px; border-right: 1px solid #E5E2DB;">
+          <div style="width: 32px; height: 32px; background: #14150F; display: flex; align-items: center; justify-content: center;">
+            <span style="font-family: 'JetBrains Mono', monospace; font-size: 21px; font-weight: 800; color: #F6F5F1; line-height: 1;">f</span>
+          </div>
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.14em; color: #9A968E;">FAVICON 32</span>
+        </div>
+        <div style="padding: 26px 20px; display: flex; flex-direction: column; align-items: center; gap: 12px;">
+          <div style="width: 72px; height: 72px; background: #F6F5F1; border: 1px solid #DCD9D2; display: flex; align-items: center; justify-content: center;">
+            <span style="font-family: 'JetBrains Mono', monospace; font-size: 44px; font-weight: 800; color: #14150F; line-height: 1;">f</span>
+            <span style="width: 9px; height: 9px; background: #3FA075; margin-left: 2px; align-self: flex-end; margin-bottom: 16px;"></span>
+          </div>
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.14em; color: #9A968E;">INVERSO</span>
+        </div>
+      </div>
+
+      <div style="display: grid; grid-template-columns: 1fr 1fr; border-top: 1px solid #E5E2DB;">
+        <div style="padding: 26px 28px; display: flex; flex-direction: column; gap: 14px; border-right: 1px solid #E5E2DB;">
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.16em; color: #9A968E;">PALETA</span>
+          <div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px;">
+            <div style="display: flex; flex-direction: column; gap: 6px;"><div style="height: 56px; background: #14150F;"></div><span style="font-family: 'JetBrains Mono', monospace; font-size: 9px; color: #7A766E;">#14150F</span></div>
+            <div style="display: flex; flex-direction: column; gap: 6px;"><div style="height: 56px; background: #57534C;"></div><span style="font-family: 'JetBrains Mono', monospace; font-size: 9px; color: #7A766E;">#57534C</span></div>
+            <div style="display: flex; flex-direction: column; gap: 6px;"><div style="height: 56px; background: #FBFAF8; border: 1px solid #E5E2DB;"></div><span style="font-family: 'JetBrains Mono', monospace; font-size: 9px; color: #7A766E;">#FBFAF8</span></div>
+            <div style="display: flex; flex-direction: column; gap: 6px;"><div style="height: 56px; background: #3FA075;"></div><span style="font-family: 'JetBrains Mono', monospace; font-size: 9px; color: #7A766E;">#3FA075</span></div>
+            <div style="display: flex; flex-direction: column; gap: 6px;"><div style="height: 56px; background: #C9E3D6;"></div><span style="font-family: 'JetBrains Mono', monospace; font-size: 9px; color: #7A766E;">#C9E3D6</span></div>
+          </div>
+        </div>
+        <div style="padding: 26px 28px; display: flex; flex-direction: column; gap: 12px;">
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.16em; color: #9A968E;">TIPOGRAFÍA</span>
+          <div style="font-family: 'JetBrains Mono', monospace; font-size: 26px; font-weight: 800; letter-spacing: -0.02em; color: #14150F;">JetBrains Mono 800</div>
+          <div style="font-family: 'JetBrains Mono', monospace; font-size: 14px; font-weight: 400; line-height: 1.6; color: #57534C;">400 — cuerpo, código y anotaciones. Una sola familia: la marca se sostiene en el ritmo del monoespaciado, no en un símbolo dibujado.</div>
+        </div>
+      </div>
+
+      <div style="padding: 28px; display: flex; flex-direction: column; gap: 12px; border-top: 1px solid #E5E2DB; background: #FBFAF8;">
+        <span style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.16em; color: #9A968E;">MINIATURAS 16:9</span>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+          <div style="aspect-ratio: 16/9; background: #14150F; padding: 22px; display: flex; flex-direction: column; justify-content: space-between; position: relative; overflow: hidden;">
+            <div style="display: flex; align-items: center; gap: 8px; font-family: 'JetBrains Mono', monospace; font-size: 13px; font-weight: 700; color: #F6F5F1;">flino<span style="width: 5px; height: 5px; background: #3FA075; display: inline-block;"></span><span style="font-weight: 400; color: #8C877E;">dev</span></div>
+            <div style="font-family: 'JetBrains Mono', monospace; font-size: 34px; font-weight: 800; line-height: 1.05; letter-spacing: -0.03em; color: #F6F5F1; max-width: 56%; position: relative; z-index: 2;">Postgres<br><span style="color: #3FA075;">sin downtime</span></div>
+            <div style="position: absolute; right: -40px; bottom: -30px; width: 190px; height: 190px; background: repeating-linear-gradient(135deg, #2A2B24 0 6px, #14150F 6px 12px); display: flex; align-items: flex-end; justify-content: center; padding-bottom: 40px;"><span style="font-family: 'JetBrains Mono', monospace; font-size: 9px; color: #6E6A63;">foto</span></div>
+          </div>
+          <div style="aspect-ratio: 16/9; background: #F6F5F1; padding: 22px; display: flex; flex-direction: column; justify-content: space-between; border: 1px solid #E5E2DB;">
+            <div style="display: flex; align-items: center; justify-content: space-between;">
+              <div style="width: 30px; height: 30px; background: #14150F; display: flex; align-items: center; justify-content: center;"><span style="font-family: 'JetBrains Mono', monospace; font-size: 19px; font-weight: 800; color: #F6F5F1; line-height: 1;">f</span></div>
+              <span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.12em; color: #7A766E;">EN PRODUCCIÓN / 04</span>
+            </div>
+            <div style="font-family: 'JetBrains Mono', monospace; font-size: 32px; font-weight: 800; line-height: 1.05; letter-spacing: -0.03em; color: #14150F;">Leí 40k líneas<br>de logs por ti</div>
+            <div style="height: 6px; background: #3FA075; width: 46%;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="1b" style="width: 880px; display: flex; flex-direction: column; border: 1px solid #CFCCC5; background: #FFFFFF;">
+      <div style="display: flex; align-items: baseline; gap: 14px; padding: 18px 28px; border-bottom: 1px solid #E5E2DB;">
+        <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; font-weight: 700; letter-spacing: 0.1em; background: #10233B; color: #F2F4F6; padding: 4px 8px;">1B</span>
+        <span style="font-size: 18px; font-weight: 700; letter-spacing: -0.01em; color: #10233B;">Bitácora</span>
+        <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #7A7F86;">grotesca sobria · registro de operación</span>
+      </div>
+
+      <div style="padding: 56px 28px 64px; display: flex; flex-direction: column; align-items: center; gap: 14px; background: #F7F8F9;">
+        <div style="display: flex; align-items: center; gap: 20px;">
+          <div style="width: 88px; height: 88px; border-radius: 999px; background: #10233B; display: flex; align-items: center; justify-content: center;">
+            <span style="font-family: Archivo, sans-serif; font-size: 40px; font-weight: 800; letter-spacing: -0.05em; color: #F2F4F6; line-height: 1;">FL</span>
+          </div>
+          <div style="display: flex; align-items: flex-start; gap: 10px;">
+            <span style="font-family: Archivo, sans-serif; font-size: 60px; font-weight: 800; letter-spacing: 0.01em; color: #10233B; line-height: 0.92;">FLINO</span>
+            <span style="font-family: 'JetBrains Mono', monospace; font-size: 15px; font-weight: 500; letter-spacing: 0.16em; color: #C2703A; margin-top: 8px;">.DEV</span>
+          </div>
+        </div>
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: #9AA0A6;">lockup horizontal</div>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid #E4E7EA;">
+        <div style="padding: 26px 20px; display: flex; flex-direction: column; align-items: center; gap: 12px; border-right: 1px solid #E4E7EA;">
+          <div style="width: 72px; height: 72px; border-radius: 999px; background: #10233B; display: flex; align-items: center; justify-content: center;"><span style="font-family: Archivo, sans-serif; font-size: 33px; font-weight: 800; letter-spacing: -0.05em; color: #F2F4F6; line-height: 1;">FL</span></div>
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.14em; color: #9AA0A6;">AVATAR</span>
+        </div>
+        <div style="padding: 26px 20px; display: flex; flex-direction: column; align-items: center; gap: 12px; border-right: 1px solid #E4E7EA;">
+          <div style="width: 72px; height: 72px; background: #C2703A; display: flex; align-items: center; justify-content: center;"><span style="font-family: Archivo, sans-serif; font-size: 33px; font-weight: 800; letter-spacing: -0.05em; color: #16130F; line-height: 1;">FL</span></div>
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.14em; color: #9AA0A6;">ACENTO</span>
+        </div>
+        <div style="padding: 26px 20px; display: flex; flex-direction: column; align-items: center; gap: 12px; border-right: 1px solid #E4E7EA;">
+          <div style="width: 32px; height: 32px; border-radius: 999px; background: #10233B; display: flex; align-items: center; justify-content: center;"><span style="font-family: Archivo, sans-serif; font-size: 16px; font-weight: 800; letter-spacing: -0.05em; color: #F2F4F6; line-height: 1;">FL</span></div>
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.14em; color: #9AA0A6;">FAVICON 32</span>
+        </div>
+        <div style="padding: 26px 20px; display: flex; flex-direction: column; align-items: center; gap: 12px;">
+          <div style="width: 72px; height: 72px; border-radius: 999px; background: #F2F4F6; border: 1px solid #DDE1E5; display: flex; align-items: center; justify-content: center;"><span style="font-family: Archivo, sans-serif; font-size: 33px; font-weight: 800; letter-spacing: -0.05em; color: #10233B; line-height: 1;">FL</span></div>
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.14em; color: #9AA0A6;">INVERSO</span>
+        </div>
+      </div>
+
+      <div style="display: grid; grid-template-columns: 1fr 1fr; border-top: 1px solid #E4E7EA;">
+        <div style="padding: 26px 28px; display: flex; flex-direction: column; gap: 14px; border-right: 1px solid #E4E7EA;">
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.16em; color: #9AA0A6;">PALETA</span>
+          <div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px;">
+            <div style="display: flex; flex-direction: column; gap: 6px;"><div style="height: 56px; background: #10233B;"></div><span style="font-family: 'JetBrains Mono', monospace; font-size: 9px; color: #7A7F86;">#10233B</span></div>
+            <div style="display: flex; flex-direction: column; gap: 6px;"><div style="height: 56px; background: #45566B;"></div><span style="font-family: 'JetBrains Mono', monospace; font-size: 9px; color: #7A7F86;">#45566B</span></div>
+            <div style="display: flex; flex-direction: column; gap: 6px;"><div style="height: 56px; background: #F7F8F9; border: 1px solid #E4E7EA;"></div><span style="font-family: 'JetBrains Mono', monospace; font-size: 9px; color: #7A7F86;">#F7F8F9</span></div>
+            <div style="display: flex; flex-direction: column; gap: 6px;"><div style="height: 56px; background: #C2703A;"></div><span style="font-family: 'JetBrains Mono', monospace; font-size: 9px; color: #7A7F86;">#C2703A</span></div>
+            <div style="display: flex; flex-direction: column; gap: 6px;"><div style="height: 56px; background: #E8D5C6;"></div><span style="font-family: 'JetBrains Mono', monospace; font-size: 9px; color: #7A7F86;">#E8D5C6</span></div>
+          </div>
+        </div>
+        <div style="padding: 26px 28px; display: flex; flex-direction: column; gap: 12px;">
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.16em; color: #9AA0A6;">TIPOGRAFÍA</span>
+          <div style="font-family: Archivo, sans-serif; font-size: 28px; font-weight: 800; letter-spacing: -0.01em; color: #10233B;">Archivo 800 · títulos</div>
+          <div style="font-family: 'JetBrains Mono', monospace; font-size: 13px; line-height: 1.6; color: #45566B;">JetBrains Mono 400 · metadatos, versiones y código. La grotesca da autoridad; el mono queda como voz técnica secundaria.</div>
+        </div>
+      </div>
+
+      <div style="padding: 28px; display: flex; flex-direction: column; gap: 12px; border-top: 1px solid #E4E7EA; background: #F7F8F9;">
+        <span style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.16em; color: #9AA0A6;">MINIATURAS 16:9</span>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+          <div style="aspect-ratio: 16/9; background: #10233B; padding: 22px; display: flex; flex-direction: column; justify-content: space-between; position: relative; overflow: hidden;">
+            <div style="display: flex; align-items: flex-start; gap: 6px;"><span style="font-family: Archivo, sans-serif; font-size: 15px; font-weight: 800; color: #F2F4F6;">FLINO</span><span style="font-family: 'JetBrains Mono', monospace; font-size: 8px; font-weight: 500; letter-spacing: 0.16em; color: #C2703A; margin-top: 2px;">.DEV</span></div>
+            <div style="font-family: Archivo, sans-serif; font-size: 36px; font-weight: 800; line-height: 1.03; letter-spacing: -0.02em; color: #F2F4F6; max-width: 58%; position: relative; z-index: 2;">El deploy que<br>rompió todo</div>
+            <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.14em; color: #C2703A;">POSTMORTEM · 12 MIN</div>
+            <div style="position: absolute; right: -30px; bottom: -20px; width: 175px; height: 175px; border-radius: 999px; background: repeating-linear-gradient(135deg, #1B3049 0 6px, #10233B 6px 12px); display: flex; align-items: flex-end; justify-content: center; padding-bottom: 34px;"><span style="font-family: 'JetBrains Mono', monospace; font-size: 9px; color: #6D7A88;">foto</span></div>
+          </div>
+          <div style="aspect-ratio: 16/9; background: #E8D5C6; padding: 22px; display: flex; flex-direction: column; justify-content: space-between;">
+            <div style="display: flex; align-items: center; justify-content: space-between;">
+              <div style="width: 30px; height: 30px; border-radius: 999px; background: #10233B; display: flex; align-items: center; justify-content: center;"><span style="font-family: Archivo, sans-serif; font-size: 14px; font-weight: 800; letter-spacing: -0.05em; color: #F2F4F6; line-height: 1;">FL</span></div>
+              <span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.12em; color: #6B5A4C;">RUNBOOK</span>
+            </div>
+            <div style="font-family: Archivo, sans-serif; font-size: 34px; font-weight: 800; line-height: 1.03; letter-spacing: -0.02em; color: #10233B;">Observabilidad<br>sin gastar $$$</div>
+            <div style="height: 6px; background: #10233B; width: 42%;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+</x-dc>
+</body>
+</html>
