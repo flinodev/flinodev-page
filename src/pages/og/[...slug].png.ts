@@ -61,7 +61,7 @@ export const GET: APIRoute = async ({ props }) => {
                       fontWeight: "bold",
                       color: "#0f172a",
                     },
-                    children: "FL",
+                    children: "f",
                   },
                 },
                 {
@@ -81,7 +81,7 @@ export const GET: APIRoute = async ({ props }) => {
                             fontWeight: "bold",
                             color: "white",
                           },
-                          children: "{flino|dev}",
+                          children: "flino.dev",
                         },
                       },
                       {
@@ -154,7 +154,7 @@ export const GET: APIRoute = async ({ props }) => {
                           style: {
                             width: "40px",
                             height: "4px",
-                            background: "#3b82f6",
+                            background: "#3FA075",
                             borderRadius: "2px",
                           },
                           children: "",
