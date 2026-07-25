@@ -20,7 +20,7 @@ export const GET: APIRoute = async () => {
   const entry = (slug: string, title: string, summary: string) =>
     `- [${title}](${new URL(`/blog/${slug}`, site).href}): ${summary}`;
 
-  const llmsTxt = `# ${SITE.AUTHOR} ({flino|dev})
+  const llmsTxt = `# ${SITE.AUTHOR} (flino.dev)
 
 > ${SITE.DESCRIPTION}
 

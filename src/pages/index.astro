@@ -6,9 +6,7 @@ import StackCard from "@components/StackCard.astro";
 import { SITE, SOCIALS } from "@consts";
 import TwinklingStars from "@components/TwinklingStars.astro";
 import MeteorShower from "@components/MeteorShower.astro";
-import EducationCard from "@components/EducationCard.astro";
 import { stack } from "@/data/stack";
-import { education } from "@/data/education";
 import { isWriteup } from "@lib/utils";
 
 const allPosts = (await getCollection("blog")).filter((post) => !post.data.draft);
@@ -97,10 +95,11 @@ const stackByCategory = stack.reduce((acc, item) => {
           <p
             class="animated text-xl md:text-2xl lg:text-3xl font-bold uppercase text-black dark:text-white leading-tight"
           >
-            Desarrollo web escalable y seguro
+            Construyo y opero sistemas en producción
           </p>
-          <p class="animated text-sm md:text-base opacity-75">
-            Node.js • React • Angular • Golang • PostgreSQL
+          <p class="animated text-sm md:text-base opacity-75 max-w-xl mx-auto">
+            Go • TypeScript • Angular • PostgreSQL • Cloudflare Workers<br />
+            Y documento lo que aprendo rompiendo cosas.
           </p>
           <div id="ctaButtons" class="animated flex flex-wrap gap-4 justify-center mt-4">
             <a
@@ -135,8 +134,13 @@ const stackByCategory = stack.reduce((acc, item) => {
             </p>
             <p>
               Antes diseñé y migré arquitecturas en Google Cloud para procesar grandes volúmenes de
-              datos. Fuera del trabajo estudio seguridad ofensiva —publico writeups de los
-              laboratorios que resuelvo— y doy clases de programación.
+              datos. Fuera del trabajo estudio seguridad ofensiva —soy <a
+                href="https://tryhackme.com/p/flinodev"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="underline decoration-[.5px] decoration-black/25 dark:decoration-white/50 hover:decoration-black dark:hover:decoration-white text-black dark:text-white underline-offset-2 blend"
+                >Jr Penetration Tester por TryHackMe</a
+              > y publico writeups de los laboratorios que resuelvo— y doy clases de programación.
             </p>
           </article>
 
@@ -156,8 +160,9 @@ const stackByCategory = stack.reduce((acc, item) => {
           <div class="space-y-3">
             <h2 class="font-semibold text-black dark:text-white">Especialidades</h2>
             <ul class="list-disc pl-5 space-y-2 opacity-75">
-              <li>Desarrollo de APIs REST y microservicios con Node.js y Golang</li>
+              <li>Desarrollo de APIs REST y microservicios con Golang y Node.js</li>
               <li>Aplicaciones web con React, Angular y Next.js</li>
+              <li>Sistemas en el edge: Cloudflare Workers, KV y Durable Objects</li>
               <li>Arquitecturas escalables en cloud (GCP, AWS)</li>
               <li>Seguridad web y ethical hacking</li>
             </ul>
@@ -284,20 +289,6 @@ const stackByCategory = stack.reduce((acc, item) => {
               ))
             }
           </ul>
-        </div>
-      </section>
-
-      <section class="animate">
-        <div class="space-y-4">
-          <h2 class="font-semibold text-black dark:text-white">Educación continua</h2>
-          <p>
-            La tecnología avanza rápido y mantenerse actualizado es parte del trabajo. Estos son
-            mis perfiles en las plataformas donde me capacito continuamente:
-          </p>
-
-          <div class="flex justify-center flex-wrap items-center gap-4 mt-5">
-            {education.map((item) => <EducationCard icon={item.icon} label={item.label} href={item.href} />)}
-          </div>
         </div>
       </section>
 
