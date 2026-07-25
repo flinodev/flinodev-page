@@ -8,6 +8,14 @@ export default {
     extend: {
       fontFamily: {
         sans: ["Atkinson", ...defaultTheme.fontFamily.sans],
+        // Solo para el logotipo. El cuerpo del sitio sigue en Atkinson.
+        brand: ["JetBrains Mono", ...defaultTheme.fontFamily.mono],
+      },
+      colors: {
+        // Acento de la marca: comunica estado (OK / en producción), nunca
+        // se usa para decorar. Máximo un elemento con acento por pantalla.
+        signal: "#3FA075",
+        alert: "#C9A227",
       },
       typography: {
         DEFAULT: {
