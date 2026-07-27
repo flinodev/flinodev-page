@@ -7,6 +7,7 @@ import { SITE, SOCIALS } from "@consts";
 import TwinklingStars from "@components/TwinklingStars.astro";
 import MeteorShower from "@components/MeteorShower.astro";
 import { stack } from "@/data/stack";
+import SubscribeForm from "@components/SubscribeForm";
 import { isWriteup } from "@lib/utils";
 
 const allPosts = (await getCollection("blog")).filter((post) => !post.data.draft);
@@ -296,6 +297,14 @@ const stackByCategory = stack.reduce((acc, item) => {
             }
           </ul>
         </div>
+      </section>
+
+      <!--
+        Antes de Contáctame a propósito: suscribirse es el compromiso menor.
+        Quien no está listo para escribirte sí puede dejar su correo.
+      -->
+      <section class="animate">
+        <SubscribeForm source="home" client:visible />
       </section>
 
       <!-- Contact Section -->

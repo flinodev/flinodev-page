@@ -67,7 +67,13 @@ export default function SubscribeForm(props: SubscribeFormProps) {
           : 'mt-8'
       }
     >
-      <h2 class="text-xl font-semibold text-black dark:text-white">
+      {/* El titular es una promesa de contenido, no una etiqueta: sin esto la
+          caja se lee como el teaser de otro artículo hasta llegar al botón. */}
+      <p class="font-brand text-xs uppercase tracking-[0.2em] opacity-50">
+        Newsletter
+      </p>
+
+      <h2 class="mt-3 text-xl font-semibold text-black dark:text-white">
         {props.title ?? 'Un proyecto pequeño, construido y explicado'}
       </h2>
 

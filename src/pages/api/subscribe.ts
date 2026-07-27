@@ -9,7 +9,14 @@ const BUTTONDOWN_API = 'https://api.buttondown.com/v1/subscribers';
 // Buttondown es el que manda los correos. No se construye esto en casa: el
 // problema no es enviar, es la entregabilidad (SPF/DKIM/DMARC, reputación de
 // IP, warm-up de dominio) y el modo de falla es silencioso.
-const isButtondownConfigured = Boolean(import.meta.env.BUTTONDOWN_API_KEY);
+//
+// La key se lee en cada petición y no al cargar el módulo. `import.meta.env` lo
+// resuelve Vite en tiempo de BUILD: si la variable se da de alta en Vercel
+// después de compilar, queda incrustado un `undefined` literal y el endpoint
+// responde 503 hasta reconstruir sin caché. `process.env` la lee del entorno de
+// ejecución, así que basta con guardarla en Vercel.
+const getButtondownKey = (): string =>
+  process.env.BUTTONDOWN_API_KEY ?? import.meta.env.BUTTONDOWN_API_KEY ?? '';
 
 // Mismo Redis del contador de vistas — aquí solo se usa para rate limit.
 const isRedisConfigured =
@@ -111,7 +118,9 @@ export const POST: APIRoute = async ({ request, clientAddress }) => {
   // A diferencia del contador de vistas, aquí NO se simula éxito cuando falta
   // la config: fingir que se guardó un correo que se tiró a la basura es la
   // peor falla posible de este endpoint.
-  if (!isButtondownConfigured) {
+  const apiKey = getButtondownKey();
+
+  if (!apiKey) {
     console.error('BUTTONDOWN_API_KEY no está configurada');
     return json(
       { ok: false, message: 'La suscripción no está disponible ahora mismo.' },
@@ -123,7 +132,7 @@ export const POST: APIRoute = async ({ request, clientAddress }) => {
     const response = await fetch(BUTTONDOWN_API, {
       method: 'POST',
       headers: {
-        Authorization: `Token ${import.meta.env.BUTTONDOWN_API_KEY}`,
+        Authorization: `Token ${apiKey}`,
         'Content-Type': 'application/json',
       },
       // No se manda `type`: así gobierna la config de Buttondown y el doble
