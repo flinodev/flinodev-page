@@ -140,6 +140,19 @@ export default function SubscribeForm(props: SubscribeFormProps) {
           {message()}
         </p>
       )}
+
+      {/* La salida para quien no quiere dar su correo. Es la conversión más
+          barata que existe: no pide nada y el lector se queda. Se oculta tras
+          suscribirse, donde la frase ya no tendría sentido. */}
+      {status() !== 'ok' && (
+        <p class="mt-4 text-sm opacity-60">
+          Si prefieres no dejar tu correo, también publico todo por{' '}
+          <a
+            href="/rss.xml"
+            class="underline decoration-[.5px] underline-offset-2 decoration-black/25 dark:decoration-white/50 hover:decoration-black dark:hover:decoration-white text-black dark:text-white blend"
+          >RSS</a>.
+        </p>
+      )}
     </div>
   );
 }
