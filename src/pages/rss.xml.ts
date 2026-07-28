@@ -7,8 +7,11 @@ type Context = {
 };
 
 export async function GET(context: Context) {
-  const posts = await getCollection("blog");
-  const projects = await getCollection("projects");
+  // Los borradores se excluyen igual que en /blog, /projects y llms.txt. Un
+  // feed no se puede retirar: si un draft sale, ya está en el lector de quien
+  // lo haya descargado.
+  const posts = (await getCollection("blog")).filter((post) => !post.data.draft);
+  const projects = (await getCollection("projects")).filter((project) => !project.data.draft);
 
   const items = [...posts, ...projects];
 
