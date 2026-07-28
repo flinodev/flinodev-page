@@ -4,7 +4,7 @@ import type { Site, Page, Links, Socials } from "@types";
 export const SITE: Site = {
   TITLE: "flino.dev",
   DESCRIPTION:
-    "Sitio de Francisco Lino, desarrollador full stack especializado en backend y seguridad web. Escribo sobre desarrollo de software, seguridad ofensiva y comparto writeups de laboratorios",
+    "Francisco Lino: construyo y opero sistemas en producción con Go, TypeScript y Cloudflare Workers. Escribo sobre desarrollo, seguridad ofensiva y writeups de laboratorios.",
   AUTHOR: "Francisco Suriel Lino",
 };
 
@@ -19,7 +19,7 @@ export const WORK: Page = {
 export const BLOG: Page = {
   TITLE: "Blog",
   DESCRIPTION:
-    "Publicaciones sobre temas de desarrollo web, seguridad informática, inteligencia artificial y más",
+    "Publicaciones sobre desarrollo web, sistemas en producción, seguridad informática y las decisiones técnicas detrás de cada proyecto.",
 };
 
 // Writeups Page
@@ -33,7 +33,7 @@ export const WRITEUPS: Page = {
 export const PROJECTS: Page = {
   TITLE: "Proyectos",
   DESCRIPTION:
-    "Proyectos web y móviles desarrollados por Francisco Lino: plataformas educativas, ecommerce y aplicaciones cloud.",
+    "Proyectos de Francisco Lino: sistemas en el edge con Cloudflare Workers, plataformas educativas, ecommerce y aplicaciones móviles.",
 };
 
 // Search Page
