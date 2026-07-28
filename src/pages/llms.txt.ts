@@ -24,7 +24,7 @@ export const GET: APIRoute = async () => {
 
 > ${SITE.DESCRIPTION}
 
-Sitio personal de Francisco Lino: desarrollo web full-stack (Node.js, Golang, React, Angular) y seguridad ofensiva/defensiva. Contenido principalmente en español.
+Sitio personal de Francisco Lino: construyo y opero sistemas en producción (Go, TypeScript, Angular, PostgreSQL, Cloudflare Workers, KV, Durable Objects) y documento lo que aprendo rompiendo cosas. También seguridad ofensiva y defensiva. Contenido principalmente en español.
 
 ## Writeups de seguridad
 
