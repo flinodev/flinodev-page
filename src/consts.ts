@@ -92,16 +92,9 @@ export const SOCIALS: Socials = [
     TEXT: "flinodev",
     HREF: "https://x.com/flinodev",
   },
-  {
-    NAME: "Youtube",
-    ICON: "youtube",
-    TEXT: "@flinodev",
-    HREF: "https://www.youtube.com/@flinodev",
-  },
-  {
-    NAME: "Tiktok",
-    ICON: "tiktok",
-    TEXT: "@flinodev",
-    HREF: "https://www.tiktok.com/@flinodev",
-  },
 ];
+
+// YouTube y TikTok salieron de aquí: los canales están vacíos. Un canal
+// ausente no dice nada; uno muerto y bien presentado dice que se empiezan
+// cosas y no se terminan. Vuelven cuando tengan contenido — y TikTok, si
+// vuelve, será apuntando a Habitus, no a la marca personal.
