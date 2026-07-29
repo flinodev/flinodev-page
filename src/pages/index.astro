@@ -199,19 +199,30 @@ const stackByCategory = stack.reduce((acc, item) => {
               </div>
             </a>
 
+            <!--
+              El post del acortador no va aquí aunque sea lo más leído del
+              sitio: ya es la primera entrada de "Posts recientes", unos
+              cientos de píxeles más abajo. Destacarlo lo repetiría en la
+              misma pantalla.
+
+              Las dos etiquetas dicen un hecho verificable, no una opinión
+              ("destacado" no significa nada). Si Habitus deja de ser lo más
+              nuevo o el writeup más leído cambia, hay que actualizarlas —
+              una superlativa falsa cuesta más que no tenerla.
+            -->
             <a
-              href="/projects/cognos-tech"
+              href="/projects/habitus"
               class="group p-6 border border-black/10 dark:border-white/20 rounded-lg hover:bg-black/5 dark:hover:bg-white/5 transition-colors duration-300"
             >
               <div class="flex-1">
                 <p class="font-semibold text-black dark:text-white group-hover:underline">
-                  Cognos Tech
+                  Habitus
                 </p>
                 <p class="text-sm opacity-75 mt-1">
-                  Plataforma educativa para cursos de inglés, construida para un cliente real
+                  Seguimiento de hábitos en Flutter: offline-first, widgets nativos y biblioteca vinculada a cada hábito
                 </p>
                 <p class="text-xs opacity-50 mt-2">
-                  Proyecto destacado
+                  App publicada en Google Play
                 </p>
               </div>
             </a>
