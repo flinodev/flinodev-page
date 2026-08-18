@@ -1,9 +1,10 @@
 import { ImageResponse } from "@vercel/og";
 import { getCollection } from "astro:content";
 import type { APIRoute } from "astro";
+import { isPublished } from "@lib/utils";
 
 export async function getStaticPaths() {
-  const posts = await getCollection("blog");
+  const posts = (await getCollection("blog")).filter(isPublished);
   return posts.map((post) => ({
     params: { slug: post.id },
     props: { post },
