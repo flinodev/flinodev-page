@@ -23,3 +23,12 @@ export function readingTime(html: string) {
 export function isWriteup(post: { id: string }) {
   return post.id.startsWith("thm/");
 }
+
+// Un borrador no debe generar página en producción. Filtrarlo aquí y no solo
+// en los listados es lo que lo mantiene fuera del sitemap: `@astrojs/sitemap`
+// recoge las rutas construidas, no la colección, así que un draft con página
+// termina enviado a Search Console. En dev sí se construyen, para poder
+// previsualizarlos.
+export function isPublished(entry: { data: { draft?: boolean } }) {
+  return import.meta.env.DEV || !entry.data.draft;
+}
