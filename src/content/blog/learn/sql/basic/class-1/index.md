@@ -7,6 +7,8 @@ tags:
   - SQL
   - Base de datos
 image: "/images/blog/main.webp"
+series: sql-basico
+seriesOrder: 1
 ---
 
 ## Introducción a las bases de datos
@@ -75,7 +77,3 @@ Observa la tabla:
 2. ¿Cuántos registros hay?
 
 3. ¿Qué tipo de información contiene la columna ciudad?
-
----
-
-**Siguiente:** [Clase 2 — primeras consultas con SELECT y FROM](/blog/learn/sql/basic/class-2), donde empezamos a leer datos de una tabla.

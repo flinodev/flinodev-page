@@ -1,4 +1,5 @@
 import { getCollection, type CollectionEntry } from "astro:content";
+import { seriesIdOf } from "@lib/series";
 import { isWriteup } from "@lib/utils";
 
 // `astro:content` no puede acabar en el bundle del cliente, así que esto vive
@@ -21,6 +22,14 @@ function section(entry: Entry) {
   return isWriteup(entry) ? "writeups" : "blog";
 }
 
+// Las partes de una serie ya las lista su propio índice; repetirlas aquí
+// gastaría el bloque en enlaces que el lector acaba de ver.
+function inSameSeries(a: Entry, b: Entry) {
+  if (a.collection !== "blog" || b.collection !== "blog") return false;
+  const id = seriesIdOf(a);
+  return id !== null && seriesIdOf(b) === id;
+}
+
 function byDateDesc(a: Entry, b: Entry) {
   return b.data.date.getTime() - a.data.date.getTime();
 }
@@ -38,7 +47,8 @@ export async function getRelated(entry: Entry, limit = 3): Promise<Entry[]> {
   const [posts, projects] = await Promise.all([getCollection("blog"), getCollection("projects")]);
 
   const pool: Entry[] = [...posts, ...projects].filter(
-    (candidate) => !candidate.data.draft && !sameEntry(candidate, entry)
+    (candidate) =>
+      !candidate.data.draft && !sameEntry(candidate, entry) && !inSameSeries(candidate, entry)
   );
 
   const tags = new Set(entry.data.tags.map(normalize));

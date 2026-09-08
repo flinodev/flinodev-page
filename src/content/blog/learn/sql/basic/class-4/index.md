@@ -6,6 +6,8 @@ draft: false
 tags:
   - SQL
   - Base de datos
+series: sql-basico
+seriesOrder: 4
 ---
 
 ## Clase 4 — Múltiples condiciones
@@ -58,8 +60,4 @@ Dada la tabla:
 
 3. Personas que no viven en CDMX.
 
----
-
-**Anterior:** [Clase 3 — filtrar registros con WHERE](/blog/learn/sql/basic/class-3)
-
-Última clase del SQL básico. Si quieres ver SQL desde el otro lado — el del atacante — sigue por el writeup de [SQL Fundamentals](/blog/thm/sql-fundamentals).
+Si quieres ver SQL desde el otro lado — el del atacante — sigue por el writeup de [SQL Fundamentals](/blog/thm/sql-fundamentals).

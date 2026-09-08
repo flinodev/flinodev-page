@@ -29,6 +29,10 @@ const blog = defineCollection({
     draft: z.boolean().optional(),
     image: z.string().optional(),
     comments: z.boolean().default(true),
+    // Pertenencia a una serie que se lee en orden; los metadatos de la serie
+    // viven en `src/data/series.ts`.
+    series: z.string().optional(),
+    seriesOrder: z.number().int().positive().optional(),
   }),
 });
 

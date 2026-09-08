@@ -6,6 +6,8 @@ draft: false
 tags:
   - SQL
   - Base de datos
+series: sql-basico
+seriesOrder: 2
 ---
 
 ## Clase 2 — Introducción a SQL
@@ -82,7 +84,3 @@ Dada la tabla
 2. Mostrar nombre y ciudad.
 
 3. Mostrar todas las columnas.
-
----
-
-**Anterior:** [Clase 1 — introducción a las bases de datos](/blog/learn/sql/basic/class-1) · **Siguiente:** [Clase 3 — filtrar registros con WHERE](/blog/learn/sql/basic/class-3)
