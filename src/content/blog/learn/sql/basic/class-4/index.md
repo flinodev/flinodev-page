@@ -57,3 +57,9 @@ Dada la tabla:
 2. Personas de Puebla o Guadalajara.
 
 3. Personas que no viven en CDMX.
+
+---
+
+**Anterior:** [Clase 3 — filtrar registros con WHERE](/blog/learn/sql/basic/class-3)
+
+Última clase del SQL básico. Si quieres ver SQL desde el otro lado — el del atacante — sigue por el writeup de [SQL Fundamentals](/blog/thm/sql-fundamentals).

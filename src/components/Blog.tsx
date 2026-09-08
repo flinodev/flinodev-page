@@ -1,5 +1,5 @@
 import type { CollectionEntry } from "astro:content";
-import { createEffect, createSignal, For } from "solid-js";
+import { createMemo, createSignal, For } from "solid-js";
 import ArrowCard from "@components/ArrowCard";
 import { cn } from "@lib/utils";
 
@@ -10,18 +10,18 @@ type Props = {
 
 export default function Blog({ data, tags }: Props) {
   const [filter, setFilter] = createSignal(new Set<string>());
-  const [posts, setPosts] = createSignal<CollectionEntry<"blog">[]>([]);
   const [showFilters, setShowFilters] = createSignal(false);
 
-  createEffect(() => {
-    setPosts(
-      data.filter((entry) =>
-        Array.from(filter()).every((value) =>
-          entry.data.tags.some((tag: string) => tag.toLowerCase() === String(value).toLowerCase())
-        )
+  // Derivado y no un efecto: `createEffect` no corre en SSR, así que el listado
+  // salía vacío en el HTML y solo aparecía al hidratar. Con un memo el HTML ya
+  // trae las entradas — y sus enlaces internos — sin depender de JS.
+  const posts = createMemo(() =>
+    data.filter((entry) =>
+      Array.from(filter()).every((value) =>
+        entry.data.tags.some((tag: string) => tag.toLowerCase() === String(value).toLowerCase())
       )
-    );
-  });
+    )
+  );
 
   function toggleTag(tag: string) {
     setFilter(

@@ -57,3 +57,7 @@ WHERE ciudad = 'CDMX';
 2. Mostrar personas mayores de 21.
 
 3. Mostrar personas con edad menor a 21.
+
+---
+
+**Anterior:** [Clase 2 — SELECT y FROM](/blog/learn/sql/basic/class-2) · **Siguiente:** [Clase 4 — varias condiciones con AND y OR](/blog/learn/sql/basic/class-4)

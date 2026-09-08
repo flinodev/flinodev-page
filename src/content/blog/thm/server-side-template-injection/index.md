@@ -5,7 +5,7 @@ date: "Oct 25 2025"
 draft: false
 tags:
   - Web Application Pentesting
-  - Injection attacks
+  - Injection Attacks
   - TryHackMe
   - THM
 image: "/images/blog/ssti.webp"

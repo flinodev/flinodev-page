@@ -1,0 +1,27 @@
+---
+import type { CollectionEntry } from "astro:content";
+import ArrowCard from "@components/ArrowCard";
+import { getRelated } from "@lib/related";
+
+type Props = {
+  entry: CollectionEntry<"blog"> | CollectionEntry<"projects">;
+};
+
+const { entry } = Astro.props;
+const related = await getRelated(entry);
+---
+
+{
+  related.length > 0 && (
+    <div class="mt-12 pt-8 border-t border-black/10 dark:border-white/25">
+      <h2 class="text-2xl font-semibold text-black dark:text-white mb-6">Sigue leyendo</h2>
+      <ul class="flex flex-col gap-4">
+        {related.map((item) => (
+          <li>
+            <ArrowCard entry={item} pill={item.collection !== entry.collection} />
+          </li>
+        ))}
+      </ul>
+    </div>
+  )
+}
