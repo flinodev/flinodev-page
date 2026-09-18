@@ -1,6 +1,8 @@
 ---
 title: "Server-side Template Injection"
 summary: "Explotación de SSTI en distintos motores de plantillas: de la detección a la ejecución remota de código."
+seoTitle: "Server-side Template Injection TryHackMe Walkthrough"
+seoDescription: "Answers to every task in the TryHackMe Server-side Template Injection room: SSTI across template engines, from detection to remote code execution."
 date: "Oct 25 2025"
 draft: false
 tags:

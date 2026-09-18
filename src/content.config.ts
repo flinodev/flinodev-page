@@ -24,6 +24,10 @@ const blog = defineCollection({
   schema: z.object({
     title: z.string(),
     summary: z.string(),
+    // Overrides del <title> y la meta description: los writeups de THM se
+    // buscan en ingles y por nombre de room, no por el titulo visible.
+    seoTitle: z.string().optional(),
+    seoDescription: z.string().optional(),
     date: z.coerce.date(),
     tags: z.array(z.string()),
     draft: z.boolean().optional(),

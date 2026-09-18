@@ -1,6 +1,8 @@
 ---
 title: "Diamond Model Room"
 summary: "El Modelo Diamante de análisis de intrusiones y sus cuatro vértices: adversario, infraestructura, capacidad y víctima."
+seoTitle: "Diamond Model TryHackMe Walkthrough & Answers"
+seoDescription: "Answers to every task in the TryHackMe Diamond Model room (SOC Level 1): adversary, infrastructure, capability and victim in intrusion analysis."
 date: "Apr 28 2025"
 draft: false
 tags:

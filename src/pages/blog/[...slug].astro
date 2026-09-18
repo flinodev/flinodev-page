@@ -20,7 +20,9 @@ export async function getStaticPaths() {
 // Get the requested post
 type Props = CollectionEntry<"blog">;
 const post = Astro.props;
-const { title, summary, date, tags, image } = post.data;
+const { title, summary, date, tags, image, seoTitle, seoDescription } = post.data;
+const metaTitle = seoTitle ?? title;
+const metaDescription = seoDescription ?? summary;
 
 // Use dynamic OG image or fallback to post image or default
 const ogImage = `/og/${post.id}.png`;
@@ -37,8 +39,8 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 const structuredData = {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  headline: title,
-  description: summary,
+  headline: metaTitle,
+  description: metaDescription,
   image: new URL(displayImage, Astro.site).toString(),
   datePublished: date.toISOString(),
   dateModified: date.toISOString(),
@@ -92,7 +94,7 @@ const breadcrumbStructuredData = {
 };
 ---
 
-<PageLayout title={title} description={summary} image={ogImage} pubDate={date} articleTags={tags}>
+<PageLayout title={metaTitle} description={metaDescription} image={ogImage} pubDate={date} articleTags={tags}>
   <!-- Structured Data -->
   <Fragment slot="head">
     <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />

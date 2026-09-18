@@ -1,6 +1,8 @@
 ---
 title: "Mitre Room"
 summary: "Los recursos de MITRE para la comunidad de ciberseguridad: ATT&CK, CAR, ENGAGE y D3FEND."
+seoTitle: "MITRE TryHackMe Walkthrough & Answers"
+seoDescription: "Answers to every task in the TryHackMe MITRE room (SOC Level 1): ATT&CK, CAR, ENGAGE and D3FEND."
 date: "Apr 29 2025"
 draft: false
 tags:

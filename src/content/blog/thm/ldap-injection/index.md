@@ -1,6 +1,8 @@
 ---
 title: "LDAP Injection"
 summary: "Explotación de inyección LDAP para eludir autenticación y extraer información del directorio."
+seoTitle: "LDAP Injection TryHackMe Walkthrough & Answers"
+seoDescription: "Answers to every task in the TryHackMe LDAP Injection room (Web Application Pentesting): authentication bypass and directory data extraction via LDAP injection."
 date: "Apr 08 2026"
 draft: false
 tags:

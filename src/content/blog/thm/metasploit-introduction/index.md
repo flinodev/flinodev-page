@@ -1,6 +1,8 @@
 ---
 title: "Metasploit: Introduction"
 summary: "Introducción al framework Metasploit: msfconsole, módulos, exploits y payloads."
+seoTitle: "Metasploit: Introduction TryHackMe Walkthrough"
+seoDescription: "Answers to every task in the TryHackMe Metasploit: Introduction room (Jr Penetration Tester): msfconsole, modules, exploits and payloads."
 date: "Jun 26 2025"
 draft: false
 tags:

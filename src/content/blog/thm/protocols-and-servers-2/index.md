@@ -1,6 +1,8 @@
 ---
 title: "Protocols and Servers 2"
 summary: "Ataques a protocolos en texto claro y contra contraseñas, y su mitigación con SSH y SSL/TLS."
+seoTitle: "Protocols and Servers 2 TryHackMe Walkthrough"
+seoDescription: "Answers to every task in the TryHackMe Protocols and Servers 2 room (Jr Penetration Tester): cleartext protocol attacks, hydra, SSH and TLS."
 date: "Jun 22 2025"
 draft: false
 tags:

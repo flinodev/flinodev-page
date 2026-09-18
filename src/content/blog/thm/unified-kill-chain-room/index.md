@@ -1,6 +1,8 @@
 ---
 title: "Unified Kill Chain Room"
 summary: "La Unified Kill Chain: 18 fases que unifican y extienden los modelos clásicos para describir un ataque completo."
+seoTitle: "Unified Kill Chain TryHackMe Walkthrough & Answers"
+seoDescription: "Answers to every task in the TryHackMe Unified Kill Chain room (SOC Level 1): the 18 phases of the Unified Kill Chain."
 date: "Apr 26 2025"
 draft: false
 tags:

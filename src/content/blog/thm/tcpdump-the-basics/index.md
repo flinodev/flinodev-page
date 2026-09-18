@@ -1,6 +1,8 @@
 ---
 title: "Tcpdump: The basics"
 summary: "Captura, filtrado y análisis de paquetes de red con tcpdump desde la línea de comandos."
+seoTitle: "Tcpdump: The Basics TryHackMe Walkthrough & Answers"
+seoDescription: "Answers to every task in the TryHackMe Tcpdump: The Basics room (Cyber Security 101), with the tcpdump command behind each traffic.pcap answer."
 date: "Jul 19 2025"
 draft: false
 tags:

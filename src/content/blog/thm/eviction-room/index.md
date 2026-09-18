@@ -1,6 +1,8 @@
 ---
 title: "Eviction Room"
 summary: "Uso del MITRE ATT&CK Navigator para mapear las TTPs de un adversario y expulsarlo de la red."
+seoTitle: "Eviction TryHackMe Walkthrough & Answers"
+seoDescription: "Answers to every task in the TryHackMe Eviction room (SOC Level 1): mapping adversary TTPs with the MITRE ATT&CK Navigator."
 date: "May 07 2025"
 draft: false
 tags:

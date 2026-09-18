@@ -1,6 +1,8 @@
 ---
 title: "XXE Injection"
 summary: "Explotación de entidades externas XML (XXE) para leer archivos del servidor y realizar SSRF."
+seoTitle: "XXE Injection TryHackMe Walkthrough & Answers"
+seoDescription: "Answers to every task in the TryHackMe XXE Injection room (Web Application Pentesting): XML external entities to read server files and pivot into SSRF."
 date: "Apr 08 2026"
 draft: false
 tags:

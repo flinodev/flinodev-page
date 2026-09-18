@@ -1,6 +1,8 @@
 ---
 title: "Net Sec Challenge"
 summary: "Reto práctico de seguridad de redes: enumeración de puertos y servicios con nmap, telnet e hydra."
+seoTitle: "Net Sec Challenge TryHackMe Walkthrough & Answers"
+seoDescription: "Answers to every task in the TryHackMe Net Sec Challenge room (Jr Penetration Tester): port and service enumeration with nmap, telnet and hydra."
 date: "Jun 22 2025"
 draft: false
 tags:

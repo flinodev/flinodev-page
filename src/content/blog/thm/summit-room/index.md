@@ -1,6 +1,8 @@
 ---
 title: "Summit Room"
 summary: "Caza de un adversario simulado subiendo la Pirámide del Dolor: de hashes e IPs hasta sus TTPs."
+seoTitle: "Summit TryHackMe Walkthrough & Answers"
+seoDescription: "Answers to every task in the TryHackMe Summit room (SOC Level 1): climbing the Pyramid of Pain from hashes and IPs to TTPs, with all flags."
 date: "May 08 2025"
 draft: false
 tags:

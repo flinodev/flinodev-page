@@ -1,6 +1,8 @@
 ---
 title: "Session Management"
 summary: "Fallos en la gestión de sesiones: fijación, secuestro y manejo inseguro de identificadores."
+seoTitle: "Session Management TryHackMe Walkthrough & Answers"
+seoDescription: "Answers to every task in the TryHackMe Session Management room (Web Application Pentesting): session fixation, hijacking and insecure session identifiers."
 date: "Jul 02 2025"
 draft: false
 tags:

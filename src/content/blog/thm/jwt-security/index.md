@@ -1,6 +1,8 @@
 ---
 title: "JWT Security"
 summary: "Vulnerabilidades comunes en JSON Web Tokens: algoritmos débiles, firmas sin validar y cómo mitigarlas."
+seoTitle: "JWT Security TryHackMe Walkthrough & Answers"
+seoDescription: "Answers to every task in the TryHackMe JWT Security room (Web Application Pentesting): weak algorithms, unverified signatures and other JSON Web Token flaws."
 date: "Oct 25 2025"
 draft: false
 tags:

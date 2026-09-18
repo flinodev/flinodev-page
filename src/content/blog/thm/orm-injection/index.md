@@ -1,6 +1,8 @@
 ---
 title: "ORM Injection"
 summary: "Explotación de vulnerabilidades de inyección en aplicaciones web construidas sobre un ORM."
+seoTitle: "ORM Injection TryHackMe Walkthrough & Answers"
+seoDescription: "Answers to every task in the TryHackMe ORM Injection room (Web Application Pentesting): exploiting injection flaws in web apps built on an ORM."
 date: "Apr 05 2026"
 draft: false
 tags:

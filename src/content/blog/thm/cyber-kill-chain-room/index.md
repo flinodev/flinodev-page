@@ -1,6 +1,8 @@
 ---
 title: "Cyber Kill Chain Room"
 summary: "Las fases de la Cyber Kill Chain de Lockheed Martin: cómo avanza un atacante del reconocimiento a la acción sobre objetivos."
+seoTitle: "Cyber Kill Chain TryHackMe Walkthrough & Answers"
+seoDescription: "Answers to every task in the TryHackMe Cyber Kill Chain room (SOC Level 1): the seven Lockheed Martin phases, from reconnaissance to actions on objectives."
 date: "Apr 24 2025"
 draft: false
 tags:

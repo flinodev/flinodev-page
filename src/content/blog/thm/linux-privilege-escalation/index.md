@@ -1,6 +1,8 @@
 ---
 title: "Linux Privilege Escalation"
 summary: "Técnicas de escalación de privilegios en Linux: enumeración, SUID, sudo, cron, kernel exploits y más."
+seoTitle: "Linux Privilege Escalation TryHackMe Walkthrough"
+seoDescription: "Answers to every task in the TryHackMe Linux Privilege Escalation room (Jr Penetration Tester): enumeration, SUID, sudo, cron jobs, capabilities and kernel exploits."
 date: "Jun 27 2025"
 draft: false
 tags:
