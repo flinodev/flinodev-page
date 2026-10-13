@@ -3,8 +3,10 @@ import { type CollectionEntry, render } from "astro:content";
 import Giscus from "@/components/Giscus.astro";
 import RelatedPosts from "@components/RelatedPosts.astro";
 import SeriesIndex from "@components/SeriesIndex.astro";
+import AuthorBox from "@components/AuthorBox.astro";
 import ShareButtons from "@/components/ShareButtons.astro";
 import SubscribeForm from "@/components/SubscribeForm";
+import { isWriteup } from "@lib/utils";
 
 type Props = {
   entry: CollectionEntry<"blog"> | CollectionEntry<"projects">;
@@ -23,6 +25,11 @@ const showComments = data.comments !== false;
   <article>
     <Content />
   </article>
+
+  {/* Lo primero tras el ultimo parrafo: quien escribe y a donde seguir. Los
+      writeups son la puerta de entrada real del sitio (casi todo el trafico
+      de busqueda cae ahi) y hasta ahora terminaban sin decir quien los firma. */}
+  {entry.collection === "blog" && <AuthorBox variant={isWriteup(entry) ? "writeup" : "post"} />}
 
   {/* Al terminar de leer, el curso completo con la clase actual marcada. */}
   {entry.collection === "blog" && <SeriesIndex entry={entry} />}

@@ -1,0 +1,73 @@
+---
+import { getCollection } from "astro:content";
+import { SITE } from "@consts";
+import { isWriteup, isPublished } from "@lib/utils";
+
+type Props = {
+  /**
+   * Los writeups reciben casi todo el trafico de busqueda y esas consultas
+   * vienen en ingles (son preguntas de rooms de THM pegadas en Google), asi
+   * que su copy va en ingles. El resto del blog se lee en espaniol.
+   */
+  variant: "writeup" | "post";
+};
+
+const { variant } = Astro.props;
+
+const writeupsCount = (await getCollection("blog")).filter(isPublished).filter(isWriteup).length;
+
+const copy =
+  variant === "writeup"
+    ? {
+        heading: "About the author",
+        bio: `I build and run production systems in Go, TypeScript and Cloudflare Workers, and I document what I learn breaking things — ${writeupsCount} TryHackMe writeups so far.`,
+        links: [
+          { text: "All writeups", href: "/writeups" },
+          { text: "Projects", href: "/projects" },
+          { text: "GitHub", href: "https://github.com/flinodev", external: true },
+        ],
+      }
+    : {
+        heading: "Sobre el autor",
+        bio: "Construyo y opero sistemas en producción con Go, TypeScript y Cloudflare Workers. Escribo sobre lo que aprendo rompiendo cosas.",
+        links: [
+          { text: "Proyectos", href: "/projects" },
+          { text: "Writeups", href: "/writeups" },
+          { text: "GitHub", href: "https://github.com/flinodev", external: true },
+        ],
+      };
+---
+
+<aside class="mt-12 pt-8 border-t border-black/10 dark:border-white/25">
+  <div class="flex items-start gap-4">
+    <img
+      src="/avatar-circular.png"
+      alt={SITE.AUTHOR}
+      width="56"
+      height="56"
+      loading="lazy"
+      decoding="async"
+      class="size-14 shrink-0 rounded-full bg-black/5 dark:bg-white/10 ring-1 ring-black/10 dark:ring-white/15"
+    />
+    <div class="space-y-2">
+      <p class="text-sm font-semibold text-black dark:text-white">
+        {copy.heading} · Francisco Lino
+      </p>
+      <p class="text-sm opacity-75">{copy.bio}</p>
+      <div class="flex flex-wrap gap-x-4 gap-y-1 text-sm">
+        {
+          copy.links.map((link) => (
+            <a
+              href={link.href}
+              target={link.external ? "_blank" : undefined}
+              rel={link.external ? "noopener noreferrer" : undefined}
+              class="text-black dark:text-white underline underline-offset-4 decoration-black/25 dark:decoration-white/25 hover:decoration-black dark:hover:decoration-white blend"
+            >
+              {link.text}
+            </a>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</aside>
